@@ -343,13 +343,13 @@
       
         <tags>
             
+            <tag> 面试 </tag>
+            
             <tag> http </tag>
             
             <tag> https </tag>
             
             <tag> 必看必会 </tag>
-            
-            <tag> 面试 </tag>
             
         </tags>
       
@@ -459,9 +459,9 @@
             
             <tag> go </tag>
             
-            <tag> 面试 </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> 面试 </tag>
             
             <tag> 101 </tag>
             
@@ -540,9 +540,9 @@
       
         <tags>
             
-            <tag> 必看必会 </tag>
-            
             <tag> 面试 </tag>
+            
+            <tag> 必看必会 </tag>
             
             <tag> mongo </tag>
             
@@ -573,9 +573,9 @@
       
         <tags>
             
-            <tag> 必看必会 </tag>
-            
             <tag> 面试 </tag>
+            
+            <tag> 必看必会 </tag>
             
             <tag> mysql </tag>
             
@@ -604,11 +604,13 @@
       
         <tags>
             
-            <tag> 必看必会 </tag>
-            
             <tag> 面试 </tag>
             
+            <tag> 必看必会 </tag>
+            
             <tag> 并发 </tag>
+            
+            <tag> raft </tag>
             
             <tag> nosql </tag>
             
@@ -619,8 +621,6 @@
             <tag> 缓存 </tag>
             
             <tag> 分布式 </tag>
-            
-            <tag> raft </tag>
             
         </tags>
       
@@ -726,9 +726,9 @@
       
         <tags>
             
-            <tag> butterfly </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> butterfly </tag>
             
             <tag> github </tag>
             
