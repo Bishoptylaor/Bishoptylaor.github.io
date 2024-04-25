@@ -389,13 +389,13 @@
     <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
     
-    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="http" scheme="https://bishoptylaor.github.io/tags/http/"/>
     
     <category term="https" scheme="https://bishoptylaor.github.io/tags/https/"/>
     
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -506,9 +506,9 @@
     
     <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
     
-    <category term="算法" scheme="https://bishoptylaor.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
     <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="算法" scheme="https://bishoptylaor.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="101" scheme="https://bishoptylaor.github.io/tags/101/"/>
     
