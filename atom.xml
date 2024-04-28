@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-04-25T12:01:47.109Z</updated>
+  <updated>2024-04-28T13:23:26.667Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,48 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>面试官101</title>
-    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/interviewer101/"/>
-    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/interviewer101/</id>
-    <published>2023-02-26T09:19:05.000Z</published>
-    <updated>2024-04-25T12:01:47.109Z</updated>
+    <title>raft</title>
+    <link href="https://bishoptylaor.github.io/interview/distribution/raft/"/>
+    <id>https://bishoptylaor.github.io/interview/distribution/raft/</id>
+    <published>2024-04-28T13:22:37.000Z</published>
+    <updated>2024-04-28T13:23:26.667Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;面试&quot;&gt;&lt;a href=&quot;#面试&quot; class=&quot;headerlink&quot; title=&quot;面试&quot;&gt;&lt;/a&gt;&lt;strong&gt;面试&lt;/strong&gt;&lt;/h3&gt;&lt;h4 id=&quot;算法能力-一题5-10min&quot;&gt;&lt;a href=&quot;#算法能力-一题5-10min&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="面试官" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/"/>
-    
-    
-    <category term="面试官" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95%E5%AE%98/"/>
-    
-    <category term="初学者" scheme="https://bishoptylaor.github.io/tags/%E5%88%9D%E5%AD%A6%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题-连续固定区间最大值</title>
-    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/maximum-of-segments/"/>
-    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/maximum-of-segments/</id>
-    <published>2023-02-26T09:19:05.000Z</published>
-    <updated>2024-04-25T12:07:43.451Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;连续固定区间最大值&quot;&gt;&lt;a href=&quot;#连续固定区间最大值&quot; class=&quot;headerlink&quot; title=&quot;连续固定区间最大值&quot;&gt;&lt;/a&gt;连续固定区间最大值&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;涉及知识点：堆，栈、双指针、滑动窗口，双向队列、线段树，树状数组,</summary>
+    <summary type="html">&lt;p&gt;Raft&lt;br&gt;Follower、Candidate、Leader&lt;/p&gt;
+&lt;p&gt;图解raft算法：轻松理解Raft算法</summary>
         
       
     
@@ -66,222 +37,24 @@
     
     <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
-    <category term="面试官" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/"/>
-    
-    
-    <category term="面试题" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题-移掉K位数字</title>
-    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/remove-the-k-digit/"/>
-    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/remove-the-k-digit/</id>
-    <published>2023-02-26T09:19:05.000Z</published>
-    <updated>2024-04-25T12:07:43.451Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;移掉K位数字-leetcode-402&quot;&gt;&lt;a href=&quot;#移掉K位数字-leetcode-402&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="面试官" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/"/>
-    
-    
-    <category term="面试题" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试题-仅出现一次的元素</title>
-    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/single-numbers/"/>
-    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/single-numbers/</id>
-    <published>2023-02-26T09:19:05.000Z</published>
-    <updated>2024-04-25T12:07:43.451Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;仅出现一次的元素&quot;&gt;&lt;a href=&quot;#仅出现一次的元素&quot; class=&quot;headerlink&quot; title=&quot;仅出现一次的元素&quot;&gt;&lt;/a&gt;仅出现一次的元素&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;涉及知识点：散列表、位运算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="面试官" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95%E5%AE%98/"/>
-    
-    
-    <category term="面试题" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://bishoptylaor.github.io/%E8%BD%AF%E5%AE%9E%E5%8A%9B/1/"/>
-    <id>https://bishoptylaor.github.io/%E8%BD%AF%E5%AE%9E%E5%8A%9B/1/</id>
-    <published>2022-04-21T11:14:05.167Z</published>
-    <updated>2023-03-07T12:11:27.767Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;软实力&quot;&gt;&lt;a href=&quot;#软实力&quot; class=&quot;headerlink&quot; title=&quot;软实力&quot;&gt;&lt;/a&gt;软实力&lt;/h1&gt;&lt;h2 id=&quot;主动性，责任心&quot;&gt;&lt;a href=&quot;#主动性，责任心&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="软实力" scheme="https://bishoptylaor.github.io/categories/%E8%BD%AF%E5%AE%9E%E5%8A%9B/"/>
+    <category term="分布式" scheme="https://bishoptylaor.github.io/categories/interview/distribution/"/>
     
     
   </entry>
   
   <entry>
-    <title>startup</title>
-    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/startup/"/>
-    <id>https://bishoptylaor.github.io/golang/go-design-pattern/startup/</id>
-    <published>2022-02-28T09:13:11.000Z</published>
-    <updated>2022-02-28T09:16:24.679Z</updated>
+    <title>simulation02</title>
+    <link href="https://bishoptylaor.github.io/interview/log/simulation02/"/>
+    <id>https://bishoptylaor.github.io/interview/log/simulation02/</id>
+    <published>2024-04-28T10:51:47.000Z</published>
+    <updated>2024-04-28T13:23:26.667Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Go 设计模式实现，包含 23 种常见的设计模式实现，同时这也是 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>zookeeper</title>
-    <link href="https://bishoptylaor.github.io/interview/zookeeper/"/>
-    <id>https://bishoptylaor.github.io/interview/zookeeper/</id>
-    <published>2022-02-27T12:59:57.000Z</published>
-    <updated>2022-02-27T13:04:31.011Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1-什么是-zookeeper-？&quot;&gt;&lt;a href=&quot;#1-什么是-zookeeper-？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 zookeeper ？&quot;&gt;&lt;/a&gt;1. 什么是 zookeeper ？&lt;/h3&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>GMP 原理与调度</title>
-    <link href="https://bishoptylaor.github.io/golang/concurrency/gmp/"/>
-    <id>https://bishoptylaor.github.io/golang/concurrency/gmp/</id>
-    <published>2022-02-26T11:54:16.000Z</published>
-    <updated>2022-02-26T16:32:14.840Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h3&gt;&lt;p&gt;M(machine): 代表着真正的执行计算资源，可以认为它就是os</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/golang/concurrency/"/>
-    
-    
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
-    
-    <category term="GMP" scheme="https://bishoptylaor.github.io/tags/GMP/"/>
-    
-    <category term="并发" scheme="https://bishoptylaor.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>go-mutex</title>
-    <link href="https://bishoptylaor.github.io/golang/concurrency/go-mutex/"/>
-    <id>https://bishoptylaor.github.io/golang/concurrency/go-mutex/</id>
-    <published>2022-02-26T09:21:45.000Z</published>
-    <updated>2022-02-26T09:32:07.918Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;lock逻辑：&quot;&gt;&lt;a href=&quot;#lock逻辑：&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/golang/concurrency/"/>
-    
-    
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
-    
-    <category term="mutex" scheme="https://bishoptylaor.github.io/tags/mutex/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>golang模拟面试题01</title>
-    <link href="https://bishoptylaor.github.io/interview/log/simulation01/"/>
-    <id>https://bishoptylaor.github.io/interview/log/simulation01/</id>
-    <published>2022-02-26T09:19:05.000Z</published>
-    <updated>2024-04-24T12:39:26.380Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;channel实现原理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Mutex 是悲观还是乐观锁（什么是乐观锁）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Mutex 有几种模式（饥饿和互斥）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Mutex</summary>
+    <summary type="html">&lt;p&gt;一面&lt;br&gt;epoll、select、poll 区别&lt;br&gt;epoll 的水平触发和边缘触发的区别&lt;br&gt;TCP 的流量控制&lt;br&gt;为什么有了流量控制还要有拥塞控制?&lt;br&gt;TCP</summary>
         
       
     
@@ -295,19 +68,425 @@
   </entry>
   
   <entry>
-    <title>单例模式</title>
-    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-create/singleton/"/>
-    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-create/singleton/</id>
-    <published>2022-02-26T08:46:47.000Z</published>
-    <updated>2022-02-28T09:07:25.582Z</updated>
+    <title>ETCD 面试必备</title>
+    <link href="https://bishoptylaor.github.io/interview/distribution/etcd/"/>
+    <id>https://bishoptylaor.github.io/interview/distribution/etcd/</id>
+    <published>2024-04-28T02:36:46.000Z</published>
+    <updated>2024-04-28T10:35:44.780Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Go 设计模式实现，包含 23 种常见的设计模式实现，同时这也是 &lt;a</summary>
+    <summary type="html">&lt;p&gt;etcd分布式锁的实现流程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;建立连接&lt;br&gt;客户端连接 etcd，以 &amp;#x2F;etcd&amp;#x2F;lock 为前缀创建全局唯一的 key， 假设第一个客户端对应的</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="分布式" scheme="https://bishoptylaor.github.io/categories/interview/distribution/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="etcd" scheme="https://bishoptylaor.github.io/tags/etcd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kafka</title>
+    <link href="https://bishoptylaor.github.io/interview/distribution/kafka/"/>
+    <id>https://bishoptylaor.github.io/interview/distribution/kafka/</id>
+    <published>2024-04-28T02:36:20.000Z</published>
+    <updated>2024-04-28T02:42:51.472Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Kafka-方案及其痛点&quot;&gt;&lt;a href=&quot;#Kafka-方案及其痛点&quot; class=&quot;headerlink&quot; title=&quot;Kafka 方案及其痛点&quot;&gt;&lt;/a&gt;Kafka 方案及其痛点&lt;/h2&gt;&lt;p&gt;之前，我们采用 Apache Kafka 作为消息平台，</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="分布式" scheme="https://bishoptylaor.github.io/categories/interview/distribution/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="kafka" scheme="https://bishoptylaor.github.io/tags/kafka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Golang语言面试题 - Grpc</title>
+    <link href="https://bishoptylaor.github.io/interview/go/go-grpc/"/>
+    <id>https://bishoptylaor.github.io/interview/go/go-grpc/</id>
+    <published>2024-04-27T08:19:02.000Z</published>
+    <updated>2024-04-28T02:40:12.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;grpc和http区别&quot;&gt;&lt;a href=&quot;#grpc和http区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="go" scheme="https://bishoptylaor.github.io/categories/interview/go/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言 Slice 结构的底层实现</title>
+    <link href="https://bishoptylaor.github.io/golang/advanced-tutorial/go-slice/"/>
+    <id>https://bishoptylaor.github.io/golang/advanced-tutorial/go-slice/</id>
+    <published>2024-04-27T01:10:08.000Z</published>
+    <updated>2024-04-28T08:45:45.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;append-性能损耗&quot;&gt;&lt;a href=&quot;#append-性能损耗&quot; class=&quot;headerlink&quot; title=&quot;append 性能损耗&quot;&gt;&lt;/a&gt;append 性能损耗&lt;/h4&gt;&lt;p&gt;未指定长度或者长度不足时，双倍扩容（cap &amp;lt; 1024）;</summary>
+        
+      
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/golang/advanced-tutorial/"/>
+    
+    
+    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="Slice" scheme="https://bishoptylaor.github.io/tags/Slice/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式23-中介模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/23-mediator/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/23-mediator/</id>
+    <published>2024-04-26T13:35:46.000Z</published>
+    <updated>2024-04-26T10:20:05.970Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式22-解释器模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/22-interpreter/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/22-interpreter/</id>
+    <published>2024-04-26T12:35:46.000Z</published>
+    <updated>2024-04-26T10:18:50.734Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式21-命令模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/21-command/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/21-command/</id>
+    <published>2024-04-26T12:18:46.000Z</published>
+    <updated>2024-04-26T10:18:46.513Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式20-备忘录模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/20-memento/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/20-memento/</id>
+    <published>2024-04-26T11:35:46.000Z</published>
+    <updated>2024-04-26T10:10:53.780Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式19-访问者模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/19-visitor/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/19-visitor/</id>
+    <published>2024-04-26T11:09:46.000Z</published>
+    <updated>2024-04-26T10:10:46.540Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式18-迭代器模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/18-iterator/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/18-iterator/</id>
+    <published>2024-04-26T10:49:46.000Z</published>
+    <updated>2024-04-26T10:10:41.431Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式17-状态模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/17-state/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/17-state/</id>
+    <published>2024-04-26T10:25:46.000Z</published>
+    <updated>2024-04-26T10:10:33.896Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言 Map 结构的底层实现</title>
+    <link href="https://bishoptylaor.github.io/golang/advanced-tutorial/go-map/"/>
+    <id>https://bishoptylaor.github.io/golang/advanced-tutorial/go-map/</id>
+    <published>2024-04-26T10:21:40.000Z</published>
+    <updated>2024-04-27T01:52:41.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Golang-中的-map-详解&quot;&gt;&lt;a href=&quot;#Golang-中的-map-详解&quot; class=&quot;headerlink&quot; title=&quot;Golang 中的 map 详解&quot;&gt;&lt;/a&gt;Golang 中的 map 详解&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/golang/advanced-tutorial/"/>
+    
+    
+    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式16-职责链模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/16-chain/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/16-chain/</id>
+    <published>2024-04-26T10:10:46.000Z</published>
+    <updated>2024-04-26T10:10:29.985Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式15-策略模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/15-strategy/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/15-strategy/</id>
+    <published>2024-04-26T09:59:46.000Z</published>
+    <updated>2024-04-26T10:10:23.260Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式14-模板模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/14-template/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/14-template/</id>
+    <published>2024-04-26T09:55:46.000Z</published>
+    <updated>2024-04-26T10:10:17.461Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式13-观察者模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/13-observer/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-act/13-observer/</id>
+    <published>2024-04-26T09:50:46.000Z</published>
+    <updated>2024-04-26T09:59:55.066Z</updated>
+    
+    
+    
+    
+    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
+    
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go设计模式12-享元模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/12-flyweight/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/12-flyweight/</id>
+    <published>2024-04-26T09:30:46.000Z</published>
+    <updated>2024-04-26T09:59:41.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;按照课程中的例子来理解，就是象棋棋子作为享元，可以被所有的对局共享，以达到减少内存的目的&lt;/p&gt;
+</summary>
         
       
     
@@ -317,101 +496,28 @@
     
     <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
     
-    <category term="创建型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-create/"/>
+    <category term="结构型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-struct/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>golang201</title>
-    <link href="https://bishoptylaor.github.io/golang/advanced-tutorial/golang201/"/>
-    <id>https://bishoptylaor.github.io/golang/advanced-tutorial/golang201/</id>
-    <published>2022-02-26T08:35:39.000Z</published>
-    <updated>2022-02-26T08:43:33.223Z</updated>
-    
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/golang/advanced-tutorial/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>channel</title>
-    <link href="https://bishoptylaor.github.io/golang/concurrency/go-channel/"/>
-    <id>https://bishoptylaor.github.io/golang/concurrency/go-channel/</id>
-    <published>2022-02-25T14:37:07.000Z</published>
-    <updated>2022-03-10T09:41:28.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;channel-101&quot;&gt;&lt;a href=&quot;#channel-101&quot; class=&quot;headerlink&quot; title=&quot;channel 101&quot;&gt;&lt;/a&gt;channel 101&lt;/h2&gt;&lt;h3 id=&quot;1-引子&quot;&gt;&lt;a href=&quot;#1-引子&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/golang/concurrency/"/>
-    
-    
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
-    
-    <category term="channel" scheme="https://bishoptylaor.github.io/tags/channel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>http 网络面试必备</title>
-    <link href="https://bishoptylaor.github.io/interview/http/"/>
-    <id>https://bishoptylaor.github.io/interview/http/</id>
-    <published>2022-02-25T12:27:57.000Z</published>
-    <updated>2024-04-25T12:04:32.927Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;HTTP-协议和-HTTPS&quot;&gt;&lt;a href=&quot;#HTTP-协议和-HTTPS&quot; class=&quot;headerlink&quot; title=&quot;HTTP 协议和 HTTPS&quot;&gt;&lt;/a&gt;HTTP 协议和</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    
-    <category term="http" scheme="https://bishoptylaor.github.io/tags/http/"/>
-    
-    <category term="https" scheme="https://bishoptylaor.github.io/tags/https/"/>
     
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
     
-    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
-    <title>channel - goroutine</title>
-    <link href="https://bishoptylaor.github.io/golang/concurrency/channel-gorourine/"/>
-    <id>https://bishoptylaor.github.io/golang/concurrency/channel-gorourine/</id>
-    <published>2022-02-25T12:21:20.000Z</published>
-    <updated>2022-03-17T03:06:07.536Z</updated>
+    <title>Go设计模式11-组合模式</title>
+    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/11-composite/"/>
+    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/11-composite/</id>
+    <published>2024-04-26T09:24:46.000Z</published>
+    <updated>2024-04-26T10:08:38.336Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;goroutine超时处理&quot;&gt;&lt;a href=&quot;#goroutine超时处理&quot; class=&quot;headerlink&quot; title=&quot;goroutine超时处理&quot;&gt;&lt;/a&gt;goroutine超时处理&lt;/h3&gt;&lt;figure class=&quot;highlight</summary>
+    <summary type="html">&lt;p&gt;比较简单的例子是 人员架构中</summary>
         
       
     
@@ -419,144 +525,14 @@
     
     <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
     
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/golang/concurrency/"/>
+    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
+    
+    <category term="结构型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-struct/"/>
     
     
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
     
-    <category term="channel" scheme="https://bishoptylaor.github.io/tags/channel/"/>
-    
-    <category term="goroutine" scheme="https://bishoptylaor.github.io/tags/goroutine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>go 反射</title>
-    <link href="https://bishoptylaor.github.io/golang/reflect/"/>
-    <id>https://bishoptylaor.github.io/golang/reflect/</id>
-    <published>2022-02-25T12:17:49.000Z</published>
-    <updated>2022-02-25T14:18:34.303Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Name-and-Kind&quot;&gt;&lt;a href=&quot;#Name-and-Kind&quot; class=&quot;headerlink&quot; title=&quot;Name and Kind&quot;&gt;&lt;/a&gt;Name and</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
-    
-    <category term="reflect" scheme="https://bishoptylaor.github.io/tags/reflect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机基础知识</title>
-    <link href="https://bishoptylaor.github.io/interview/elementary/"/>
-    <id>https://bishoptylaor.github.io/interview/elementary/</id>
-    <published>2022-02-25T11:55:20.000Z</published>
-    <updated>2022-02-28T12:32:43.294Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;多核-CPU-Cache-如何保持一致？&quot;&gt;&lt;a href=&quot;#多核-CPU-Cache-如何保持一致？&quot; class=&quot;headerlink&quot; title=&quot;多核 CPU Cache 如何保持一致？&quot;&gt;&lt;/a&gt;多核 CPU Cache</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试算法题总结</title>
-    <link href="https://bishoptylaor.github.io/interview/inter-alg101/"/>
-    <id>https://bishoptylaor.github.io/interview/inter-alg101/</id>
-    <published>2022-02-25T11:40:08.000Z</published>
-    <updated>2023-03-07T11:38:43.255Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;负载均衡算法&quot;&gt;&lt;a href=&quot;#负载均衡算法&quot; class=&quot;headerlink&quot; title=&quot;负载均衡算法&quot;&gt;&lt;/a&gt;负载均衡算法&lt;/h3&gt;&lt;p&gt;更多加分点： 加权等&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    
-    <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="算法" scheme="https://bishoptylaor.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="101" scheme="https://bishoptylaor.github.io/tags/101/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>raft</title>
-    <link href="https://bishoptylaor.github.io/research/distribution/raft101/"/>
-    <id>https://bishoptylaor.github.io/research/distribution/raft101/</id>
-    <published>2022-02-25T08:57:29.000Z</published>
-    <updated>2023-03-07T11:39:07.115Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="研究所" scheme="https://bishoptylaor.github.io/categories/research/"/>
-    
-    <category term="分布式" scheme="https://bishoptylaor.github.io/categories/research/distribution/"/>
-    
-    
-    <category term="101" scheme="https://bishoptylaor.github.io/tags/101/"/>
-    
-    <category term="raft" scheme="https://bishoptylaor.github.io/tags/raft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>paxos 论文翻译</title>
-    <link href="https://bishoptylaor.github.io/research/distribution/paxos-original/"/>
-    <id>https://bishoptylaor.github.io/research/distribution/paxos-original/</id>
-    <published>2022-02-25T08:57:23.000Z</published>
-    <updated>2022-02-25T09:00:57.517Z</updated>
-    
-    
-    
-    
-    <category term="研究所" scheme="https://bishoptylaor.github.io/categories/research/"/>
-    
-    <category term="分布式" scheme="https://bishoptylaor.github.io/categories/research/distribution/"/>
-    
+    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
