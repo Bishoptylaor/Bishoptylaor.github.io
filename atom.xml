@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-04-28T13:23:26.667Z</updated>
+  <updated>2024-04-29T12:47:45.733Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>raft</title>
+    <title>排序</title>
+    <link href="https://bishoptylaor.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/elementary-sort/"/>
+    <id>https://bishoptylaor.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/elementary-sort/</id>
+    <published>2024-04-29T12:45:51.000Z</published>
+    <updated>2024-04-29T12:47:45.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;![[Pasted image</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时间复杂度</title>
+    <link href="https://bishoptylaor.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/elementary-time-complixty/"/>
+    <id>https://bishoptylaor.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/elementary-time-complixty/</id>
+    <published>2024-04-29T11:40:08.000Z</published>
+    <updated>2024-04-29T12:47:45.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;时间复杂度-大-O&quot;&gt;&lt;a href=&quot;#时间复杂度-大-O&quot; class=&quot;headerlink&quot; title=&quot;时间复杂度 (大 O)&quot;&gt;&lt;/a&gt;时间复杂度 (大 O)&lt;/h2&gt;&lt;p&gt;![[Pasted image</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Raft 面试必备</title>
     <link href="https://bishoptylaor.github.io/interview/distribution/raft/"/>
     <id>https://bishoptylaor.github.io/interview/distribution/raft/</id>
     <published>2024-04-28T13:22:37.000Z</published>
-    <updated>2024-04-28T13:23:26.667Z</updated>
+    <updated>2024-04-28T13:26:04.169Z</updated>
     
     
       
@@ -47,14 +101,15 @@
     <link href="https://bishoptylaor.github.io/interview/log/simulation02/"/>
     <id>https://bishoptylaor.github.io/interview/log/simulation02/</id>
     <published>2024-04-28T10:51:47.000Z</published>
-    <updated>2024-04-28T13:23:26.667Z</updated>
+    <updated>2024-04-29T02:26:22.368Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;一面&lt;br&gt;epoll、select、poll 区别&lt;br&gt;epoll 的水平触发和边缘触发的区别&lt;br&gt;TCP 的流量控制&lt;br&gt;为什么有了流量控制还要有拥塞控制?&lt;br&gt;TCP</summary>
+    <summary type="html">&lt;p&gt;深维：&lt;br&gt;一面：&lt;/p&gt;
+&lt;h4 id=&quot;1-用过哪些分布式锁-redis-key用什么类型-用string有什么坏处-？没抢到的都在干等着，浪费cpu？如何规避。-etcd如何分布式锁&quot;&gt;&lt;a</summary>
         
       
     
@@ -101,11 +156,11 @@
   </entry>
   
   <entry>
-    <title>kafka</title>
+    <title>Kafka 面试必备</title>
     <link href="https://bishoptylaor.github.io/interview/distribution/kafka/"/>
     <id>https://bishoptylaor.github.io/interview/distribution/kafka/</id>
     <published>2024-04-28T02:36:20.000Z</published>
-    <updated>2024-04-28T02:42:51.472Z</updated>
+    <updated>2024-04-28T13:26:09.400Z</updated>
     
     
       
@@ -181,9 +236,9 @@
     
     <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     <category term="Slice" scheme="https://bishoptylaor.github.io/tags/Slice/"/>
     
@@ -375,9 +430,9 @@
     
     <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
@@ -465,69 +520,6 @@
     <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
     
     <category term="行为型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-act/"/>
-    
-    
-    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
-    
-    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go设计模式12-享元模式</title>
-    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/12-flyweight/"/>
-    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/12-flyweight/</id>
-    <published>2024-04-26T09:30:46.000Z</published>
-    <updated>2024-04-26T09:59:41.113Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;按照课程中的例子来理解，就是象棋棋子作为享元，可以被所有的对局共享，以达到减少内存的目的&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
-    
-    <category term="结构型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-struct/"/>
-    
-    
-    <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
-    
-    <category term="设计模式" scheme="https://bishoptylaor.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go设计模式11-组合模式</title>
-    <link href="https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/11-composite/"/>
-    <id>https://bishoptylaor.github.io/golang/go-design-pattern/gda-struct/11-composite/</id>
-    <published>2024-04-26T09:24:46.000Z</published>
-    <updated>2024-04-26T10:08:38.336Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;比较简单的例子是 人员架构中</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="https://bishoptylaor.github.io/categories/golang/"/>
-    
-    <category term="设计模式之美" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/"/>
-    
-    <category term="结构型模式" scheme="https://bishoptylaor.github.io/categories/golang/go-design-pattern/gda-struct/"/>
     
     
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
