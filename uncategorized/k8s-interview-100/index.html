@@ -1,0 +1,992 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>k8s 面试必备 100 题 | Bishop</title><meta name="author" content="Bishop"><meta name="copyright" content="Bishop"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1、简述ETCD及其特点?etcd是一个用于配置共享和服务发现的键值存储系统，能够为整个分布式集群存储关键数据，协助集群正常运转 服务端将配置信息存储在etcd中，客户端从etcd中得到配置信息，etcd监听配置信息的变化，发现配置变化通知到客户端 特点 - 安装、使用简单 - 数据分层存储在目录中，类似于文件系统 - watch机制 - 安装机制：支持ssl证书认证 - 高性能：etc支持2k&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="k8s 面试必备 100 题">
+<meta property="og:url" content="https://bishoptylaor.github.io/uncategorized/k8s-interview-100/index.html">
+<meta property="og:site_name" content="Bishop">
+<meta property="og:description" content="1、简述ETCD及其特点?etcd是一个用于配置共享和服务发现的键值存储系统，能够为整个分布式集群存储关键数据，协助集群正常运转 服务端将配置信息存储在etcd中，客户端从etcd中得到配置信息，etcd监听配置信息的变化，发现配置变化通知到客户端 特点 - 安装、使用简单 - 数据分层存储在目录中，类似于文件系统 - watch机制 - 安装机制：支持ssl证书认证 - 高性能：etc支持2k&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bishoptylaor.github.io/img/index.jpg">
+<meta property="article:published_time" content="2024-05-23T16:46:31.000Z">
+<meta property="article:modified_time" content="2024-05-23T16:47:40.593Z">
+<meta property="article:author" content="Bishop">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bishoptylaor.github.io/img/index.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://bishoptylaor.github.io/uncategorized/k8s-interview-100/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'k8s 面试必备 100 题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-24 00:47:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Bishop" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/research/"><i class="fa-fw fas fa-flask"></i><span> 研究所</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/golang/"><i class="fa-fw fa-brands fa-golang"></i><span> Go</span></a></li><li><a class="site-page child" href="/categories/python/"><i class="fa-fw fa-brands fa-python"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw /categories/interview/"></i><span> 面试</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview/interviewer"><i class="fa-fw fa-solid fa-wheelchair-alt"></i><span> 面试官</span></a></li><li><a class="site-page child" href="/categories/interview/db"><i class="fa-fw fa-solid fa-database"></i><span> 数据库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-indent"></i><span> 索引</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/timeline/"><i class="fa-fw fas fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-ghost"></i><span> 俺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-bug"></i><span> 俺</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com"><i class="fa-fw fa-brands fa-bilibili"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/relax/"><i class="fa-fw fas fa-gamepad"></i><span> 休息一下</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Bishop</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/research/"><i class="fa-fw fas fa-flask"></i><span> 研究所</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/golang/"><i class="fa-fw fa-brands fa-golang"></i><span> Go</span></a></li><li><a class="site-page child" href="/categories/python/"><i class="fa-fw fa-brands fa-python"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw /categories/interview/"></i><span> 面试</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview/interviewer"><i class="fa-fw fa-solid fa-wheelchair-alt"></i><span> 面试官</span></a></li><li><a class="site-page child" href="/categories/interview/db"><i class="fa-fw fa-solid fa-database"></i><span> 数据库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-indent"></i><span> 索引</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/timeline/"><i class="fa-fw fas fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-ghost"></i><span> 俺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-bug"></i><span> 俺</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com"><i class="fa-fw fa-brands fa-bilibili"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/relax/"><i class="fa-fw fas fa-gamepad"></i><span> 休息一下</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">k8s 面试必备 100 题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-23T16:46:31.000Z" title="发表于 2024-05-24 00:46:31">2024-05-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-23T16:47:40.593Z" title="更新于 2024-05-24 00:47:40">2024-05-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">13.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>43分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="k8s 面试必备 100 题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="1、简述ETCD及其特点"><a href="#1、简述ETCD及其特点" class="headerlink" title="1、简述ETCD及其特点?"></a>1、简述ETCD及其特点?</h3><p>etcd是一个用于配置共享和服务发现的键值存储系统，能够为整个分布式集群存储关键数据，协助集群正常运转 服务端将配置信息存储在etcd中，客户端从etcd中得到配置信息，etcd监听配置信息的变化，发现配置变化通知到客户端 特点 - 安装、使用简单 - 数据分层存储在目录中，类似于文件系统 - watch机制 - 安装机制：支持ssl证书认证 - 高性能：etc支持2k&#x2F;s的读操作 - 一致可靠：基于Raft共识算法实现数据存储、服务调用的一致性和高可用性 - Revision机制：每个key带有一个revision号，每次事物便加一。 -</p>
+<h3 id="2、简述ETCD适应的场景"><a href="#2、简述ETCD适应的场景" class="headerlink" title="2、简述ETCD适应的场景?"></a>2、简述ETCD适应的场景?</h3><ul>
+<li>服务发现</li>
+<li>消息发布与订阅</li>
+<li>负载均衡</li>
+<li>分布式通知与协调</li>
+<li>分布式锁</li>
+<li>集群监控与leader选举</li>
+</ul>
+<h3 id="3、简述什么是Kubernetes"><a href="#3、简述什么是Kubernetes" class="headerlink" title="3、简述什么是Kubernetes?"></a>3、简述什么是Kubernetes?</h3><p>k8s是一个开源的容器管理工具，负责容器部署，容器扩缩容以及负载平衡。可以说k8s是一个多容器管理解决方案。</p>
+<h3 id="4、简述Kubernetes和Docker的关系"><a href="#4、简述Kubernetes和Docker的关系" class="headerlink" title="4、简述Kubernetes和Docker的关系?"></a>4、简述Kubernetes和Docker的关系?</h3><p>docker提供容器的生命周期管理、镜像构建运行时容器。k8s关联和编排容器在多个主机上互相通信。</p>
+<h3 id="5、简述Kubernetes中什么是Minikube、Kubectl、Kubelet"><a href="#5、简述Kubernetes中什么是Minikube、Kubectl、Kubelet" class="headerlink" title="5、简述Kubernetes中什么是Minikube、Kubectl、Kubelet?"></a>5、简述Kubernetes中什么是Minikube、Kubectl、Kubelet?</h3><ul>
+<li>是一种可以在本地轻松运行k8s的工具。</li>
+<li>是一个命令行工具，可以使用该工具控制Kubernetes集群管理器，如检查群集资源，创建、删除和更新组件，查看应用程序</li>
+<li>是一个代理服务，它在每个节点上运行，并使从服务器与主服务器通信</li>
+</ul>
+<h3 id="6、简述Kubernetes常见的部署方式"><a href="#6、简述Kubernetes常见的部署方式" class="headerlink" title="6、简述Kubernetes常见的部署方式?"></a>6、简述Kubernetes常见的部署方式?</h3><ul>
+<li>二进制部署</li>
+<li>kubeadm</li>
+<li>源码安装部署</li>
+</ul>
+<h3 id="7、简述Kubernetes如何实现集群管理"><a href="#7、简述Kubernetes如何实现集群管理" class="headerlink" title="7、简述Kubernetes如何实现集群管理?"></a>7、简述Kubernetes如何实现集群管理?</h3><p>在集群管理方面，Kubernetes将集群中的机器划分为一个Master节点和一群工作节点Node。其中，在Master节点运行着集群管理相关的一组进程kube-apiserver、kube-controller-manager和kube-scheduler，这些进程实现了整个集群的资源管理、Pod调度、弹性伸缩、安全控制、系统监控和纠错等管理能力，并且都是全自动完成的</p>
+<h3 id="8、简述Kubernetes的优势、适应场景及其特点"><a href="#8、简述Kubernetes的优势、适应场景及其特点" class="headerlink" title="8、简述Kubernetes的优势、适应场景及其特点?"></a>8、简述Kubernetes的优势、适应场景及其特点?</h3><p>优势 - 容器编排 - 轻量级 - 开源 - 弹性伸缩 - 负载均衡</p>
+<p>场景 - 快速部署 - 快速扩展 - 快速对接新的应用功能 - 优化资源，提升资源利用率</p>
+<p>特点 - 可移植 - 可扩展 - 自动化</p>
+<h3 id="9、简述Kubernetes的缺点或当前的不足之处"><a href="#9、简述Kubernetes的缺点或当前的不足之处" class="headerlink" title="9、简述Kubernetes的缺点或当前的不足之处?"></a>9、简述Kubernetes的缺点或当前的不足之处?</h3><ul>
+<li>安装过程和配置相对困难复杂</li>
+<li>管理服务相对繁琐</li>
+<li>运行和编译需要很多时间</li>
+<li>它比其他替代品更昂贵</li>
+</ul>
+<h3 id="10、简述Kubernetes相关基础概念"><a href="#10、简述Kubernetes相关基础概念" class="headerlink" title="10、简述Kubernetes相关基础概念"></a>10、简述Kubernetes相关基础概念</h3><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pod（Pod组）</td>
+<td>Pod是Kubernetes的最小调度单元，它可以包含一个或多个容器。容器在同一个Pod中共享网络和存储，它们之间可以通过localhost通信。</td>
+</tr>
+<tr>
+<td>Node（节点）</td>
+<td>节点是Kubernetes集群中的一个工作机器，可以是物理机器或虚拟机。每个节点负责运行Pod中的容器，并由Master节点进行管理。</td>
+</tr>
+<tr>
+<td>Cluster（集群）</td>
+<td>集群是由一组工作节点和一个Master节点组成的Kubernetes系统。Master节点负责整个集群的控制和管理。</td>
+</tr>
+<tr>
+<td>Service（服务）</td>
+<td>服务是一种抽象，定义了一组Pod及其访问方式。它可以确保Pod的稳定网络标识和动态路由。</td>
+</tr>
+<tr>
+<td>ReplicaSet</td>
+<td>ReplicaSet是用于确保在集群中运行指定数量的Pod的控制器。当Pod数目发生变化时，ReplicaSet会启动或终止Pod，以维持所需的数量。</td>
+</tr>
+<tr>
+<td>Deployment（部署）</td>
+<td>部署是一种资源对象，它描述了应用程序的期望状态，并确保集群中的Pod数量符合这个状态。</td>
+</tr>
+<tr>
+<td>Namespace（命名空间）</td>
+<td>命名空间用于将集群划分为多个虚拟集群，每个命名空间中的资源相互隔离。</td>
+</tr>
+<tr>
+<td>ConfigMap和Secret</td>
+<td>ConfigMap用于将配置数据提供给应用程序，而Secret用于存储敏感信息，如密码和API密钥。</td>
+</tr>
+<tr>
+<td>Service Discovery（服务发现）</td>
+<td>Kubernetes通过服务发现机制允许容器应用程序找到和通信其他应用程序的服务。</td>
+</tr>
+<tr>
+<td>Ingress</td>
+<td>Ingress是一种API对象，定义了从集群外部到集群内部服务的规则。</td>
+</tr>
+<tr>
+<td>Persistent Volumes和Persistent Volume Claims</td>
+<td>Persistent Volumes（PV）提供了一种抽象，用于将存储资源与集群中的Pod分离开来。Persistent Volume Claims（PVC）是对Persistent Volumes的请求，用于绑定Pod中的存储资源。</td>
+</tr>
+<tr>
+<td>RBAC（Role-Based Access Control）</td>
+<td>RBAC用于定义对Kubernetes资源的访问权限，以及哪些用户或服务账户可以执行哪些操作。</td>
+</tr>
+</tbody></table>
+<h3 id="11、简述Kubernetes集群相关组件"><a href="#11、简述Kubernetes集群相关组件" class="headerlink" title="11、简述Kubernetes集群相关组件?"></a>11、简述Kubernetes集群相关组件?</h3><ul>
+<li><p>master</p>
+</li>
+<li><p>kube-controller-manager</p>
+</li>
+<li><p>kube-apiserver</p>
+</li>
+<li><p>kube-scheduler</p>
+</li>
+<li><p>etcd</p>
+</li>
+<li><p>worker</p>
+</li>
+<li><p>kubelet</p>
+</li>
+<li><p>kube-proxy</p>
+</li>
+</ul>
+<h3 id="12、简述Kubernetes-RC的机制"><a href="#12、简述Kubernetes-RC的机制" class="headerlink" title="12、简述Kubernetes RC的机制?"></a>12、简述Kubernetes RC的机制?</h3><p>Replication Controller用来管理Pod的副本，保证集群中存在指定数量的Pod副本。当定义了RC并提交至Kubernetes集群中之后，Master节点上的Controller Manager组件获悉，并同时巡检系统中当前存活的目标Pod，并确保目标Pod实例的数量刚好等于此RC的期望值，若存在过多的Pod副本在运行，系统会停止一些Pod，反之则自动创建一些Pod</p>
+<h3 id="13、简述kube-proxy作用"><a href="#13、简述kube-proxy作用" class="headerlink" title="13、简述kube-proxy作用?"></a>13、简述kube-proxy作用?</h3><p>kube-proxy的作用主要是负责service的实现,具体来说,就是实现了内部从pod到service和外部的从node port向service的访问</p>
+<h3 id="14、简述kube-proxy-iptables原理"><a href="#14、简述kube-proxy-iptables原理" class="headerlink" title="14、简述kube-proxy iptables原理?"></a>14、简述kube-proxy iptables原理?</h3><p>Kubernetes从1.2版本开始，将iptables作为kube-proxy的默认模式。iptables模式下的kube-proxy不再起到Proxy的作用，其核心功能：通过API Server的Watch接口实时跟踪Service与Endpoint的变更信息，并更新对应的iptables规则，Client的请求流量则通过iptables的NAT机制“直接路由”到目标Pod</p>
+<h3 id="15、简述kube-proxy-ipvs原理"><a href="#15、简述kube-proxy-ipvs原理" class="headerlink" title="15、简述kube-proxy ipvs原理?"></a>15、简述kube-proxy ipvs原理?</h3><p>答：IPVS 在 Kubernetes1.11 中升级为 GA 稳定版。IPVS 则专门用于高性能负载均衡，并使用更高效的数据结构（Hash 表），允许几乎无限的规模扩张，因此被 kube-proxy 采纳为最新模式。</p>
+<p>在 IPVS 模式下，使用 iptables 的扩展 ipset，而不是直接调用 iptables 来生成规则链。iptables 规则链是一个线性的数据结构，ipset 则引入了带索引的数据结构，因此当规则很多时，也可以很高效地查找和匹配。</p>
+<p>可以将 ipset 简单理解为一个 IP（段）的集合，这个集合的内容可以是 IP 地址、IP 网段、端口等，iptables 可以直接添加规则对这个“可变的集合”进行操作，这样做的好处在于可以大大减少 iptables 规则的数量，从而减少性能损耗。</p>
+<h3 id="16、简述kube-proxy-ipvs和iptables的异同"><a href="#16、简述kube-proxy-ipvs和iptables的异同" class="headerlink" title="16、简述kube-proxy ipvs和iptables的异同?"></a>16、简述kube-proxy ipvs和iptables的异同?</h3><p>答：iptables 与 IPVS 都是基于 Netfilter 实现的，但因为定位不同，二者有着本质的</p>
+<p>差别：iptables 是为防火墙而设计的；IPVS 则专门用于高性能负载均衡，并使用更高效的数据结构（Hash 表），允许几乎无限的规模扩张。</p>
+<p>与 iptables 相比，IPVS 拥有以下明显优势：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、为大型集群提供了更好的可扩展性和性能；</span><br><span class="line"></span><br><span class="line">2、支持比 iptables 更复杂的负载均衡算法（最小负载、最少连接、加权等）；</span><br><span class="line"></span><br><span class="line">3、支持服务器健康检查和连接重试等功能；</span><br><span class="line"></span><br><span class="line">4、可以动态修改 ipset 的集合，即使 iptables 的规则正在使用这个集合。</span><br></pre></td></tr></table></figure>
+
+<h3 id="17、简述Kubernetes中什么是静态Pod"><a href="#17、简述Kubernetes中什么是静态Pod" class="headerlink" title="17、简述Kubernetes中什么是静态Pod?"></a>17、简述Kubernetes中什么是静态Pod?</h3><p>答：静态 pod 是由 kubelet 进行管理的仅存在于特定 Node的Pod，他们不能通过 API Server 进行管理，无法与 ReplicationController、Deployment 或者DaemonSet 进行关联，并且 kubelet 无法对他们进行健康检查。静态 Pod 总是由kubelet 进行创建，并且总是在 kubelet 所在的 Node 上运行</p>
+<h3 id="18、简述Kubernetes中Pod可能位于的状态"><a href="#18、简述Kubernetes中Pod可能位于的状态" class="headerlink" title="18、简述Kubernetes中Pod可能位于的状态?"></a>18、简述Kubernetes中Pod可能位于的状态?</h3><p>Pending API Server已经创建该Pod，且Pod内还有一个或多个容器的镜像没有创建，包括正在下载镜像的过程。 Running Pod内所有容器均已创建，且至少有一个容器处于运行状态、正在启动状态或正在重启状态。 Succeeded Pod内所有容器均成功执行退出，且不会重启。 Failed Pod内所有容器均已退出，但至少有一个容器退出为失败状态。 Unknown 由于某种原因无法获取该Pod状态，可能由于网络通信不畅导致。</p>
+<h3 id="19、简述Kubernetes创建一个Pod的主要流程"><a href="#19、简述Kubernetes创建一个Pod的主要流程" class="headerlink" title="19、简述Kubernetes创建一个Pod的主要流程?"></a>19、简述Kubernetes创建一个Pod的主要流程?</h3><p>Kubernetes中创建一个Pod涉及多个组件之间联动，主要流程如下：</p>
+<ul>
+<li>客户端提交Pod的配置信息（可以是yaml文件定义的信息）到kube-apiserver。</li>
+<li>Apiserver收到指令后，通知给controller-manager创建一个资源对象。</li>
+<li>Controller-manager通过api-server将pod的配置信息存储到ETCD数据中心中。</li>
+<li>Kube-scheduler检测到pod信息会开始调度预选，会先过滤掉不符合Pod资源配置要求的节点，然后开始调度调优，主要是挑选出更适合运行pod的节点，然后将pod的资源配置单发送到node节点上的kubelet组件上。</li>
+<li>Kubelet根据scheduler发来的资源配置单运行pod，运行成功后，将pod的运行信息返回给scheduler，scheduler将返回的pod运行状况的信息存储到etcd数据中心。</li>
+</ul>
+<h3 id="20、简述Kubernetes中Pod的重启策略"><a href="#20、简述Kubernetes中Pod的重启策略" class="headerlink" title="20、简述Kubernetes中Pod的重启策略?"></a>20、简述Kubernetes中Pod的重启策略?</h3><p>Pod的重启策略包括Always、OnFailure和Never，默认值为Always。</p>
+<p>Always：当容器失效时，由kubelet自动重启该容器； OnFailure：当容器终止运行且退出码不为0时，由kubelet自动重启该容器； Never：不论容器运行状态如何，kubelet都不会重启该容器。 同时Pod的重启策略与控制方式关联，当前可用于管理Pod的控制器包括ReplicationController、Job、DaemonSet及直接管理kubelet管理（静态Pod）。 不同控制器的重启策略限制如下： RC和DaemonSet：必须设置为Always，需要保证该容器持续运行； Job：OnFailure或Never，确保容器执行完成后不再重启； kubelet：在Pod失效时重启，不论将RestartPolicy设置为何值，也不会对Pod进行健康检查。</p>
+<h3 id="21、简述Kubernetes中Pod的健康检查方式"><a href="#21、简述Kubernetes中Pod的健康检查方式" class="headerlink" title="21、简述Kubernetes中Pod的健康检查方式?"></a>21、简述Kubernetes中Pod的健康检查方式?</h3><p>对Pod的健康检查可以通过两类探针来检查：LivenessProbe和ReadinessProbe。</p>
+<p>LivenessProbe探针：用于判断容器是否存活（running状态），如果LivenessProbe探针探测到容器不健康，则kubelet将杀掉该容器，并根据容器的重启策略做相应处理。若一个容器不包含LivenessProbe探针，kubelet认为该容器的LivenessProbe探针返回值用于是“Success”。</p>
+<p>ReadineeProbe探针：用于判断容器是否启动完成（ready状态）。如果ReadinessProbe探针探测到失败，则Pod的状态将被修改。Endpoint Controller将从Service的Endpoint中删除包含该容器所在Pod的Eenpoint。</p>
+<p>startupProbe探针：启动检查机制，应用一些启动缓慢的业务，避免业务长时间启动而被上面两类探针kill掉。</p>
+<h3 id="22、简述Kubernetes-Pod的LivenessProbe探针的常见方式"><a href="#22、简述Kubernetes-Pod的LivenessProbe探针的常见方式" class="headerlink" title="22、简述Kubernetes Pod的LivenessProbe探针的常见方式?"></a>22、简述Kubernetes Pod的LivenessProbe探针的常见方式?</h3><p>ExecAction：在容器内执行一个命令，若返回码为0，则表明容器健康。</p>
+<p>TCPSocketAction：通过容器的IP地址和端口号执行TCP检查，若能建立TCP连接，则表明容器健康。</p>
+<p>HTTPGetAction：通过容器的IP地址、端口号及路径调用HTTP Get方法，若响应的状态码大于等于200且小于400，则表明容器健康。</p>
+<h3 id="23、简述Kubernetes-Pod的常见调度方式"><a href="#23、简述Kubernetes-Pod的常见调度方式" class="headerlink" title="23、简述Kubernetes Pod的常见调度方式?"></a>23、简述Kubernetes Pod的常见调度方式?</h3><p>Kubernetes中，Pod通常是容器的载体，主要有如下常见调度方式：</p>
+<p>Deployment或RC：该调度策略主要功能就是自动部署一个容器应用的多份副本，以及持续监控副本的数量，在集群内始终维持用户指定的副本数量。</p>
+<p>NodeSelector：定向调度，当需要手动指定将Pod调度到特定Node上，可以通过Node的标签（Label）和Pod的nodeSelector属性相匹配。</p>
+<p>NodeAffinity亲和性调度：亲和性调度机制极大的扩展了Pod的调度能力，目前有两种节点亲和力表达：</p>
+<p>requiredDuringSchedulingIgnoredDuringExecution：硬规则，必须满足指定的规则，调度器才可以调度Pod至Node上（类似nodeSelector，语法不同）。</p>
+<p>preferredDuringSchedulingIgnoredDuringExecution：软规则，优先调度至满足的Node的节点，但不强求，多个优先级规则还可以设置权重值。</p>
+<p>Taints和Tolerations（污点和容忍）：</p>
+<p>Taint：使Node拒绝特定Pod运行；</p>
+<p>Toleration：为Pod的属性，表示Pod能容忍（运行）标注了Taint的Node。</p>
+<h3 id="24、简述Kubernetes初始化容器（init-container）"><a href="#24、简述Kubernetes初始化容器（init-container）" class="headerlink" title="24、简述Kubernetes初始化容器（init container）?"></a>24、简述Kubernetes初始化容器（init container）?</h3><p>init container的运行方式与应用容器不同，它们必须先于应用容器执行完成，当设置了多个init container时，将按顺序逐个运行，并且只有前一个init container运行成功后才能运行后一个init container。当所有init container都成功运行后，Kubernetes才会初始化Pod的各种信息，并开始创建和运行应用容器。</p>
+<h3 id="25、简述Kubernetes-deployment升级过程"><a href="#25、简述Kubernetes-deployment升级过程" class="headerlink" title="25、简述Kubernetes deployment升级过程?"></a>25、简述Kubernetes deployment升级过程?</h3><p>初始创建Deployment时，系统创建了一个ReplicaSet，并按用户的需求创建了对应数量的Pod副本。</p>
+<p>当更新Deployment时，系统创建了一个新的ReplicaSet，并将其副本数量扩展到1，然后将旧ReplicaSet缩减为2。</p>
+<p>之后，系统继续按照相同的更新策略对新旧两个ReplicaSet进行逐个调整。</p>
+<p>最后，新的ReplicaSet运行了对应个新版本Pod副本，旧的ReplicaSet副本数量则缩减为0。</p>
+<h3 id="26、简述Kubernetes-deployment升级策略"><a href="#26、简述Kubernetes-deployment升级策略" class="headerlink" title="26、简述Kubernetes deployment升级策略?"></a>26、简述Kubernetes deployment升级策略?</h3><p>在Deployment的定义中，可以通过spec.strategy指定Pod更新的策略，目前支持两种策略：Recreate（重建）和RollingUpdate（滚动更新），默认值为RollingUpdate。</p>
+<p>Recreate：设置spec.strategy.type&#x3D;Recreate，表示Deployment在更新Pod时，会先杀掉所有正在运行的Pod，然后创建新的Pod。</p>
+<p>RollingUpdate：设置spec.strategy.type&#x3D;RollingUpdate，表示Deployment会以滚动更新的方式来逐个更新Pod。同时，可以通过设置spec.strategy.rollingUpdate下的两个参数（maxUnavailable和maxSurge）来控制滚动更新的过程。</p>
+<h3 id="27、简述Kubernetes-DaemonSet类型的资源特性"><a href="#27、简述Kubernetes-DaemonSet类型的资源特性" class="headerlink" title="27、简述Kubernetes DaemonSet类型的资源特性?"></a>27、简述Kubernetes DaemonSet类型的资源特性?</h3><p>DaemonSet资源对象会在每个Kubernetes集群中的节点上运行，并且每个节点只能运行一个pod，这是它和deployment资源对象的最大也是唯一的区别。因此，在定义yaml文件中，不支持定义replicas。</p>
+<p>它的一般使用场景如下：</p>
+<p>在去做每个节点的日志收集工作。</p>
+<p>监控每个节点的的运行状态。</p>
+<h3 id="28、简述Kubernetes自动扩容机制"><a href="#28、简述Kubernetes自动扩容机制" class="headerlink" title="28、简述Kubernetes自动扩容机制?"></a>28、简述Kubernetes自动扩容机制?</h3><p>Kubernetes使用Horizontal Pod Autoscaler（HPA）的控制器实现基于CPU使用率进行自动Pod扩缩容的功能。HPA控制器周期性地监测目标Pod的资源性能指标，并与HPA资源对象中的扩缩容条件进行对比，在满足条件时对Pod副本数量进行调整。</p>
+<p>HPA原理</p>
+<p>Kubernetes中的某个Metrics Server（Heapster或自定义Metrics Server）持续采集所有Pod副本的指标数据。HPA控制器通过Metrics Server的API（Heapster的API或聚合API）获取这些数据，基于用户定义的扩缩容规则进行计算，得到目标Pod副本数量。</p>
+<p>当目标Pod副本数量与当前副本数量不同时，HPA控制器就向Pod的副本控制器（Deployment、RC或ReplicaSet）发起scale操作，调整Pod的副本数量，完成扩缩容操作。</p>
+<h3 id="29、简述Kubernetes-Service类型"><a href="#29、简述Kubernetes-Service类型" class="headerlink" title="29、简述Kubernetes Service类型?"></a>29、简述Kubernetes Service类型?</h3><p>通过创建Service，可以为一组具有相同功能的容器应用提供一个统一的入口地址，并且将请求负载分发到后端的各个容器应用上。其主要类型有：</p>
+<p>ClusterIP：虚拟的服务IP地址，该地址用于Kubernetes集群内部的Pod访问，在Node上kube-proxy通过设置的iptables规则进行转发；</p>
+<p>NodePort：使用宿主机的端口，使能够访问各Node的外部客户端通过Node的IP地址和端口号就能访问服务；</p>
+<p>LoadBalancer：使用外接负载均衡器完成到服务的负载分发，需要在spec.status.loadBalancer字段指定外部负载均衡器的IP地址，通常用于公有云。</p>
+<h3 id="30、简述Kubernetes-Service分发后端的策略"><a href="#30、简述Kubernetes-Service分发后端的策略" class="headerlink" title="30、简述Kubernetes Service分发后端的策略?"></a>30、简述Kubernetes Service分发后端的策略?</h3><p>Service负载分发的策略有：RoundRobin和SessionAffinity</p>
+<p>RoundRobin：默认为轮询模式，即轮询将请求转发到后端的各个Pod上。</p>
+<p>SessionAffinity：基于客户端IP地址进行会话保持的模式，即第1次将某个客户端发起的请求转发到后端的某个Pod上，之后从相同的客户端发起的请求都将被转发到后端相同的Pod上。</p>
+<h3 id="31、简述Kubernetes-Headless-Service"><a href="#31、简述Kubernetes-Headless-Service" class="headerlink" title="31、简述Kubernetes Headless Service?"></a>31、简述Kubernetes Headless Service?</h3><p>在某些应用场景中，若需要人为指定负载均衡器，不使用Service提供的默认负载均衡的功能，或者应用程序希望知道属于同组服务的其他实例。Kubernetes提供了Headless Service来实现这种功能，即不为Service设置ClusterIP（入口IP地址），仅通过Label Selector将后端的Pod列表返回给调用的客户端。</p>
+<h3 id="32、简述Kubernetes外部如何访问集群内的服务"><a href="#32、简述Kubernetes外部如何访问集群内的服务" class="headerlink" title="32、简述Kubernetes外部如何访问集群内的服务?"></a>32、简述Kubernetes外部如何访问集群内的服务?</h3><p>对于Kubernetes，集群外的客户端默认情况，无法通过Pod的IP地址或者Service的虚拟IP地址:虚拟端口号进行访问。通常可以通过以下方式进行访问Kubernetes集群内的服务：</p>
+<p>映射Pod到物理机：将Pod端口号映射到宿主机，即在Pod中采用hostPort方式，以使客户端应用能够通过物理机访问容器应用。</p>
+<p>映射Service到物理机：将Service端口号映射到宿主机，即在Service中采用nodePort方式，以使客户端应用能够通过物理机访问容器应用。</p>
+<p>映射Sercie到LoadBalancer：通过设置LoadBalancer映射到云服务商提供的LoadBalancer地址。这种用法仅用于在公有云服务提供商的云平台上设置Service的场景。</p>
+<h3 id="33、简述Kubernetes-ingress"><a href="#33、简述Kubernetes-ingress" class="headerlink" title="33、简述Kubernetes ingress?"></a>33、简述Kubernetes ingress?</h3><p>Kubernetes的Ingress资源对象，用于将不同URL的访问请求转发到后端不同的Service，以实现HTTP层的业务路由机制。</p>
+<p>Kubernetes使用了Ingress策略和Ingress Controller，两者结合并实现了一个完整的Ingress负载均衡器。使用Ingress进行负载分发时，Ingress Controller基于Ingress规则将客户端请求直接转发到Service对应的后端Endpoint（Pod）上，从而跳过kube-proxy的转发功能，kube-proxy不再起作用，全过程为：ingress controller + ingress 规则 —-&gt; services。</p>
+<p>同时当Ingress Controller提供的是对外服务，则实际上实现的是边缘路由器的功能。</p>
+<h3 id="34、简述Kubernetes镜像的下载策略"><a href="#34、简述Kubernetes镜像的下载策略" class="headerlink" title="34、简述Kubernetes镜像的下载策略?"></a>34、简述Kubernetes镜像的下载策略?</h3><p>K8s的镜像下载策略有三种：Always、Never、IFNotPresent。</p>
+<p>Always：镜像标签为latest时，总是从指定的仓库中获取镜像。</p>
+<p>Never：禁止从仓库中下载镜像，也就是说只能使用本地镜像。</p>
+<p>IfNotPresent：仅当本地没有对应镜像时，才从目标仓库中下载。默认的镜像下载策略是：当镜像标签是latest时，默认策略是Always；当镜像标签是自定义时（也就是标签不是latest），那么默认策略是IfNotPresent。</p>
+<h3 id="35、简述Kubernetes的负载均衡器"><a href="#35、简述Kubernetes的负载均衡器" class="headerlink" title="35、简述Kubernetes的负载均衡器?"></a>35、简述Kubernetes的负载均衡器?</h3><p>负载均衡器是暴露服务的最常见和标准方式之一。</p>
+<p>根据工作环境使用两种类型的负载均衡器，即内部负载均衡器或外部负载均衡器。内部负载均衡器自动平衡负载并使用所需配置分配容器，而外部负载均衡器将流量从外部负载引导至后端容器。负载均衡器是暴露服务的最常见和标准方式之一。</p>
+<p>根据工作环境使用两种类型的负载均衡器，即内部负载均衡器或外部负载均衡器。内部负载均衡器自动平衡负载并使用所需配置分配容器，而外部负载均衡器将流量从外部负载引导至后端容器。</p>
+<h3 id="36、简述Kubernetes各模块如何与API-Server通信"><a href="#36、简述Kubernetes各模块如何与API-Server通信" class="headerlink" title="36、简述Kubernetes各模块如何与API Server通信?"></a>36、简述Kubernetes各模块如何与API Server通信?</h3><p>Kubernetes API Server作为集群的核心，负责集群各功能模块之间的通信。集群内的各个功能模块通过API Server将信息存入etcd，当需要获取和操作这些数据时，则通过API Server提供的REST接口（用GET、LIST或WATCH方法）来实现，从而实现各模块之间的信息交互。</p>
+<p>如kubelet进程与API Server的交互：每个Node上的kubelet每隔一个时间周期，就会调用一次API Server的REST接口报告自身状态，API Server在接收到这些信息后，会将节点状态信息更新到etcd中。</p>
+<p>如kube-controller-manager进程与API Server的交互：kube-controller-manager中的Node Controller模块通过API Server提供的Watch接口实时监控Node的信息，并做相应处理。</p>
+<p>如kube-scheduler进程与API Server的交互：Scheduler通过API Server的Watch接口监听到新建Pod副本的信息后，会检索所有符合该Pod要求的Node列表，开始执行Pod调度逻辑，在调度成功后将Pod绑定到目标节点上。</p>
+<h3 id="37、简述Kubernetes-Scheduler作用及实现原理"><a href="#37、简述Kubernetes-Scheduler作用及实现原理" class="headerlink" title="37、简述Kubernetes Scheduler作用及实现原理?"></a>37、简述Kubernetes Scheduler作用及实现原理?</h3><p>Kubernetes Scheduler是负责Pod调度的重要功能模块，Kubernetes Scheduler在整个系统中承担了“承上启下”的重要功能，“承上”是指它负责接收Controller Manager创建的新Pod，为其调度至目标Node；“启下”是指调度完成后，目标Node上的kubelet服务进程接管后继工作，负责Pod接下来生命周期。</p>
+<p>Kubernetes Scheduler的作用是将待调度的Pod（API新创建的Pod、Controller Manager为补足副本而创建的Pod等）按照特定的调度算法和调度策略绑定（Binding）到集群中某个合适的Node上，并将绑定信息写入etcd中。</p>
+<p>在整个调度过程中涉及三个对象，分别是待调度Pod列表、可用Node列表，以及调度算法和策略。</p>
+<p>Kubernetes Scheduler通过调度算法调度为待调度Pod列表中的每个Pod从Node列表中选择一个最适合的Node来实现Pod的调度。随后，目标节点上的kubelet通过API Server监听到Kubernetes Scheduler产生的Pod绑定事件，然后获取对应的Pod清单，下载Image镜像并启动容器。</p>
+<h3 id="38、简述Kubernetes-Scheduler使用哪两种算法将Pod绑定到worker节点"><a href="#38、简述Kubernetes-Scheduler使用哪两种算法将Pod绑定到worker节点" class="headerlink" title="38、简述Kubernetes Scheduler使用哪两种算法将Pod绑定到worker节点?"></a>38、简述Kubernetes Scheduler使用哪两种算法将Pod绑定到worker节点?</h3><p>预选（Predicates）：输入是所有节点，输出是满足预选条件的节点。kube-scheduler根据预选策略过滤掉不满足策略的Nodes。如果某节点的资源不足或者不满足预选策略的条件则无法通过预选。如“Node的label必须与Pod的Selector一致”。</p>
+<p>优选（Priorities）：输入是预选阶段筛选出的节点，优选会根据优先策略为通过预选的Nodes进行打分排名，选择得分最高的Node。例如，资源越富裕、负载越小的Node可能具有越高的排名。</p>
+<h3 id="39、简述Kubernetes-kubelet的作用"><a href="#39、简述Kubernetes-kubelet的作用" class="headerlink" title="39、简述Kubernetes kubelet的作用?"></a>39、简述Kubernetes kubelet的作用?</h3><p>在Kubernetes集群中，在每个Node（又称Worker）上都会启动一个kubelet服务进程。该进程用于处理Master下发到本节点的任务，管理Pod及Pod中的容器。每个kubelet进程都会在API Server上注册节点自身的信息，定期向Master汇报节点资源的使用情况，并通过cAdvisor监控容器和节点资源。</p>
+<h3 id="40、简述Kubernetes-kubelet监控Worker节点资源是使用什么组件来实现的"><a href="#40、简述Kubernetes-kubelet监控Worker节点资源是使用什么组件来实现的" class="headerlink" title="40、简述Kubernetes kubelet监控Worker节点资源是使用什么组件来实现的?"></a>40、简述Kubernetes kubelet监控Worker节点资源是使用什么组件来实现的?</h3><p>kubelet使用cAdvisor对worker节点资源进行监控。在 Kubernetes 系统中，cAdvisor 已被默认集成到 kubelet 组件内，当 kubelet 服务启动时，它会自动启动 cAdvisor 服务，然后 cAdvisor 会实时采集所在节点的性能指标及在节点上运行的容器的性能指标。</p>
+<h3 id="41、简述Kubernetes如何保证集群的安全性"><a href="#41、简述Kubernetes如何保证集群的安全性" class="headerlink" title="41、简述Kubernetes如何保证集群的安全性?"></a>41、简述Kubernetes如何保证集群的安全性?</h3><ul>
+<li>最小权限原则</li>
+<li>用户权限：划分普通用户和管理员的角色</li>
+<li>API Server的认证授权</li>
+<li>API Server的授权管理</li>
+<li>敏感数据引入Secret机制</li>
+<li>AdmissionControl（准入机制）</li>
+</ul>
+<h3 id="42、简述Kubernetes准入机制"><a href="#42、简述Kubernetes准入机制" class="headerlink" title="42、简述Kubernetes准入机制?"></a>42、简述Kubernetes准入机制?</h3><table>
+<thead>
+<tr>
+<th>Kubernetes准入机制</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>准入控制插件</td>
+<td></td>
+</tr>
+<tr>
+<td>- AlwaysAdmit</td>
+<td>总是通过请求，不执行检查。</td>
+</tr>
+<tr>
+<td>- AlwaysDeny</td>
+<td>总是拒绝请求，不执行检查。</td>
+</tr>
+<tr>
+<td>- NamespaceLifecycle</td>
+<td>确保命名空间存在，并根据策略允许或拒绝创建。</td>
+</tr>
+<tr>
+<td>- ResourceQuota</td>
+<td>实施资源配额，限制在命名空间内的资源使用。</td>
+</tr>
+<tr>
+<td>- PodSecurityPolicy</td>
+<td>强制执行容器安全策略。</td>
+</tr>
+<tr>
+<td>- ServiceAccount</td>
+<td>确保Pod使用有效的ServiceAccount。</td>
+</tr>
+<tr>
+<td>Webhook准入控制</td>
+<td></td>
+</tr>
+<tr>
+<td>- Webhook机制</td>
+<td>将自定义的准入控制插件集成到API服务器中。</td>
+</tr>
+<tr>
+<td>动态准入控制配置</td>
+<td></td>
+</tr>
+<tr>
+<td>- 动态配置</td>
+<td>在Kubernetes 1.9版本及以上，引入了动态准入控制配置，管理员可以动态配置准入控制插件。</td>
+</tr>
+<tr>
+<td>Mutating和Validating准入控制</td>
+<td></td>
+</tr>
+<tr>
+<td>- MutatingAdmissionWebhook</td>
+<td>在资源被持久化之前对其进行修改。例如，可以动态地注入sidecar容器。</td>
+</tr>
+<tr>
+<td>- ValidatingAdmissionWebhook</td>
+<td>对资源进行验证，确保其符合特定规则。例如，可以强制执行命名约定或其他策略。</td>
+</tr>
+<tr>
+<td>默认准入控制配置</td>
+<td></td>
+</tr>
+<tr>
+<td>- 启用&#x2F;禁用默认插件</td>
+<td>集群管理员可以通过启用或禁用默认的准入控制插件来调整系统的默认行为。</td>
+</tr>
+</tbody></table>
+<h3 id="43、简述Kubernetes-RBAC及其特点（优势）"><a href="#43、简述Kubernetes-RBAC及其特点（优势）" class="headerlink" title="43、简述Kubernetes RBAC及其特点（优势）?"></a>43、简述Kubernetes RBAC及其特点（优势）?</h3><ul>
+<li><p>对集群中的资源和非资源权限均有完整的覆盖。  </p>
+</li>
+<li><p>整个RBAC完全由几个API对象完成， 同其他API对象一样， 可以用kubectl或API进行操作。  </p>
+</li>
+<li><p>可以在运行时进行调整，无须重新启动API Server。</p>
+</li>
+</ul>
+<h3 id="44、简述Kubernetes-Secret作用"><a href="#44、简述Kubernetes-Secret作用" class="headerlink" title="44、简述Kubernetes Secret作用?"></a>44、简述Kubernetes Secret作用?</h3><p>Secret对象，主要作用是保管私密数据，比如密码、OAuth Tokens、SSH Keys等信息。将这些私密信息放在Secret对象中比直接放在Pod或Docker Image中更安全，也更便于使用和分发。</p>
+<h3 id="45、简述Kubernetes-Secret有哪些使用方式"><a href="#45、简述Kubernetes-Secret有哪些使用方式" class="headerlink" title="45、简述Kubernetes Secret有哪些使用方式?"></a>45、简述Kubernetes Secret有哪些使用方式?</h3><p>在创建Pod时，通过为Pod指定Service Account来自动使用该Secret。</p>
+<p>通过挂载该Secret到Pod来使用它。</p>
+<p>在Docker镜像下载时使用，通过指定Pod的spc.ImagePullSecrets来引用它。</p>
+<h3 id="46、简述Kubernetes-PodSecurityPolicy机制"><a href="#46、简述Kubernetes-PodSecurityPolicy机制" class="headerlink" title="46、简述Kubernetes PodSecurityPolicy机制?"></a>46、简述Kubernetes PodSecurityPolicy机制?</h3><p>Kubernetes PodSecurityPolicy是为了更精细地控制Pod对资源的使用方式以及提升安全策略。在开启PodSecurityPolicy准入控制器后，Kubernetes默认不允许创建任何Pod，需要创建PodSecurityPolicy策略和相应的RBAC授权策略（Authorizing Policies），Pod才能创建成功。</p>
+<h3 id="47、简述Kubernetes-PodSecurityPolicy机制能实现哪些安全策略"><a href="#47、简述Kubernetes-PodSecurityPolicy机制能实现哪些安全策略" class="headerlink" title="47、简述Kubernetes PodSecurityPolicy机制能实现哪些安全策略?"></a>47、简述Kubernetes PodSecurityPolicy机制能实现哪些安全策略?</h3><ul>
+<li><p>特权模式：privileged是否允许Pod以特权模式运行。  </p>
+</li>
+<li><p>宿主机资源：控制Pod对宿主机资源的控制，如hostPID：是否允许Pod共享宿主机的进程空间。  </p>
+</li>
+<li><p>用户和组：设置运行容器的用户ID（范围）或组（范围）。  </p>
+</li>
+<li><p>提升权限：AllowPrivilegeEscalation：设置容器内的子进程是否可以提升权限，通常在设置非root用户（MustRunAsNonRoot）时进行设置。  </p>
+</li>
+<li><p>SELinux：进行SELinux的相关配置。</p>
+</li>
+</ul>
+<h3 id="48、简述Kubernetes网络模型"><a href="#48、简述Kubernetes网络模型" class="headerlink" title="48、简述Kubernetes网络模型?"></a>48、简述Kubernetes网络模型?</h3><p>Kubernetes网络模型中每个Pod都拥有一个独立的IP地址，并假定所有Pod都在一个可以直接连通的、扁平的网络空间中。所以不管它们是否运行在同一个Node（宿主机）中，都要求它们可以直接通过对方的IP进行访问。设计这个原则的原因是，用户不需要额外考虑如何建立Pod之间的连接，也不需要考虑如何将容器端口映射到主机端口等问题。</p>
+<p>同时为每个Pod都设置一个IP地址的模型使得同一个Pod内的不同容器会共享同一个网络命名空间，也就是同一个Linux网络协议栈。这就意味着同一个Pod内的容器可以通过localhost来连接对方的端口。</p>
+<p>在Kubernetes的集群里，IP是以Pod为单位进行分配的。一个Pod内部的所有容器共享一个网络堆栈（相当于一个网络命名空间，它们的IP地址、网络设备、配置等都是共享的）。</p>
+<h3 id="49、简述Kubernetes-CNI模型"><a href="#49、简述Kubernetes-CNI模型" class="headerlink" title="49、简述Kubernetes CNI模型?"></a>49、简述Kubernetes CNI模型?</h3><p>CNI提供了一种应用容器的插件化网络解决方案，定义对容器网络进行操作和配置的规范，通过插件的形式对CNI接口进行实现。CNI仅关注在创建容器时分配网络资源，和在销毁容器时删除网络资源。在CNI模型中只涉及两个概念：容器和网络。</p>
+<p>容器（Container）：是拥有独立Linux网络命名空间的环境，例如使用Docker或rkt创建的容器。容器需要拥有自己的Linux网络命名空间，这是加入网络的必要条件。</p>
+<p>网络（Network）：表示可以互连的一组实体，这些实体拥有各自独立、唯一的IP地址，可以是容器、物理机或者其他网络设备（比如路由器）等。</p>
+<p>对容器网络的设置和操作都通过插件（Plugin）进行具体实现，CNI插件包括两种类型：CNI Plugin和IPAM（IP Address Management）Plugin。CNI Plugin负责为容器配置网络资源，IPAM Plugin负责对容器的IP地址进行分配和管理。IPAM Plugin作为CNI Plugin的一部分，与CNI Plugin协同工作。</p>
+<h3 id="50、简述Kubernetes网络策略"><a href="#50、简述Kubernetes网络策略" class="headerlink" title="50、简述Kubernetes网络策略?"></a>50、简述Kubernetes网络策略?</h3><p>Network Policy的主要功能是对Pod间的网络通信进行限制和准入控制，设置允许访问或禁止访问的客户端Pod列表。Network Policy定义网络策略，配合策略控制器（Policy Controller）进行策略的实现。</p>
+<h3 id="51、简述Kubernetes网络策略原理"><a href="#51、简述Kubernetes网络策略原理" class="headerlink" title="51、简述Kubernetes网络策略原理?"></a>51、简述Kubernetes网络策略原理?</h3><p>Network Policy的工作原理主要为：policy controller需要实现一个API Listener，监听用户设置的Network Policy定义，并将网络访问规则通过各Node的Agent进行实际设置（Agent则需要通过CNI网络插件实现）。</p>
+<h3 id="52、简述Kubernetes中flannel的作用"><a href="#52、简述Kubernetes中flannel的作用" class="headerlink" title="52、简述Kubernetes中flannel的作用?"></a>52、简述Kubernetes中flannel的作用?</h3><p>它能协助Kubernetes，给每一个Node上的Docker容器都分配互相不冲突的IP地址。</p>
+<p>它能在这些IP地址之间建立一个覆盖网络（Overlay Network），通过这个覆盖网络，将数据包原封不动地传递到目标容器内。</p>
+<h3 id="53、简述Kubernetes-Calico网络组件实现原理"><a href="#53、简述Kubernetes-Calico网络组件实现原理" class="headerlink" title="53、简述Kubernetes Calico网络组件实现原理?"></a>53、简述Kubernetes Calico网络组件实现原理?</h3><p>Calico是一个基于BGP的纯三层的网络方案 Calico在每个计算节点都利用Linux Kernel实现了一个高效的vRouter来负责数据转发。每个vRouter都通过BGP协议把在本节点上运行的容器的路由信息向整个Calico网络广播，并自动设置到达其他节点的路由转发规则。</p>
+<p>Calico保证所有容器之间的数据流量都是通过IP路由的方式完成互联互通的。Calico节点组网时可以直接利用数据中心的网络结构（L2或者L3），不需要额外的NAT、隧道或者Overlay Network，没有额外的封包解包，能够节约CPU运算，提高网络效率。</p>
+<h3 id="54、简述Kubernetes共享存储的作用"><a href="#54、简述Kubernetes共享存储的作用" class="headerlink" title="54、简述Kubernetes共享存储的作用?"></a>54、简述Kubernetes共享存储的作用?</h3><p>Kubernetes对于有状态的容器应用或者对数据需要持久化的应用，因此需要更加可靠的存储来保存应用产生的重要数据，以便容器应用在重建之后仍然可以使用之前的数据。因此需要使用共享存储。</p>
+<h3 id="55、简述Kubernetes数据持久化的方式有哪些"><a href="#55、简述Kubernetes数据持久化的方式有哪些" class="headerlink" title="55、简述Kubernetes数据持久化的方式有哪些?"></a>55、简述Kubernetes数据持久化的方式有哪些?</h3><p>EmptyDir（空目录）：没有指定要挂载宿主机上的某个目录，直接由Pod内保部映射到宿主机上。类似于docker中的manager volume。只需要临时将数据保存在磁盘上，比如在合并&#x2F;排序算法中；作为两个容器的共享存储。同个pod里面的不同容器，共享同一个持久化目录，当pod节点删除时，volume的数据也会被删除。 Hostpath：将宿主机上已存在的目录或文件挂载到容器内部。类似于docker中的bind mount挂载方式 PersistentVolume（简称PV）：如基于NFS服务的PV，也可以基于GFS的PV。它的作用是统一数据持久化目录，方便管理。</p>
+<h3 id="56、简述Kubernetes-PV和PVC"><a href="#56、简述Kubernetes-PV和PVC" class="headerlink" title="56、简述Kubernetes PV和PVC?"></a>56、简述Kubernetes PV和PVC?</h3><p>PV是对底层网络共享存储的抽象，将共享存储定义为一种“资源”。</p>
+<p>PVC则是用户对存储资源的一个“申请”。</p>
+<h3 id="57、简述Kubernetes-PV生命周期内的阶段"><a href="#57、简述Kubernetes-PV生命周期内的阶段" class="headerlink" title="57、简述Kubernetes PV生命周期内的阶段?"></a>57、简述Kubernetes PV生命周期内的阶段?</h3><ul>
+<li>Available：可用状态，还未与某个PVC绑定。</li>
+<li>Bound：已与某个PVC绑定。</li>
+<li>Released：绑定的PVC已经删除，资源已释放，但没有被集群回收。</li>
+<li>Failed：自动资源回收失败。</li>
+</ul>
+<h3 id="58、简述Kubernetes所支持的存储供应模式"><a href="#58、简述Kubernetes所支持的存储供应模式" class="headerlink" title="58、简述Kubernetes所支持的存储供应模式?"></a>58、简述Kubernetes所支持的存储供应模式?</h3><p>Kubernetes支持两种资源的存储供应模式：静态模式（Static）和动态模式（Dynamic）。</p>
+<p>静态模式：集群管理员手工创建许多PV，在定义PV时需要将后端存储的特性进行设置。</p>
+<p>动态模式：集群管理员无须手工创建PV，而是通过StorageClass的设置对后端存储进行描述，标记为某种类型。此时要求PVC对存储的类型进行声明，系统将自动完成PV的创建及与PVC的绑定。</p>
+<h3 id="59、简述Kubernetes-CSI模型"><a href="#59、简述Kubernetes-CSI模型" class="headerlink" title="59、简述Kubernetes CSI模型?"></a>59、简述Kubernetes CSI模型?</h3><p>Kubernetes CSI是Kubernetes推出与容器对接的存储接口标准，存储提供方只需要基于标准接口进行存储插件的实现，就能使用Kubernetes的原生存储机制为容器提供存储服务。CSI使得存储提供方的代码能和Kubernetes代码彻底解耦，部署也与Kubernetes核心组件分离，显然，存储插件的开发由提供方自行维护，就能为Kubernetes用户提供更多的存储功能，也更加安全可靠。</p>
+<p>CSI包括CSI Controller和CSI Node：</p>
+<p>CSI Controller的主要功能是提供存储服务视角对存储资源和存储卷进行管理和操作。</p>
+<p>CSI Node的主要功能是对主机（Node）上的Volume进行管理和操作。</p>
+<h3 id="60、简述Kubernetes-Worker节点加入集群的过程"><a href="#60、简述Kubernetes-Worker节点加入集群的过程" class="headerlink" title="60、简述Kubernetes Worker节点加入集群的过程?"></a>60、简述Kubernetes Worker节点加入集群的过程?</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、在该Node上安装Docker、kubelet和kube-proxy服务；</span><br><span class="line"></span><br><span class="line">2、然后配置kubelet和kubeproxy的启动参数，将Master URL指定为当前Kubernetes集群Master的地址，最后启动这些服务；</span><br><span class="line"></span><br><span class="line">3、通过kubelet默认的自动注册机制，新的Worker将会自动加入现有的Kubernetes集群中；</span><br><span class="line"></span><br><span class="line">4、Kubernetes Master在接受了新Worker的注册之后，会自动将其纳入当前集群的调度范围。</span><br></pre></td></tr></table></figure>
+
+<h3 id="61、简述Kubernetes-Pod如何实现对节点的资源控制"><a href="#61、简述Kubernetes-Pod如何实现对节点的资源控制" class="headerlink" title="61、简述Kubernetes Pod如何实现对节点的资源控制?"></a>61、简述Kubernetes Pod如何实现对节点的资源控制?</h3><p>Kubernetes集群里的节点提供的资源主要是计算资源，计算资源是可计量的能被申请、分配和使用的基础资源。当前Kubernetes集群中的计算资源主要包括CPU、GPU及Memory。CPU与Memory是被Pod使用的，因此在配置Pod时可以通过参数CPU Request及Memory Request为其中的每个容器指定所需使用的CPU与Memory量，Kubernetes会根据Request的值去查找有足够资源的Node来调度此Pod。</p>
+<p>通常，一个程序所使用的CPU与Memory是一个动态的量，确切地说，是一个范围，跟它的负载密切相关：负载增加时，CPU和Memory的使用量也会增加。</p>
+<h3 id="62、简述Kubernetes-Requests和Limits如何影响Pod的调度"><a href="#62、简述Kubernetes-Requests和Limits如何影响Pod的调度" class="headerlink" title="62、简述Kubernetes Requests和Limits如何影响Pod的调度?"></a>62、简述Kubernetes Requests和Limits如何影响Pod的调度?</h3><p>当一个Pod创建成功时，Kubernetes调度器（Scheduler）会为该Pod选择一个节点来执行。对于每种计算资源（CPU和Memory）而言，每个节点都有一个能用于运行Pod的最大容量值。调度器在调度时，首先要确保调度后该节点上所有Pod的CPU和内存的Requests总和，不超过该节点能提供给Pod使用的CPU和Memory的最大容量值。</p>
+<h3 id="63、简述Kubernetes-Metric-Service"><a href="#63、简述Kubernetes-Metric-Service" class="headerlink" title="63、简述Kubernetes Metric Service?"></a>63、简述Kubernetes Metric Service?</h3><p>在Kubernetes从1.10版本后采用Metrics Server作为默认的性能数据采集和监控，主要用于提供核心指标（Core Metrics），包括Node、Pod的CPU和内存使用指标。</p>
+<p>对其他自定义指标（Custom Metrics）的监控则由Prometheus等组件来完成。</p>
+<h3 id="64、简述Kubernetes中，如何使用EFK实现日志的统一管理"><a href="#64、简述Kubernetes中，如何使用EFK实现日志的统一管理" class="headerlink" title="64、简述Kubernetes中，如何使用EFK实现日志的统一管理"></a>64、简述Kubernetes中，如何使用EFK实现日志的统一管理</h3><p>在Kubernetes集群环境中，通常一个完整的应用或服务涉及组件过多，建议对日志系统进行集中化管理，通常采用EFK实现。</p>
+<p>EFK是 Elasticsearch、Fluentd 和 Kibana 的组合，其各组件功能如下：</p>
+<p>Elasticsearch：是一个搜索引擎，负责存储日志并提供查询接口；</p>
+<p>Fluentd：负责从 Kubernetes 搜集日志，每个node节点上面的fluentd监控并收集该节点上面的系统日志，并将处理过后的日志信息发送给Elasticsearch；</p>
+<p>Kibana：提供了一个 Web GUI，用户可以浏览和搜索存储在 Elasticsearch 中的日志。</p>
+<p>通过在每台node上部署一个以DaemonSet方式运行的fluentd来收集每台node上的日志。Fluentd将docker日志目录&#x2F;var&#x2F;lib&#x2F;docker&#x2F;containers和&#x2F;var&#x2F;log目录挂载到Pod中，然后Pod会在node节点的&#x2F;var&#x2F;log&#x2F;pods目录中创建新的目录，可以区别不同的容器日志输出，该目录下有一个日志文件链接到&#x2F;var&#x2F;lib&#x2F;docker&#x2F;contianers目录下的容器日志输出。</p>
+<h3 id="65、简述Kubernetes如何进行优雅的节点关机维护"><a href="#65、简述Kubernetes如何进行优雅的节点关机维护" class="headerlink" title="65、简述Kubernetes如何进行优雅的节点关机维护?"></a>65、简述Kubernetes如何进行优雅的节点关机维护?</h3><p>由于Kubernetes节点运行大量Pod，因此在进行关机维护之前，建议先使用kubectl drain将该节点的Pod进行驱逐，然后进行关机维护。</p>
+<h3 id="66、简述Kubernetes集群联邦"><a href="#66、简述Kubernetes集群联邦" class="headerlink" title="66、简述Kubernetes集群联邦?"></a>66、简述Kubernetes集群联邦?</h3><p>Kubernetes集群联邦可以将多个Kubernetes集群作为一个集群进行管理。因此，可以在一个数据中心&#x2F;云中创建多个Kubernetes集群，并使用集群联邦在一个地方控制&#x2F;管理所有集群。</p>
+<h3 id="67、简述Helm及其优势"><a href="#67、简述Helm及其优势" class="headerlink" title="67、简述Helm及其优势?"></a>67、简述Helm及其优势?</h3><table>
+<thead>
+<tr>
+<th>Helm及其优势</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>什么是Helm</td>
+<td>Helm是一个用于简化Kubernetes应用程序部署、更新和管理的包管理工具。</td>
+</tr>
+<tr>
+<td>Chart</td>
+<td>Helm使用Chart来定义、安装和升级Kubernetes应用程序。Chart是一个包含了所有部署Kubernetes应用所需信息的打包文件。</td>
+</tr>
+<tr>
+<td>优势</td>
+<td></td>
+</tr>
+<tr>
+<td>- 模板引擎</td>
+<td>Helm使用Go语言的模板引擎，允许用户动态生成Kubernetes资源配置，实现配置的可重用性和参数化。</td>
+</tr>
+<tr>
+<td>- 版本控制</td>
+<td>Helm允许用户版本控制Chart，轻松管理不同应用程序版本的发布和回滚。</td>
+</tr>
+<tr>
+<td>- 包管理</td>
+<td>通过Helm，用户可以轻松共享和重用应用程序定义，避免重复劳动。</td>
+</tr>
+<tr>
+<td>- 依赖管理</td>
+<td>Helm支持定义Chart之间的依赖关系，简化了多组件应用程序的部署。</td>
+</tr>
+<tr>
+<td>- 社区支持</td>
+<td>Helm拥有活跃的社区，用户可以从社区中获取Chart，共享经验和解决问题。</td>
+</tr>
+<tr>
+<td>- 插件系统</td>
+<td>Helm提供插件系统，允许用户扩展其功能，满足特定需求。</td>
+</tr>
+<tr>
+<td>- 安全发布</td>
+<td>Helm允许用户将应用程序作为一个整体发布，确保一致性和可重复性。</td>
+</tr>
+<tr>
+<td>- Charts存储库</td>
+<td>用户可以配置Charts存储库，从中获取和发布Charts，便于管理和分发。</td>
+</tr>
+<tr>
+<td>- 自定义配置值</td>
+<td>Helm允许通过values文件自定义Chart的配置，提高了可配置性和灵活性。</td>
+</tr>
+</tbody></table>
+<h3 id="69、容器和主机部署应用的区别是什么"><a href="#69、容器和主机部署应用的区别是什么" class="headerlink" title="69、容器和主机部署应用的区别是什么?"></a>69、容器和主机部署应用的区别是什么?</h3><p>容器的中心思想就是秒级启动；一次封装、到处运行 容器部署可以将各个服务进行隔离，互不影响</p>
+<h3 id="70、请你说一下kubenetes针对pod资源对象的健康监测机制"><a href="#70、请你说一下kubenetes针对pod资源对象的健康监测机制" class="headerlink" title="70、请你说一下kubenetes针对pod资源对象的健康监测机制?"></a>70、请你说一下kubenetes针对pod资源对象的健康监测机制?</h3><ul>
+<li>livenessProbe</li>
+<li>readinessProbe</li>
+<li>startupProbe</li>
+</ul>
+<h3 id="71、如何控制滚动更新过程"><a href="#71、如何控制滚动更新过程" class="headerlink" title="71、如何控制滚动更新过程?"></a>71、如何控制滚动更新过程?</h3><p>maxSurge：　此参数控制滚动更新过程，副本总数超过预期pod数量的上限。可以是百分比，也可以是具体的值。默认为1。</p>
+<p>（上述参数的作用就是在更新过程中，值若为3，那么不管三七二一，先运行三个pod，用于替换旧的pod，以此类推）</p>
+<p>maxUnavailable： 此参数控制滚动更新过程中，不可用的Pod的数量。</p>
+<p>（这个值和上面的值没有任何关系，举个例子：我有十个pod，但是在更新的过程中，我允许这十个pod中最多有三个不可用，那么就将这个参数的值设置为3，在更新的过程中，只要不可用的pod数量小于或等于3，那么更新过程就不会停止）。</p>
+<h3 id="75、Service这种资源对象的作用是什么"><a href="#75、Service这种资源对象的作用是什么" class="headerlink" title="75、Service这种资源对象的作用是什么?"></a>75、Service这种资源对象的作用是什么?</h3><p>用来给相同的多个pod对象提供一个固定的统一访问接口，常用于服务发现和服务访问。</p>
+<h3 id="76、版本回滚相关的命令"><a href="#76、版本回滚相关的命令" class="headerlink" title="76、版本回滚相关的命令?"></a>76、版本回滚相关的命令?</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>kubectl rollout history deployment&#x2F;<deployment-name></td>
+<td>查看滚动升级历史记录</td>
+</tr>
+<tr>
+<td>kubectl rollout history deployment&#x2F;<deployment-name> –revision&#x3D;<revision-number></td>
+<td>查看特定版本的详细信息</td>
+</tr>
+<tr>
+<td>kubectl rollout undo deployment&#x2F;<deployment-name></td>
+<td>回滚到上一个版本</td>
+</tr>
+<tr>
+<td>kubectl rollout undo deployment&#x2F;<deployment-name> –to-revision&#x3D;<revision-number></td>
+<td>回滚到特定版本</td>
+</tr>
+</tbody></table>
+<h3 id="77、标签与标签选择器的作用是什么"><a href="#77、标签与标签选择器的作用是什么" class="headerlink" title="77、标签与标签选择器的作用是什么?"></a>77、标签与标签选择器的作用是什么?</h3><table>
+<thead>
+<tr>
+<th>名词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标签（Label）</td>
+<td>标签是键值对，用于附加元数据到Kubernetes资源对象（如Pod、Service、Node等）。</td>
+</tr>
+<tr>
+<td>标签选择器（Label Selector）</td>
+<td>标签选择器用于选择带有特定标签的资源对象，以便进行筛选和操作。</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>通过标签，可以对资源对象进行分类、组织和识别，提供更灵活的资源管理和调度方式。</td>
+</tr>
+<tr>
+<td></td>
+<td>标签选择器允许用户根据标签的键值对对资源进行查询和选择，用于实现有选择性的操作。</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>一个Pod可以有标签app&#x3D;web，允许使用标签选择器选择所有具有该标签的Pod进行管理。</td>
+</tr>
+<tr>
+<td></td>
+<td>Service可以使用标签选择器将请求路由到具有特定标签的Pod，实现服务发现和负载均衡。</td>
+</tr>
+</tbody></table>
+<h3 id="78、常用的标签分类有哪些"><a href="#78、常用的标签分类有哪些" class="headerlink" title="78、常用的标签分类有哪些?"></a>78、常用的标签分类有哪些?</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>环境</td>
+<td>用于区分不同环境，如environment&#x3D;production。</td>
+</tr>
+<tr>
+<td>应用程序</td>
+<td>用于标识属于哪个应用程序，如app&#x3D;web。</td>
+</tr>
+<tr>
+<td>版本</td>
+<td>用于标识应用程序或组件的版本，如version&#x3D;1.2.3。</td>
+</tr>
+<tr>
+<td>部门</td>
+<td>用于区分不同部门的资源，如department&#x3D;finance。</td>
+</tr>
+<tr>
+<td>客户</td>
+<td>用于标识属于哪个客户，如customer&#x3D;companyA。</td>
+</tr>
+<tr>
+<td>组织</td>
+<td>用于标识属于哪个组织，如organization&#x3D;dev-team。</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>用于标识资源的状态，如status&#x3D;ready。</td>
+</tr>
+<tr>
+<td>系统</td>
+<td>用于标识系统级别的资源，如system&#x3D;true。</td>
+</tr>
+</tbody></table>
+<h3 id="79、有几种查看标签的方式"><a href="#79、有几种查看标签的方式" class="headerlink" title="79、有几种查看标签的方式?"></a>79、有几种查看标签的方式?</h3><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>命令&#x2F;操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查看单个资源的标签</td>
+<td>kubectl get &lt;资源类型&gt; &lt;资源名称&gt; -o yaml</td>
+</tr>
+<tr>
+<td>查看所有资源的标签</td>
+<td>kubectl get &lt;资源类型&gt; –show-labels</td>
+</tr>
+<tr>
+<td>查看特定标签的资源</td>
+<td>kubectl get &lt;资源类型&gt; -l &lt;标签选择器&gt;</td>
+</tr>
+<tr>
+<td>查看所有命名空间中的标签</td>
+<td>kubectl get all –all-namespaces –show-labels</td>
+</tr>
+<tr>
+<td>使用kubectl describe查看资源详情</td>
+<td>kubectl describe &lt;资源类型&gt; &lt;资源名称&gt;</td>
+</tr>
+</tbody></table>
+<h3 id="80、添加、修改、删除标签的命令"><a href="#80、添加、修改、删除标签的命令" class="headerlink" title="80、添加、修改、删除标签的命令?"></a>80、添加、修改、删除标签的命令?</h3><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>添加标签</td>
+<td>kubectl label &lt;资源类型&gt; &lt;资源名称&gt; &lt;键&gt;&#x3D;&lt;值&gt;</td>
+<td>kubectl label pod nginx-app app&#x3D;web</td>
+</tr>
+<tr>
+<td>修改标签</td>
+<td>kubectl label –overwrite &lt;资源类型&gt; &lt;资源名称&gt; &lt;键&gt;&#x3D;&lt;新值&gt;</td>
+<td>kubectl label –overwrite pod nginx-app app&#x3D;backend</td>
+</tr>
+<tr>
+<td>删除标签</td>
+<td>kubectl label &lt;资源类型&gt; &lt;资源名称&gt; &lt;键&gt;-</td>
+<td>kubectl label pod nginx-app app-</td>
+</tr>
+</tbody></table>
+<h3 id="82、说说你对Job这种资源对象的了解"><a href="#82、说说你对Job这种资源对象的了解" class="headerlink" title="82、说说你对Job这种资源对象的了解?"></a>82、说说你对Job这种资源对象的了解?</h3><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>任务类型</td>
+<td>Job主要用于管理一次性任务或批处理任务</td>
+</tr>
+<tr>
+<td>Pod管理</td>
+<td>创建一个或多个Pod，Pod包含执行任务所需的容器</td>
+</tr>
+<tr>
+<td>任务完成策略</td>
+<td>有两种策略，Parallel允许多个Pod并行运行，Complete确保所有Pod成功完成</td>
+</tr>
+<tr>
+<td>重试机制</td>
+<td>支持任务的重试，启动新的Pod替代失败的Pod</td>
+</tr>
+<tr>
+<td>成功条件</td>
+<td>配置成功的条件，如成功运行的Pod数量或成功完成的总任务数</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>一个简单的Job定义包括容器镜像、命令和重试策略</td>
+</tr>
+</tbody></table>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">batch/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Job</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">example-job</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">example-job-pod</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">example-container</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">example-image</span></span><br><span class="line">        <span class="attr">command:</span> [<span class="string">&quot;echo&quot;</span>, <span class="string">&quot;Hello, Kubernetes!&quot;</span>]</span><br><span class="line">  <span class="attr">backoffLimit:</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="85、删除一个Pod会发生什么事情"><a href="#85、删除一个Pod会发生什么事情" class="headerlink" title="85、删除一个Pod会发生什么事情?"></a>85、删除一个Pod会发生什么事情?</h3><p>答：Kube-apiserver会接受到用户的删除指令，默认有30秒时间等待优雅退出，超过30秒会被标记为死亡状态，此时Pod的状态Terminating，kubelet看到pod标记为Terminating就开始了关闭Pod的工作；</p>
+<p>关闭流程如下：</p>
+<p>pod从service的endpoint列表中被移除； 如果该pod定义了一个停止前的钩子，其会在pod内部被调用，停止钩子一般定义了如何优雅的结束进程； 进程被发送TERM信号（kill -14） 当超过优雅退出的时间后，Pod中的所有进程都会被发送SIGKILL信号（kill -9）。</p>
+<h3 id="87、k8s是怎么进行服务注册的"><a href="#87、k8s是怎么进行服务注册的" class="headerlink" title="87、k8s是怎么进行服务注册的?"></a>87、k8s是怎么进行服务注册的?</h3><p>Pod启动后会加载当前环境所有Service信息，以便不同Pod根据Service名进行通信。</p>
+<h3 id="88、k8s集群外流量怎么访问Pod"><a href="#88、k8s集群外流量怎么访问Pod" class="headerlink" title="88、k8s集群外流量怎么访问Pod?"></a>88、k8s集群外流量怎么访问Pod?</h3><p>可以通过Service的NodePort方式访问，会在所有节点监听同一个端口，比如：30000，访问节点的流量会被重定向到对应的Service上面。</p>
+<h3 id="90、Kubernetes与Docker-Swarm的区别如何"><a href="#90、Kubernetes与Docker-Swarm的区别如何" class="headerlink" title="90、Kubernetes与Docker Swarm的区别如何?"></a>90、Kubernetes与Docker Swarm的区别如何?</h3><p>Kubernetes有助于管理更复杂的软件应用容器；Docker Swarm只能编排简单的Docker容器 支持自动扩缩容；不支持自动扩缩容 滚动更新回滚；滚动更新不能自动回滚 仅能与同一pod的容器共享存储卷；可以和其他任何容器共享存储卷</p>
+<h3 id="94、什么是Container-Orchestration（容器编排）"><a href="#94、什么是Container-Orchestration（容器编排）" class="headerlink" title="94、什么是Container Orchestration（容器编排）?"></a>94、什么是Container Orchestration（容器编排）?</h3><p>意味着各个容器中的所有服务协同工作以满足单个服务器的需求</p>
+<h3 id="95、Container-Orchestration需要什么"><a href="#95、Container-Orchestration需要什么" class="headerlink" title="95、Container Orchestration需要什么?"></a>95、Container Orchestration需要什么?</h3><table>
+<thead>
+<tr>
+<th>组件&#x2F;功能</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编排引擎</td>
+<td>管理和调度容器的核心组件，负责实现自动化部署和伸缩</td>
+</tr>
+<tr>
+<td>编排策略</td>
+<td>决定容器如何分布、伸缩和调度的规则和算法</td>
+</tr>
+<tr>
+<td>服务发现</td>
+<td>动态发现和管理容器化应用程序中的服务和网络细节</td>
+</tr>
+<tr>
+<td>负载均衡</td>
+<td>将流量分发到不同的容器实例，确保应用程序高可用性</td>
+</tr>
+<tr>
+<td>自动伸缩</td>
+<td>根据应用程序负载和需求自动调整容器实例数量</td>
+</tr>
+<tr>
+<td>健康检查</td>
+<td>定期检查容器实例的健康状态，以确保高可用性</td>
+</tr>
+<tr>
+<td>日志管理</td>
+<td>收集、存储和管理容器产生的日志信息</td>
+</tr>
+<tr>
+<td>配置管理</td>
+<td>管理应用程序配置的中心化系统，支持动态配置更新</td>
+</tr>
+<tr>
+<td>安全性和权限</td>
+<td>提供容器级别和集群级别的安全性和访问控制</td>
+</tr>
+<tr>
+<td>存储编排</td>
+<td>管理和调度容器中的数据存储，支持持久化和共享存储</td>
+</tr>
+<tr>
+<td>版本控制</td>
+<td>管理应用程序和容器镜像的版本，支持回滚和升级</td>
+</tr>
+<tr>
+<td>跨节点通信</td>
+<td>实现容器之间的通信，跨节点通信保障分布式应用正常运行</td>
+</tr>
+<tr>
+<td>故障恢复</td>
+<td>处理节点故障、容器故障，确保应用程序的高可用性</td>
+</tr>
+</tbody></table>
+<h3 id="97、Kubernetes如何简化容器化部署"><a href="#97、Kubernetes如何简化容器化部署" class="headerlink" title="97、Kubernetes如何简化容器化部署?"></a>97、Kubernetes如何简化容器化部署?</h3><p>由于典型应用程序将具有跨多个主机运行的容器集群，因此所有这些容器都需要相互通信。因此，要做到这一点，你需要一些能够负载平衡，扩展和监控容器的东西。由于Kubernetes与云无关并且可以在任何公共&#x2F;私有提供商上运行，因此必须是您简化容器化部署的选择。</p>
+<h3 id="98、对Kubernetes的集群了解多少？"><a href="#98、对Kubernetes的集群了解多少？" class="headerlink" title="98、对Kubernetes的集群了解多少？"></a>98、对Kubernetes的集群了解多少？</h3><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Master节点</td>
+<td>Kubernetes集群的控制中心，负责整个集群的管理和控制。主要组件包括kube-apiserver、kube-controller-manager、kube-scheduler和etcd等。</td>
+</tr>
+<tr>
+<td>Node节点</td>
+<td>集群中的工作节点，负责运行应用程序容器。每个Node节点上都运行有kubelet和kube-proxy，与Master节点协同工作。</td>
+</tr>
+<tr>
+<td>Pod</td>
+<td>Kubernetes中最小的部署单元，包含一个或多个容器。Pod共享网络和存储资源，它们在同一节点上运行，并可以直接通过localhost通信。</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>服务是一种抽象，定义了一组Pod及其访问方式。它确保了Pod的稳定网络标识和动态路由。</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td>命名空间用于将集群划分为多个虚拟集群，每个命名空间中的资源相互隔离。</td>
+</tr>
+<tr>
+<td>ConfigMap和Secret</td>
+<td>ConfigMap用于将配置数据提供给应用程序，而Secret用于存储敏感信息，如密码和API密钥。</td>
+</tr>
+</tbody></table>
+<h3 id="99、什么是Google容器引擎"><a href="#99、什么是Google容器引擎" class="headerlink" title="99、什么是Google容器引擎?"></a>99、什么是Google容器引擎?</h3><p>Google Container Engine（GKE）是Docker容器和集群的开源管理平台。这个基于Kubernetes的引擎仅支持在Google的公共云服务中运行的群集。</p>
+<h3 id="100、什么是Heapster"><a href="#100、什么是Heapster" class="headerlink" title="100、什么是Heapster?"></a>100、什么是Heapster?</h3><p>Heapster是由每个节点上运行的Kubelet提供的集群范围的数据聚合器。此容器管理工具在Kubernetes集群上本机支持，并作为pod运行，就像集群中的任何其他pod一样。因此，它基本上发现集群中的所有节点，并通过机上Kubernetes代理查询集群中Kubernetes节点的使用信息。</p>
+<h3 id="107、kube-apiserver和kube-scheduler的作用是什么"><a href="#107、kube-apiserver和kube-scheduler的作用是什么" class="headerlink" title="107、kube-apiserver和kube-scheduler的作用是什么?"></a>107、kube-apiserver和kube-scheduler的作用是什么?</h3><p>kube-apiserver遵循横向扩展架构，是主节点控制面板的前端。这将公开Kubernetes主节点组件的所有API，并负责在Kubernetes节点和Kubernetes主组件之间建立通信。 kube-scheduler负责工作节点上工作负载的分配和管理。因此，它根据资源需求选择最合适的节点来运行未调度的pod，并跟踪资源利用率。它确保不在已满的节点上调度工作负载。</p>
+<h3 id="108、你能简要介绍一下Kubernetes控制管理器吗"><a href="#108、你能简要介绍一下Kubernetes控制管理器吗" class="headerlink" title="108、你能简要介绍一下Kubernetes控制管理器吗?"></a>108、你能简要介绍一下Kubernetes控制管理器吗?</h3><p>多个控制器进程在主节点上运行，但是一起编译为单个进程运行，即Kubernetes控制器管理器。因此，Controller Manager是一个嵌入控制器并执行命名空间创建和垃圾收集的守护程序。它拥有责任并与API服务器通信以管理端点。 常见控制器： - node controller - hpa controller - replication controller - service account &amp; token controller - endpoints controller</p>
+<h3 id="112、什么是Ingress网络，它是如何工作的"><a href="#112、什么是Ingress网络，它是如何工作的" class="headerlink" title="112、什么是Ingress网络，它是如何工作的?"></a>112、什么是Ingress网络，它是如何工作的?</h3><p>Ingress网络是一组规则，充当Kubernetes集群的入口点。这允许入站连接，可以将其配置为 通过可访问的URL，负载平衡流量或通过提供基于名称的虚拟主机从外部提供服务。因此， Ingress是一个API对象，通常通过HTTP管理集群中服务的外部访问，是暴露服务的最有效方 式。</p>
+<p>现在，让我以一个例子向您解释Ingress网络的工作。</p>
+<p>有2个节点具有带有Linux桥接器的pod和根网络命名空间。除此之外，还有一个名为 flannel0（网络插件）的新虚拟以太网设备被添加到根网络中。</p>
+<p>现在，假设我们希望数据包从pod1流向pod 4。</p>
+<p>因此，数据包将pod1的网络保留在eth0，并进入veth0的根网络。 然后它被传递给cbr0，这使得ARP请求找到目的地，并且发现该节点上没有人具有目的地IP地址。</p>
+<p>因此，桥接器将数据包发送到flannel0，因为节点的路由表配置了flannel0。 现在，flannel守护程序与Kubernetes的API服务器通信，以了解所有pod IP及其各自的节 点，以创建pods IP到节点IP的映射。</p>
+<p>网络插件将此数据包封装在UDP数据包中，其中额外的标头将源和目标IP更改为各自的节点， 并通过eth0发送此数据包。</p>
+<p>现在，由于路由表已经知道如何在节点之间路由流量，因此它将数据包发送到目标节点2。 数据包到达node2的eth0并返回到flannel0以解封装并在根网络命名空间中将其发回。 同样，数据包被转发到Linux网桥以发出ARP请求以找出属于veth1的IP。 数据包最终穿过根网络并到达目标Pod4。</p>
+<h3 id="113、您对云控制器管理器有何了解"><a href="#113、您对云控制器管理器有何了解" class="headerlink" title="113、您对云控制器管理器有何了解?"></a>113、您对云控制器管理器有何了解?</h3><p>Cloud Controller Manager负责持久存储，网络路由，从核心Kubernetes特定代码中抽象出特定于云的代码，以及管理与底层云服务的通信。它可能会分成几个不同的容器，具体取决于您运行的是哪个云平台，然后它可以使云供应商和Kubernetes代码在没有任何相互依赖的情况下开发。因此，云供应商开发他们的代码并在运行Kubernetes时与Kubernetes云控制器管理器连接。 - node controller - route controller - volume controller - service controller</p>
+<h3 id="114、什么是Container资源监控"><a href="#114、什么是Container资源监控" class="headerlink" title="114、什么是Container资源监控?"></a>114、什么是Container资源监控?</h3><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>容器资源监控</td>
+<td>监控容器运行时的资源使用情况，包括CPU利用率、内存使用、网络IO等。用于性能分析、故障排查和资源优化。</td>
+</tr>
+<tr>
+<td>监控指标</td>
+<td>常见的容器监控指标包括CPU利用率、内存使用量、磁盘IO、网络IO、容器启动时间等。</td>
+</tr>
+<tr>
+<td>监控工具</td>
+<td>一些常用的容器监控工具包括Prometheus、Grafana、cAdvisor等。它们提供可视化和警报功能，帮助管理员实时监控和管理容器。</td>
+</tr>
+<tr>
+<td>数据收集</td>
+<td>监控工具通过在容器内运行代理或直接访问容器运行时API，收集实时的性能数据。</td>
+</tr>
+<tr>
+<td>可视化和报警</td>
+<td>容器监控工具通常提供仪表盘和报警功能，让管理员能够直观地查看容器集群的状态，并在发生异常时及时收到通知。</td>
+</tr>
+</tbody></table>
+<h3 id="115、Replica-Set和Replication-Controller之间有什么区别"><a href="#115、Replica-Set和Replication-Controller之间有什么区别" class="headerlink" title="115、Replica Set和Replication Controller之间有什么区别?"></a>115、Replica Set和Replication Controller之间有什么区别?</h3><p>Replica Set 和 Replication Controller几乎完全相同。它们都确保在任何给定时间运行指定数量的pod副本。不同之处在于复制pod使用的选择器。Replica Set使用基于集合的选择器，而Replication Controller使用基于权限的选择器。</p>
+<h3 id="117、使用Kubernetes时可以采取哪些最佳安全措施"><a href="#117、使用Kubernetes时可以采取哪些最佳安全措施" class="headerlink" title="117、使用Kubernetes时可以采取哪些最佳安全措施?"></a>117、使用Kubernetes时可以采取哪些最佳安全措施?</h3><ul>
+<li>日志记录生产环境中的所有内容</li>
+<li>定期对环境应用安全更新</li>
+<li>实施网络分割</li>
+<li>为资源制定严格的策略&#x2F;规则</li>
+<li>实施持续安全漏洞扫描</li>
+<li>提供对 k8s 节点的有限直接访问</li>
+<li>定义资源限制</li>
+<li>使用私有镜像仓库</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Bishop</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://bishoptylaor.github.io/uncategorized/k8s-interview-100/">https://bishoptylaor.github.io/uncategorized/k8s-interview-100/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://bishoptylaor.github.io" target="_blank">Bishop</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/uncategorized/redis-ziplist/"><img class="next-cover" src="/img/loading.gif" data-original="/img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">redis-ziplist</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Gitalk</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bishop</div><div class="author-info__description">Bishop的blog</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Bishoptylaor/Bishoptylaor.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a><a class="social-icon" href="https://github.com/Bishoptylaor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/ayabishop@sina.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">嘻嘻，不嘻嘻</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%AE%80%E8%BF%B0ETCD%E5%8F%8A%E5%85%B6%E7%89%B9%E7%82%B9"><span class="toc-text">1、简述ETCD及其特点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%AE%80%E8%BF%B0ETCD%E9%80%82%E5%BA%94%E7%9A%84%E5%9C%BA%E6%99%AF"><span class="toc-text">2、简述ETCD适应的场景?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E7%AE%80%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AFKubernetes"><span class="toc-text">3、简述什么是Kubernetes?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%92%8CDocker%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">4、简述Kubernetes和Docker的关系?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%AD%E4%BB%80%E4%B9%88%E6%98%AFMinikube%E3%80%81Kubectl%E3%80%81Kubelet"><span class="toc-text">5、简述Kubernetes中什么是Minikube、Kubectl、Kubelet?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%B8%B8%E8%A7%81%E7%9A%84%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="toc-text">6、简述Kubernetes常见的部署方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9B%86%E7%BE%A4%E7%AE%A1%E7%90%86"><span class="toc-text">7、简述Kubernetes如何实现集群管理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%9A%84%E4%BC%98%E5%8A%BF%E3%80%81%E9%80%82%E5%BA%94%E5%9C%BA%E6%99%AF%E5%8F%8A%E5%85%B6%E7%89%B9%E7%82%B9"><span class="toc-text">8、简述Kubernetes的优势、适应场景及其特点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%9A%84%E7%BC%BA%E7%82%B9%E6%88%96%E5%BD%93%E5%89%8D%E7%9A%84%E4%B8%8D%E8%B6%B3%E4%B9%8B%E5%A4%84"><span class="toc-text">9、简述Kubernetes的缺点或当前的不足之处?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-text">10、简述Kubernetes相关基础概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E9%9B%86%E7%BE%A4%E7%9B%B8%E5%85%B3%E7%BB%84%E4%BB%B6"><span class="toc-text">11、简述Kubernetes集群相关组件?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-RC%E7%9A%84%E6%9C%BA%E5%88%B6"><span class="toc-text">12、简述Kubernetes RC的机制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13%E3%80%81%E7%AE%80%E8%BF%B0kube-proxy%E4%BD%9C%E7%94%A8"><span class="toc-text">13、简述kube-proxy作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14%E3%80%81%E7%AE%80%E8%BF%B0kube-proxy-iptables%E5%8E%9F%E7%90%86"><span class="toc-text">14、简述kube-proxy iptables原理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15%E3%80%81%E7%AE%80%E8%BF%B0kube-proxy-ipvs%E5%8E%9F%E7%90%86"><span class="toc-text">15、简述kube-proxy ipvs原理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16%E3%80%81%E7%AE%80%E8%BF%B0kube-proxy-ipvs%E5%92%8Ciptables%E7%9A%84%E5%BC%82%E5%90%8C"><span class="toc-text">16、简述kube-proxy ipvs和iptables的异同?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%AD%E4%BB%80%E4%B9%88%E6%98%AF%E9%9D%99%E6%80%81Pod"><span class="toc-text">17、简述Kubernetes中什么是静态Pod?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%ADPod%E5%8F%AF%E8%83%BD%E4%BD%8D%E4%BA%8E%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-text">18、简述Kubernetes中Pod可能位于的状态?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAPod%E7%9A%84%E4%B8%BB%E8%A6%81%E6%B5%81%E7%A8%8B"><span class="toc-text">19、简述Kubernetes创建一个Pod的主要流程?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%ADPod%E7%9A%84%E9%87%8D%E5%90%AF%E7%AD%96%E7%95%A5"><span class="toc-text">20、简述Kubernetes中Pod的重启策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%ADPod%E7%9A%84%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">21、简述Kubernetes中Pod的健康检查方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Pod%E7%9A%84LivenessProbe%E6%8E%A2%E9%92%88%E7%9A%84%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F"><span class="toc-text">22、简述Kubernetes Pod的LivenessProbe探针的常见方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Pod%E7%9A%84%E5%B8%B8%E8%A7%81%E8%B0%83%E5%BA%A6%E6%96%B9%E5%BC%8F"><span class="toc-text">23、简述Kubernetes Pod的常见调度方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%88%9D%E5%A7%8B%E5%8C%96%E5%AE%B9%E5%99%A8%EF%BC%88init-container%EF%BC%89"><span class="toc-text">24、简述Kubernetes初始化容器（init container）?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-deployment%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B"><span class="toc-text">25、简述Kubernetes deployment升级过程?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-deployment%E5%8D%87%E7%BA%A7%E7%AD%96%E7%95%A5"><span class="toc-text">26、简述Kubernetes deployment升级策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-DaemonSet%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%B5%84%E6%BA%90%E7%89%B9%E6%80%A7"><span class="toc-text">27、简述Kubernetes DaemonSet类型的资源特性?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E8%87%AA%E5%8A%A8%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6"><span class="toc-text">28、简述Kubernetes自动扩容机制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Service%E7%B1%BB%E5%9E%8B"><span class="toc-text">29、简述Kubernetes Service类型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Service%E5%88%86%E5%8F%91%E5%90%8E%E7%AB%AF%E7%9A%84%E7%AD%96%E7%95%A5"><span class="toc-text">30、简述Kubernetes Service分发后端的策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#31%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Headless-Service"><span class="toc-text">31、简述Kubernetes Headless Service?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%A4%96%E9%83%A8%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E9%9B%86%E7%BE%A4%E5%86%85%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="toc-text">32、简述Kubernetes外部如何访问集群内的服务?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-ingress"><span class="toc-text">33、简述Kubernetes ingress?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%8B%E8%BD%BD%E7%AD%96%E7%95%A5"><span class="toc-text">34、简述Kubernetes镜像的下载策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#35%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%99%A8"><span class="toc-text">35、简述Kubernetes的负载均衡器?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#36%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%90%84%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E4%B8%8EAPI-Server%E9%80%9A%E4%BF%A1"><span class="toc-text">36、简述Kubernetes各模块如何与API Server通信?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#37%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Scheduler%E4%BD%9C%E7%94%A8%E5%8F%8A%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">37、简述Kubernetes Scheduler作用及实现原理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#38%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Scheduler%E4%BD%BF%E7%94%A8%E5%93%AA%E4%B8%A4%E7%A7%8D%E7%AE%97%E6%B3%95%E5%B0%86Pod%E7%BB%91%E5%AE%9A%E5%88%B0worker%E8%8A%82%E7%82%B9"><span class="toc-text">38、简述Kubernetes Scheduler使用哪两种算法将Pod绑定到worker节点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#39%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-kubelet%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">39、简述Kubernetes kubelet的作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#40%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-kubelet%E7%9B%91%E6%8E%A7Worker%E8%8A%82%E7%82%B9%E8%B5%84%E6%BA%90%E6%98%AF%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E7%BB%84%E4%BB%B6%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%9A%84"><span class="toc-text">40、简述Kubernetes kubelet监控Worker节点资源是使用什么组件来实现的?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#41%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E9%9B%86%E7%BE%A4%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">41、简述Kubernetes如何保证集群的安全性?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#42%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%87%86%E5%85%A5%E6%9C%BA%E5%88%B6"><span class="toc-text">42、简述Kubernetes准入机制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-RBAC%E5%8F%8A%E5%85%B6%E7%89%B9%E7%82%B9%EF%BC%88%E4%BC%98%E5%8A%BF%EF%BC%89"><span class="toc-text">43、简述Kubernetes RBAC及其特点（优势）?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#44%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Secret%E4%BD%9C%E7%94%A8"><span class="toc-text">44、简述Kubernetes Secret作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#45%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Secret%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">45、简述Kubernetes Secret有哪些使用方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#46%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-PodSecurityPolicy%E6%9C%BA%E5%88%B6"><span class="toc-text">46、简述Kubernetes PodSecurityPolicy机制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#47%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-PodSecurityPolicy%E6%9C%BA%E5%88%B6%E8%83%BD%E5%AE%9E%E7%8E%B0%E5%93%AA%E4%BA%9B%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="toc-text">47、简述Kubernetes PodSecurityPolicy机制能实现哪些安全策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#48%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="toc-text">48、简述Kubernetes网络模型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#49%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-CNI%E6%A8%A1%E5%9E%8B"><span class="toc-text">49、简述Kubernetes CNI模型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#50%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%BD%91%E7%BB%9C%E7%AD%96%E7%95%A5"><span class="toc-text">50、简述Kubernetes网络策略?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#51%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E7%BD%91%E7%BB%9C%E7%AD%96%E7%95%A5%E5%8E%9F%E7%90%86"><span class="toc-text">51、简述Kubernetes网络策略原理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#52%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%ADflannel%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">52、简述Kubernetes中flannel的作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#53%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Calico%E7%BD%91%E7%BB%9C%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">53、简述Kubernetes Calico网络组件实现原理?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#54%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%85%B1%E4%BA%AB%E5%AD%98%E5%82%A8%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">54、简述Kubernetes共享存储的作用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#55%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">55、简述Kubernetes数据持久化的方式有哪些?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#56%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-PV%E5%92%8CPVC"><span class="toc-text">56、简述Kubernetes PV和PVC?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#57%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-PV%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%86%85%E7%9A%84%E9%98%B6%E6%AE%B5"><span class="toc-text">57、简述Kubernetes PV生命周期内的阶段?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#58%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E6%89%80%E6%94%AF%E6%8C%81%E7%9A%84%E5%AD%98%E5%82%A8%E4%BE%9B%E5%BA%94%E6%A8%A1%E5%BC%8F"><span class="toc-text">58、简述Kubernetes所支持的存储供应模式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#59%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-CSI%E6%A8%A1%E5%9E%8B"><span class="toc-text">59、简述Kubernetes CSI模型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#60%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Worker%E8%8A%82%E7%82%B9%E5%8A%A0%E5%85%A5%E9%9B%86%E7%BE%A4%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">60、简述Kubernetes Worker节点加入集群的过程?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#61%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Pod%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%AF%B9%E8%8A%82%E7%82%B9%E7%9A%84%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6"><span class="toc-text">61、简述Kubernetes Pod如何实现对节点的资源控制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#62%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Requests%E5%92%8CLimits%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8DPod%E7%9A%84%E8%B0%83%E5%BA%A6"><span class="toc-text">62、简述Kubernetes Requests和Limits如何影响Pod的调度?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#63%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes-Metric-Service"><span class="toc-text">63、简述Kubernetes Metric Service?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#64%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8EFK%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E7%9A%84%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86"><span class="toc-text">64、简述Kubernetes中，如何使用EFK实现日志的统一管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#65%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E4%BC%98%E9%9B%85%E7%9A%84%E8%8A%82%E7%82%B9%E5%85%B3%E6%9C%BA%E7%BB%B4%E6%8A%A4"><span class="toc-text">65、简述Kubernetes如何进行优雅的节点关机维护?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#66%E3%80%81%E7%AE%80%E8%BF%B0Kubernetes%E9%9B%86%E7%BE%A4%E8%81%94%E9%82%A6"><span class="toc-text">66、简述Kubernetes集群联邦?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#67%E3%80%81%E7%AE%80%E8%BF%B0Helm%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8A%BF"><span class="toc-text">67、简述Helm及其优势?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#69%E3%80%81%E5%AE%B9%E5%99%A8%E5%92%8C%E4%B8%BB%E6%9C%BA%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">69、容器和主机部署应用的区别是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#70%E3%80%81%E8%AF%B7%E4%BD%A0%E8%AF%B4%E4%B8%80%E4%B8%8Bkubenetes%E9%92%88%E5%AF%B9pod%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%81%A5%E5%BA%B7%E7%9B%91%E6%B5%8B%E6%9C%BA%E5%88%B6"><span class="toc-text">70、请你说一下kubenetes针对pod资源对象的健康监测机制?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#71%E3%80%81%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6%E6%BB%9A%E5%8A%A8%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B"><span class="toc-text">71、如何控制滚动更新过程?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#75%E3%80%81Service%E8%BF%99%E7%A7%8D%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">75、Service这种资源对象的作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#76%E3%80%81%E7%89%88%E6%9C%AC%E5%9B%9E%E6%BB%9A%E7%9B%B8%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">76、版本回滚相关的命令?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#77%E3%80%81%E6%A0%87%E7%AD%BE%E4%B8%8E%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">77、标签与标签选择器的作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#78%E3%80%81%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">78、常用的标签分类有哪些?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#79%E3%80%81%E6%9C%89%E5%87%A0%E7%A7%8D%E6%9F%A5%E7%9C%8B%E6%A0%87%E7%AD%BE%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">79、有几种查看标签的方式?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#80%E3%80%81%E6%B7%BB%E5%8A%A0%E3%80%81%E4%BF%AE%E6%94%B9%E3%80%81%E5%88%A0%E9%99%A4%E6%A0%87%E7%AD%BE%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">80、添加、修改、删除标签的命令?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82%E3%80%81%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%AF%B9Job%E8%BF%99%E7%A7%8D%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-text">82、说说你对Job这种资源对象的了解?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#85%E3%80%81%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AAPod%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88%E4%BA%8B%E6%83%85"><span class="toc-text">85、删除一个Pod会发生什么事情?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#87%E3%80%81k8s%E6%98%AF%E6%80%8E%E4%B9%88%E8%BF%9B%E8%A1%8C%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E7%9A%84"><span class="toc-text">87、k8s是怎么进行服务注册的?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#88%E3%80%81k8s%E9%9B%86%E7%BE%A4%E5%A4%96%E6%B5%81%E9%87%8F%E6%80%8E%E4%B9%88%E8%AE%BF%E9%97%AEPod"><span class="toc-text">88、k8s集群外流量怎么访问Pod?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#90%E3%80%81Kubernetes%E4%B8%8EDocker-Swarm%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%82%E4%BD%95"><span class="toc-text">90、Kubernetes与Docker Swarm的区别如何?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#94%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFContainer-Orchestration%EF%BC%88%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%EF%BC%89"><span class="toc-text">94、什么是Container Orchestration（容器编排）?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#95%E3%80%81Container-Orchestration%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88"><span class="toc-text">95、Container Orchestration需要什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#97%E3%80%81Kubernetes%E5%A6%82%E4%BD%95%E7%AE%80%E5%8C%96%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="toc-text">97、Kubernetes如何简化容器化部署?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#98%E3%80%81%E5%AF%B9Kubernetes%E7%9A%84%E9%9B%86%E7%BE%A4%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91%EF%BC%9F"><span class="toc-text">98、对Kubernetes的集群了解多少？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#99%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFGoogle%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E"><span class="toc-text">99、什么是Google容器引擎?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#100%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFHeapster"><span class="toc-text">100、什么是Heapster?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#107%E3%80%81kube-apiserver%E5%92%8Ckube-scheduler%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">107、kube-apiserver和kube-scheduler的作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#108%E3%80%81%E4%BD%A0%E8%83%BD%E7%AE%80%E8%A6%81%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8BKubernetes%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%90%97"><span class="toc-text">108、你能简要介绍一下Kubernetes控制管理器吗?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#112%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFIngress%E7%BD%91%E7%BB%9C%EF%BC%8C%E5%AE%83%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84"><span class="toc-text">112、什么是Ingress网络，它是如何工作的?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#113%E3%80%81%E6%82%A8%E5%AF%B9%E4%BA%91%E6%8E%A7%E5%88%B6%E5%99%A8%E7%AE%A1%E7%90%86%E5%99%A8%E6%9C%89%E4%BD%95%E4%BA%86%E8%A7%A3"><span class="toc-text">113、您对云控制器管理器有何了解?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#114%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFContainer%E8%B5%84%E6%BA%90%E7%9B%91%E6%8E%A7"><span class="toc-text">114、什么是Container资源监控?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#115%E3%80%81Replica-Set%E5%92%8CReplication-Controller%E4%B9%8B%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">115、Replica Set和Replication Controller之间有什么区别?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#117%E3%80%81%E4%BD%BF%E7%94%A8Kubernetes%E6%97%B6%E5%8F%AF%E4%BB%A5%E9%87%87%E5%8F%96%E5%93%AA%E4%BA%9B%E6%9C%80%E4%BD%B3%E5%AE%89%E5%85%A8%E6%8E%AA%E6%96%BD"><span class="toc-text">117、使用Kubernetes时可以采取哪些最佳安全措施?</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/k8s-interview-100/" title="k8s 面试必备 100 题"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s 面试必备 100 题"/></a><div class="content"><a class="title" href="/uncategorized/k8s-interview-100/" title="k8s 面试必备 100 题">k8s 面试必备 100 题</a><time datetime="2024-05-23T16:46:31.000Z" title="发表于 2024-05-24 00:46:31">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/redis-ziplist/" title="redis-ziplist"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="redis-ziplist"/></a><div class="content"><a class="title" href="/uncategorized/redis-ziplist/" title="redis-ziplist">redis-ziplist</a><time datetime="2024-05-23T16:38:10.000Z" title="发表于 2024-05-24 00:38:10">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/redis-skiplist/" title="Redis 跳表详解"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis 跳表详解"/></a><div class="content"><a class="title" href="/uncategorized/redis-skiplist/" title="Redis 跳表详解">Redis 跳表详解</a><time datetime="2024-05-23T16:24:49.000Z" title="发表于 2024-05-24 00:24:49">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" title="计算机网络"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络"/></a><div class="content"><a class="title" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" title="计算机网络">计算机网络</a><time datetime="2024-05-22T10:42:59.000Z" title="发表于 2024-05-22 18:42:59">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/" title="操作系统八股文"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统八股文"/></a><div class="content"><a class="title" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/" title="操作系统八股文">操作系统八股文</a><time datetime="2024-05-22T10:39:00.149Z" title="发表于 2024-05-22 18:39:00">2024-05-22</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/index.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By Bishop</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      id: '1973f875b309ea6feca112bd06cc9126',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Gitalk' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover4.webp);"> <a class="categoryBar-list-link" href="categories/interview/">面试</a><span class="categoryBar-list-count">92</span><span class="categoryBar-list-descr">个人日记</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/db/">数据库</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/distribution/">分布式</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/软实力/">软实力</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/research/">研究所</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/go/">go</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/blog/">博客</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/simulation/">实录</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/juan/">刷题</a><span class="categoryBar-list-count">70</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/">知识库</a><span class="categoryBar-list-count">38</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/interviewer/">面试官</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/blog/build-blog/">建站</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/juan/Blind75/">Blind75</a><span class="categoryBar-list-count">69</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/algorithm/">算法题</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/计算机基础/">计算机基础</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/">Golang</a><span class="categoryBar-list-count">34</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/concurrency/">并发</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/advanced-tutorial/">进阶教程笔记</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/go-design-pattern/">设计模式之美</a><span class="categoryBar-list-count">23</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>

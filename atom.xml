@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-05-22T10:43:28.541Z</updated>
+  <updated>2024-05-23T16:47:40.593Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>计算机网络</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/network/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/network/</id>
-    <published>2024-05-22T10:42:59.000Z</published>
-    <updated>2024-05-22T10:43:28.541Z</updated>
+    <title>k8s 面试必备 100 题</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/k8s-interview-100/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/k8s-interview-100/</id>
+    <published>2024-05-23T16:46:31.000Z</published>
+    <updated>2024-05-23T16:47:40.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1、简述ETCD及其特点&quot;&gt;&lt;a href=&quot;#1、简述ETCD及其特点&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>redis-ziplist</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/redis-ziplist/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/redis-ziplist/</id>
+    <published>2024-05-23T16:38:10.000Z</published>
+    <updated>2024-05-23T16:38:10.776Z</updated>
     
     
     
@@ -30,11 +51,41 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://bishoptylaor.github.io/uncategorized/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%85%AB%E8%82%A1%E6%96%87/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%85%AB%E8%82%A1%E6%96%87/</id>
+    <title>Redis 跳表详解</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/redis-skiplist/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/redis-skiplist/</id>
+    <published>2024-05-23T16:24:49.000Z</published>
+    <updated>2024-05-23T16:25:32.117Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络</title>
+    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/"/>
+    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/</id>
+    <published>2024-05-22T10:42:59.000Z</published>
+    <updated>2024-05-22T10:45:53.987Z</updated>
+    
+    
+    
+    
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>操作系统八股文</title>
+    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/"/>
+    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/</id>
     <published>2024-05-22T10:39:00.149Z</published>
-    <updated>2024-05-22T10:39:00.149Z</updated>
+    <updated>2024-05-22T10:47:18.804Z</updated>
     
     
       
@@ -47,53 +98,70 @@
     
     
     
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
     
   </entry>
   
   <entry>
     <title>数据库面试常见题</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/sql/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/sql/</id>
+    <link href="https://bishoptylaor.github.io/interview/sql101/"/>
+    <id>https://bishoptylaor.github.io/interview/sql101/</id>
     <published>2024-05-22T10:24:06.000Z</published>
-    <updated>2024-05-22T10:24:48.813Z</updated>
+    <updated>2024-05-23T16:40:58.045Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;△ 66次&lt;/p&gt;
-&lt;p&gt;MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等 &lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等&quot;&gt;&lt;a href=&quot;#△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
     
   </entry>
   
   <entry>
     <title>Golang GC 详解</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/go-gc/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/go-gc/</id>
+    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-gc/"/>
+    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-gc/</id>
     <published>2024-05-21T09:09:42.000Z</published>
-    <updated>2024-05-21T09:10:12.802Z</updated>
+    <updated>2024-05-22T10:45:53.940Z</updated>
     
     
     
+    
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
+    
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/"/>
     
     
   </entry>
   
   <entry>
     <title>go-sync-map</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/go-sync-map/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/go-sync-map/</id>
+    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/go-sync-map/"/>
+    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/go-sync-map/</id>
     <published>2024-05-21T09:02:27.000Z</published>
-    <updated>2024-05-21T09:02:27.541Z</updated>
+    <updated>2024-05-22T10:45:53.940Z</updated>
     
     
     
+    
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
+    
+    <category term="并发" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/"/>
     
     
   </entry>
@@ -320,63 +388,6 @@
     <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet226/"/>
     <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet226/</id>
     <published>2024-05-20T15:24:01.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet100</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet100/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet100/</id>
-    <published>2024-05-20T15:23:56.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet104</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet104/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet104/</id>
-    <published>2024-05-20T15:23:52.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet295</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet295/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet295/</id>
-    <published>2024-05-20T15:21:54.000Z</published>
     <updated>2024-05-20T15:26:01.024Z</updated>
     
     

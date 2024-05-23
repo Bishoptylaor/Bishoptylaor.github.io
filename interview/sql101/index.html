@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>数据库面试常见题 | Bishop</title><meta name="author" content="Bishop"><meta name="copyright" content="Bishop"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="△ 66次 MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等 从需求分析上来讲，数据库使用多为 查询 和 新增 操作，改删  本质上也是查询的进一步动作 二分搜索树实现的 DB 存在一个问题: 范围查询会很慢。我们需要不断地从根节点出发，然后往下遍历。所以我们稍微改造下，数据只 保存在叶子节点上，并且用双向链表进行连接 对于二分搜索树实现的 DB 而言，其查询效">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库面试常见题">
+<meta property="og:url" content="https://bishoptylaor.github.io/interview/sql101/index.html">
+<meta property="og:site_name" content="Bishop">
+<meta property="og:description" content="△ 66次 MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等 从需求分析上来讲，数据库使用多为 查询 和 新增 操作，改删  本质上也是查询的进一步动作 二分搜索树实现的 DB 存在一个问题: 范围查询会很慢。我们需要不断地从根节点出发，然后往下遍历。所以我们稍微改造下，数据只 保存在叶子节点上，并且用双向链表进行连接 对于二分搜索树实现的 DB 而言，其查询效">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bishoptylaor.github.io/img/index.jpg">
+<meta property="article:published_time" content="2024-05-22T10:24:06.000Z">
+<meta property="article:modified_time" content="2024-05-23T16:40:58.045Z">
+<meta property="article:author" content="Bishop">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bishoptylaor.github.io/img/index.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://bishoptylaor.github.io/interview/sql101/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据库面试常见题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-05-24 00:40:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mycss.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Bishop" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/research/"><i class="fa-fw fas fa-flask"></i><span> 研究所</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/golang/"><i class="fa-fw fa-brands fa-golang"></i><span> Go</span></a></li><li><a class="site-page child" href="/categories/python/"><i class="fa-fw fa-brands fa-python"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw /categories/interview/"></i><span> 面试</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview/interviewer"><i class="fa-fw fa-solid fa-wheelchair-alt"></i><span> 面试官</span></a></li><li><a class="site-page child" href="/categories/interview/db"><i class="fa-fw fa-solid fa-database"></i><span> 数据库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-indent"></i><span> 索引</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/timeline/"><i class="fa-fw fas fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-ghost"></i><span> 俺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-bug"></i><span> 俺</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com"><i class="fa-fw fa-brands fa-bilibili"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/relax/"><i class="fa-fw fas fa-gamepad"></i><span> 休息一下</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Bishop</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/research/"><i class="fa-fw fas fa-flask"></i><span> 研究所</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-graduation-cap"></i><span> 学习</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/golang/"><i class="fa-fw fa-brands fa-golang"></i><span> Go</span></a></li><li><a class="site-page child" href="/categories/python/"><i class="fa-fw fa-brands fa-python"></i><span> Python</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw /categories/interview/"></i><span> 面试</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/interview/interviewer"><i class="fa-fw fa-solid fa-wheelchair-alt"></i><span> 面试官</span></a></li><li><a class="site-page child" href="/categories/interview/db"><i class="fa-fw fa-solid fa-database"></i><span> 数据库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-indent"></i><span> 索引</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/timeline/"><i class="fa-fw fas fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-ghost"></i><span> 俺</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fa fa-bug"></i><span> 俺</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com"><i class="fa-fw fa-brands fa-bilibili"></i><span> Bilibili</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/relax/"><i class="fa-fw fas fa-gamepad"></i><span> 休息一下</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库面试常见题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-22T10:24:06.000Z" title="发表于 2024-05-22 18:24:06">2024-05-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-23T16:40:58.045Z" title="更新于 2024-05-24 00:40:58">2024-05-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/interview/">面试</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库面试常见题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等"><a href="#△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等" class="headerlink" title="△ 66次 MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等"></a><strong>△ 66次</strong> MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等</h1><ol>
+<li>从需求分析上来讲，数据库使用多为 <em>查询</em> 和 <em>新增</em> 操作，<em>改删</em>  本质上也是查询的进一步动作</li>
+<li>二分搜索树实现的 DB 存在一个问题: 范围查询会很慢。我们需要不断地从根节点出发，然后往下遍历。所以我们稍微改造下，数据只 保存在叶子节点上，并且用双向链表进行连接</li>
+<li>对于二分搜索树实现的 DB 而言，其查询效率是与树高有关的。假设我们有 2000 万条数据，我们大概需要一棵树高为 25 的 BST 才能装下所 有数据和索引。也就是说，我们至少需要 25 次硬盘 I&#x2F;O 才能取出一条数据</li>
+<li>将刚刚说的二分搜索树进行树高的压缩，让它变矮胖，就得到了多叉搜索树，aka B-树。</li>
+<li>B+ 树是二叉搜索树的一个扩充，是多路搜索树。它只在叶子节点存储具体的数据或者数据的指向指针，而非叶子节点存放索引数据。这样可以降低磁盘 IO，还能充分利用磁盘的预读功能，批量的加载索引数据。</li>
+</ol>
+<h1 id="△-42次-数据库的事务隔离级别有哪些？各有哪些优缺点？-中等"><a href="#△-42次-数据库的事务隔离级别有哪些？各有哪些优缺点？-中等" class="headerlink" title="△ 42次 数据库的事务隔离级别有哪些？各有哪些优缺点？  中等"></a><strong>△ 42次</strong> 数据库的事务隔离级别有哪些？各有哪些优缺点？  中等</h1><p>首先要明白几个概念</p>
+<ul>
+<li><p><strong>脏读</strong>：脏读指的是读到了其他事务未提交的数据，未提交意味着这些数据可能会回滚，也就是可能最终不会存到数据库中，也就是不存在的数据。读到了并一定最终存在的数据，这就是脏读。</p>
+</li>
+<li><p><strong>可重复读</strong>：可重复读指的是在一个事务内，最开始读到的数据和事务结束前的任意时刻读到的同一批数据都是一致的。通常针对数据<strong>更新（UPDATE）</strong>操作。</p>
+</li>
+<li><p><strong>不可重复读</strong>：对比可重复读，不可重复读指的是在同一事务内，不同的时刻读到的同一批数据可能是不一样的，可能会受到其他事务的影响，比如其他事务改了这批数据并提交了。通常针对数据<strong>更新（UPDATE）</strong>操作。</p>
+</li>
+<li><p><strong>幻读</strong>：幻读是针对数据<strong>插入（INSERT）</strong>操作来说的。假设事务A对某些行的内容作了更改，但是还未提交，此时事务B插入了与事务A更改前的记录相同的记录行，并且在事务A提交之前先提交了，而这时，在事务A中查询，会发现好像刚刚的更改对于某些数据未起作用，但其实是事务B刚插入进来的，让用户感觉很魔幻，感觉出现了幻觉，这就叫幻读。</p>
+</li>
+<li></li>
+<li><p><strong>未提交读：</strong> 即所谓的脏读，事务读取的数据可能是另一个事务已修改但还没提交的，这部分数据有可能产生回滚。导致后续的操作依赖了无效的数据。<br>  修改时加排它锁；读取时加共享锁，读完释放。 eg：select for update</p>
+</li>
+<li><p><strong>已提交读：</strong> 如果想防止脏读，就需要等待其他事务提交后再进行读取操作。</p>
+</li>
+<li><p><strong>可重复读：</strong> 已提交读的隔离级别考虑到了数据回滚的无效性，却无法阻止事务的多次提交。比如事务 A 不断的对表进行修改提交，那么事务 B 就会在不同的时间点读取到不同的数据。为了让事务 B 在执行期间读取的数据都是一致的，就有了可重复读的隔离级别，即事务 B 在执行期间，其他事务不得进行修改操作。</p>
+</li>
+<li><p><strong>可串行化：</strong> 上面的可重复读隔离级别保证了事务执行期间读取的一致性。然而这里并不包括插入、删除操作。即会出现读多读少数据的情况，这种现象叫做幻读。为了解决幻读，只得进行串行化执行事务，才能互不影响。而此时的事务并发性是最低的</p>
+</li>
+</ul>
+<h1 id="△-36次-简述-Redis-持久化中-RDB-以及-AOF-方案的优缺点-困难"><a href="#△-36次-简述-Redis-持久化中-RDB-以及-AOF-方案的优缺点-困难" class="headerlink" title="△ 36次 简述 Redis 持久化中 RDB 以及 AOF 方案的优缺点  困难"></a><strong>△ 36次</strong> 简述 Redis 持久化中 RDB 以及 AOF 方案的优缺点  困难</h1><h3 id="1-RDB：Redis-Database"><a href="#1-RDB：Redis-Database" class="headerlink" title="1. RDB：Redis Database"></a>1. RDB：Redis Database</h3><p>指定的时间间隔内将内存中的数据集快照写入磁盘，实际操作是 fork 一个子进程，先将数据集写入临时文件，写入成功后，再替换之前的文件，使用二进制压缩存储。<br>优点：</p>
+<ul>
+<li>整个 redis 只包含一个文件 dump.rdb，方便持久化</li>
+<li>容灾性好，易于备份</li>
+<li>性能最大化，使用子进程处理，保证主进程 IO 吞吐，保证了 redis 的高性能</li>
+<li>相对于数据集大时，比 AOF 的启动效率更高<br>缺点：</li>
+<li>数据安全性低，因为会有间隔时间，所以如果间隔期间出现故障，无法保证期间的数据正常备份</li>
+<li>当数据集较大时，子进程长期占用 CPU，会导致服务中断时间延长至秒级</li>
+</ul>
+<h3 id="2-AOF：Append-Only-File"><a href="#2-AOF：Append-Only-File" class="headerlink" title="2. AOF：Append Only File"></a>2. AOF：Append Only File</h3><p>以日志的形式记录服务器处理的每个读写操作，以文本的方式详细记录，可以查看历史操作记录<br>优点：</p>
+<ul>
+<li>数据安全：每秒同步、每修改同步、不同步3中策略。每秒同步可以理解为类似1s间隔的 RDB ，可能也会出现丢失的情况；每修改同步可以认为是同步持久化，不会丢失</li>
+<li>通过 append 方式追加新的操作，不惧宕机，可以使用 redis-check-aof 工具来解决一致性的问题。</li>
+<li>rewrite 模式可以定期对 AOF 文件重写，合并相关操作，以达到压缩存储的目的<br>缺点</li>
+<li>AOF 文件较大，恢复速度慢</li>
+<li>数据集大的情况下，启动比 RDB 慢</li>
+<li>运行效率 AOF &lt; RDB</li>
+</ul>
+<p>4.x版本后，把重写方式变成 RDB 直接放到 AOF 文件的头部，比以前版本更快</p>
+<h3 id="3-主从同步"><a href="#3-主从同步" class="headerlink" title="3. 主从同步"></a>3. 主从同步</h3><ul>
+<li>全量复制：<ul>
+<li>主节点通过 bgsave 命令 fork 子进程进行 rdb 持久化，过程非常消耗CPU，内存，硬盘io</li>
+<li>主节点将rdb文件通过网络发给从节点，消耗带宽</li>
+<li>从节点清空数据，使用rdb文件载入，整个过程阻塞，无法响应命令</li>
+</ul>
+</li>
+<li>部分复制：<ul>
+<li>复制偏移量，双方都要维护</li>
+<li>复制积压缓冲区：定长FIFO的队列作为缓冲区</li>
+</ul>
+</li>
+</ul>
+<h1 id="△-36次-Redis-如何实现分布式锁？-困难"><a href="#△-36次-Redis-如何实现分布式锁？-困难" class="headerlink" title="△ 36次 Redis 如何实现分布式锁？  困难"></a><strong>△ 36次</strong> Redis 如何实现分布式锁？  困难</h1><p>一般可以采用 setnx 原子操作来进行加锁，常规过期时间为 1s，设置的值为随机数。对于加锁的 key，一般要和当前的操作和请求有幂等关系，防止解锁的时候把其他请求的锁解掉；另一方面如果 1s 过期时间还未执行完毕，可以考虑使用看门狗给这个锁续期。<br>对于 setnx 的解锁，可以使用 lua 脚本 ‘if redis.call(‘get’, KEYS[1]) &#x3D;&#x3D; ARGV[1] then return redis.call(‘del’, KEYS[1]) else return 0 end’ 保证解的锁就是请求刚刚申请的那个锁</p>
+<h3 id="Redlock"><a href="#Redlock" class="headerlink" title="Redlock"></a>Redlock</h3><p>这个是针对于 Redis 中多 master 实例的情况来获取锁的。具体的步骤如下：</p>
+<ul>
+<li>获取当前毫秒单位时间</li>
+<li>以相同的 key 和随机值在 n 个节点上请求锁，这里获取锁的尝试时间一定要远小于锁的过期时间，防止某个 master 宕机，而我们还在不断地尝试，产生较长的阻塞时间</li>
+<li>只有在绝对大多数节点上获取了锁，且获取时间小于锁的过期时间，就认为锁获取成功了</li>
+<li>如果获取成功，key 的真正有效时间等于过期时间时间减去获取锁所使用的时间（即还会在预设的过期时间过期掉）</li>
+<li>如果获取失败，或者尝试时间超过了超时时间，都认为是获取失败，要将已经设置了 key 的 master 节点删除该 key</li>
+</ul>
+<h1 id="△-34次-Redis-序列化有哪些方式？-中等"><a href="#△-34次-Redis-序列化有哪些方式？-中等" class="headerlink" title="△ 34次 Redis 序列化有哪些方式？  中等"></a><strong>△ 34次</strong> Redis 序列化有哪些方式？  中等</h1><ol>
+<li>字符串序列化：将数据以字符串的形式进行序列化和反序列化，常用的字符串序列化方式有JSON、XML、YAML等。</li>
+<li>二进制序列化：将数据以二进制的形式进行序列化和反序列化，常用的二进制序列化方式有MessagePack、Protocol Buffers、Thrift等。</li>
+<li>压缩序列化：将序列化后的数据进行压缩，减小存储空间，常用的压缩序列化方式有Gzip、Snappy等。</li>
+<li>自定义序列化：根据业务需求自定义序列化方式，可以根据数据的特点选择最合适的序列化方式，例如使用Hessian、Kryo等。</li>
+</ol>
+<h1 id="△-34次-简述-Redis-的哨兵机制-中等"><a href="#△-34次-简述-Redis-的哨兵机制-中等" class="headerlink" title="△ 34次 简述 Redis 的哨兵机制  中等"></a><strong>△ 34次</strong> 简述 Redis 的哨兵机制  中等</h1><h3 id="主从复制"><a href="#主从复制" class="headerlink" title="主从复制"></a>主从复制</h3><p>当从数据库启动时，会向主数据库发送sync命令，主数据库接收到sync后开始在后台保存快照rdb，在保存快照期间收到的命令缓存起来，当快照完成时，主数据库会将快照和缓存的命令一块发送给从**。复制初始化结束。 之后，主每收到1个命令就同步发送给从。 当出现断开重连后，2.8之后的版本会将断线期间的命令传给重数据库。增量复制</p>
+<p>主从复制是乐观复制，当客户端发送写执行给主，主执行完立即将结果返回客户端，并异步的把命令发送给从，从而不影响性能。也可以设置至少同步给多少个从主才可写。 无硬盘复制:如果硬盘效率低将会影响复制性能，2.8之后可以设置无硬盘复制，repl-diskless-sync yes</p>
+<h3 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h3><p>哨兵的作用：<br>1、监控redis主、从数据库是否正常运行<br>2、主出现故障自动将从数据库转换为主数据库。<br>哨兵的核心知识<br>1、哨兵至少需要 3 个实例，来保证自己的健壮性。<br>2、哨兵 + redis 主从的部署架构，是不保证数据零丢失的，只能保证 redis 集群的高可用性。<br>3、对于哨兵 + redis 主从这种复杂的部署架构，尽量在测试环境和生产环境，都进行充足的测试和演练。<br>4、配置哨兵监控一个系统时，只需要配置其监控主数据库即可，哨兵会自动发现所有复制该主数据库的从数据库。</p>
+<h1 id="△-30次-简述-Redis-中如何防止缓存雪崩和缓存击穿-中等"><a href="#△-30次-简述-Redis-中如何防止缓存雪崩和缓存击穿-中等" class="headerlink" title="△ 30次 简述 Redis 中如何防止缓存雪崩和缓存击穿  中等"></a><strong>△ 30次</strong> 简述 Redis 中如何防止缓存雪崩和缓存击穿  中等</h1><p>数据库是架构的瓶颈，要尽量保证有效请求到达数据库，可以酌情放大链路上前置位置的复杂度和成本<br>c client；redis ； db&#x2F;mysql</p>
+<p>穿透：缓存和db中都找不到该数据 &#x3D; db中无数据，redis无数据，大量并发，请求打到db层<br>原因：接口请求数据不是有效参数，因此根本查不到结果；有效参数但是确实没有数据<br>解法：接口层增加鉴权，业务层增加有效请求判断；返回空 &amp;&amp; 增加短效的空缓存；布隆过滤器（难道要加到每个接口上么？需要思考嗷）；业务加互斥锁；对于空值可以增加一个空缓存</p>
+<p>击穿：热点key过期 or key从来没有被访问过 &#x3D; db中有数据，大量并发，redis无缓存，请求打到db层<br>解法：热点数据永不过期；互斥锁（挡住大量重复的并发请求）</p>
+<p>雪崩：N个key的都过期了（没有被缓存到） &#x3D; db中有，大量并发，redis无缓存，请求打到db层<br>解法：缓存数据设置随机过期时间；增加缓存失效标记位；缓存预热；互斥锁</p>
+<p>流程： 请求redis，查不到 –&gt; 大家抢锁 O（1） –&gt; 抢上的查db，并更新缓存 O（1） –&gt; 没抢上的重复请求Redis ，拿到数据<br>延伸问题：多个等待的请求，是blocking的轻量级进程，不参与cpu及内核调度，注意处理线程池即可</p>
+<p>△ 30次</p>
+<p>产生死锁的必要条件有哪些？如何解决死锁？  中等 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-deadlocks.html">参考1</a> <a target="_blank" rel="noopener" href="https://smartkeyerror.oss-cn-shenzhen.aliyuncs.com/Phyduck/database/%E5%85%A8%E5%B1%80%E9%94%81%E3%80%81%E8%A1%A8%E7%BA%A7%E9%94%81%E4%BB%A5%E5%8F%8A%E8%A1%8C%E9%94%81%EF%BC%88%E4%B8%8A%EF%BC%89.pdf">参考2</a> <a target="_blank" rel="noopener" href="https://www.gatevidyalay.com/deadlock-in-os-conditions-for-deadlock/">参考3</a></p>
+<h1 id="△-28次-简述-Redis-中常见类型的底层数据结构"><a href="#△-28次-简述-Redis-中常见类型的底层数据结构" class="headerlink" title="△ 28次 简述 Redis 中常见类型的底层数据结构"></a><strong>△ 28次</strong> 简述 Redis 中常见类型的底层数据结构</h1><h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><ul>
+<li>id&#x2F;id_info 缓存  </li>
+<li>计数器  </li>
+<li>setnx 分布式锁 <ul>
+<li>setnx 的时候会传入一个随机值</li>
+<li>解锁：‘if redis.call(‘get’, KEYS[1]) &#x3D;&#x3D; ARGV[1] then return redis.call(‘del’, KEYS[1]) else return 0 end’</li>
+<li>lua脚本</li>
+</ul>
+</li>
+<li>分布式ID </li>
+<li>sds（动态简单字符串）<ul>
+<li>底层结构为：<ul>
+<li>len buf中已经占有的长度(表示此字符串的实际长度)</li>
+<li>free buf中未使用的缓冲区长度</li>
+<li>buf[] 实际保存字符串数据的地方</li>
+</ul>
+</li>
+<li>读取时间复杂度为 O(1)</li>
+<li>惰性删除，留待下次使用</li>
+<li>一次分配最大为 128kb<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3></li>
+</ul>
+</li>
+<li>当队列用，最近100个购买用户信息  </li>
+<li>当栈用  </li>
+<li>元素可重复</li>
+<li>非实时分页列表，比如小时榜，日榜，周榜</li>
+<li>存储微博、微信公众号等消息流数据</li>
+<li>等于链表，插入删除 O(1)，查找 O(n)</li>
+<li>底层是一个叫做 quicklist 的节点，相当于由 ziplist 节点组成的双向链表<h3 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h3></li>
+<li>相比string获取单个字段节省 序列化与反序列化操作</li>
+<li>相当于 HashMap ，由数组加链表组合而成，当一维的 hash 数组碰撞时，用链表串起来</li>
+<li>底层实现方式有两种，数据量少的时候是 ziplist；量大时转为 Hashtable<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3></li>
+<li>取交、并、差集  </li>
+<li>点赞、收藏、关注等…  </li>
+<li>kv 模式</li>
+<li>内部元素不重复<h3 id="sorted-set（zset）"><a href="#sorted-set（zset）" class="headerlink" title="sorted set（zset）"></a>sorted set（zset）</h3></li>
+<li>排行榜功能，实时分页列表，实时榜单等</li>
+<li>set 基础上增加了分数</li>
+<li>结构上是由一个 dict 和一个跳表组成，dict 保证 key 唯一性</li>
+<li>插入删除都是 O(log n)，查找 O(logn)</li>
+<li>一大优点是可以对分数进行范围查找 zrange</li>
+<li>少量数据按照 ziplist 存储，member和score顺序存放并按score的顺序排列；元素数量 &lt; 128，元素大小 &lt; 64kb</li>
+<li>大量数据按照跳表存储</li>
+</ul>
+<h1 id="△-28次-简述什么是最左匹配原则-简单"><a href="#△-28次-简述什么是最左匹配原则-简单" class="headerlink" title="△ 28次 简述什么是最左匹配原则  简单"></a><strong>△ 28次</strong> 简述什么是最左匹配原则  简单</h1><p>mysql 建立联合索引后，是按最左匹配原则来筛选记录的，即检索数据是从联合索引的第一个字段来筛选的。如果 where 里的条件只有第二个字段，那么将无法应用到索引。</p>
+<h1 id="△-26次-简述-Redis-的过期机制和内存淘汰策略-困难"><a href="#△-26次-简述-Redis-的过期机制和内存淘汰策略-困难" class="headerlink" title="△ 26次 简述 Redis 的过期机制和内存淘汰策略  困难"></a><strong>△ 26次</strong> 简述 Redis 的过期机制和内存淘汰策略  困难</h1><h3 id="过期机制"><a href="#过期机制" class="headerlink" title="过期机制"></a>过期机制</h3><ol>
+<li>惰性过期：访问一个 key 的时候才判断这个 key 是否已经过期，该策略可以最大化的节省 CPU 资源，但是对内存不友好，会存在大量的过期 key 没有被再次访问，从而不会被清除，占用内存，造成泄漏</li>
+<li>定期过期：每隔一定的时间，扫描数据库中一定量的 expire 字典中的 key，并清除其中已经过期的 key。该策略是前两者的一个折中方案，通过调整定时扫描的时间间隔和每次扫描的限定耗时，可以在不同情况下使内存和 CPU 达到最优平衡。<strong>特点：随机抽取检查</strong>，缺点是实际操作中很难界定时间间隔和限定耗时。</li>
+<li>二种策略同时生效<h3 id="内存淘汰策略"><a href="#内存淘汰策略" class="headerlink" title="内存淘汰策略"></a>内存淘汰策略</h3><h4 id="常见的六种淘汰策略"><a href="#常见的六种淘汰策略" class="headerlink" title="常见的六种淘汰策略"></a>常见的六种淘汰策略</h4></li>
+</ol>
+<ul>
+<li>noeviction: 不删除策略， 达到最大内存限制时， 如果需要更多内存， 直接返回错误信息。 大多数写命令都会导致占用更多的内存(有极少数会例外， 如 DEL )</li>
+<li>allkeys-lru: 所有key通用; 优先删除最近最少使用(less recently used ，LRU) 的 key</li>
+<li>volatile-lru: 只限于设置了 expire 的部分; 优先删除最近最少使用(less recently used ，LRU) 的 key</li>
+<li>allkeys-random: 所有key通用; 随机删除一部分 key</li>
+<li>volatile-random: 只限于设置了 expire 的部分; 随机删除一部分 key</li>
+<li>volatile-ttl: 只限于设置了 expire 的部分; 优先删除剩余时间(time to live，TTL) 短的key<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4></li>
+<li>如果分为热数据与冷数据， 推荐使用 allkeys-lru 策略；也就是， 其中一部分key经常被读写. 如果不确定具体的业务特征， 那么 allkeys-lru 是一个很好的选择</li>
+<li>如果需要循环读写所有的key， 或者各个key的访问频率差不多， 可以使用 allkeys-random 策略， 即读写所有元素的概率差不多</li>
+<li>假如要让 Redis 根据 TTL 来筛选需要删除的key， 请使用 volatile-ttl 策略<br>volatile-lru 和 volatile-random 策略主要应用场景是: 既有缓存，又有持久key的实例中。一般来说， 像这类场景， 应该使用两个单独的 Redis 实例<br>值得一提的是， 设置 expire 会消耗额外的内存， 所以使用 allkeys-lru 策略， 可以更高效地利用内存， 因为这样就可以不再设置过期时间了<h4 id="淘汰的内部实现"><a href="#淘汰的内部实现" class="headerlink" title="淘汰的内部实现"></a>淘汰的内部实现</h4>淘汰过程可以这样理解：</li>
+<li>应用执行一个命令， 导致 Redis 中的数据增加，占用更多内存</li>
+<li>Redis 检查内存使用量， 如果超出 <code>maxmemory</code> （redis.conf中配置）限制，根据策略清除部分 key</li>
+<li>继续执行下一条命令， 以此类推<br>在这个过程中， 内存使用量会不断地达到 limit 值， 然后超过， 然后删除部分 key， 使用量又下降到 limit 值之下<br>如果某个命令导致大量内存占用(比如通过新key保存一个很大的set)， 在一段时间内， 可能内存的使用量会明显超过 maxmemory 限制</li>
+</ul>
+<p>△ 24次</p>
+<p>数据库有哪些常见索引？数据库设计的范式是什么？  中等 <a target="_blank" rel="noopener" href="https://smartkeyerror.oss-cn-shenzhen.aliyuncs.com/Phyduck/database/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%20InnoDB%20Index.pdf">参考1</a></p>
+<p>△ 24次</p>
+<p>简述乐观锁以及悲观锁的区别以及使用场景  简单 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking">参考1</a> <a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903639207641096">参考2</a></p>
+<p>△ 24次</p>
+<p>MySQL 中 join 与 left join 的区别是什么？  简单</p>
+<p>△ 24次</p>
+<p>简述 MySQL MVCC 的实现原理  困难 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-multi-versioning.html">参考1</a></p>
+<p>△ 22次</p>
+<p>简述脏读和幻读的发生场景，InnoDB 是如何解决幻读的？  中等 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html">参考1</a> <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1450773">参考2</a></p>
+<p>△ 20次</p>
+<p>Redis 有几种数据结构？Zset 是如何实现的？  中等 <a target="_blank" rel="noopener" href="https://redis.io/topics/data-types">参考1</a> <a target="_blank" rel="noopener" href="https://smartkeyerror.oss-cn-shenzhen.aliyuncs.com/Phyduck/database/Redis%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.pdf">参考2</a></p>
+<h1 id="△-20次-简述-Redis-中跳表的应用以及优缺点-中等"><a href="#△-20次-简述-Redis-中跳表的应用以及优缺点-中等" class="headerlink" title="△ 20次 简述 Redis 中跳表的应用以及优缺点  中等"></a><strong>△ 20次</strong> 简述 Redis 中跳表的应用以及优缺点  中等</h1><h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p>我们知道单链表查询的时间复杂度为O(n)，而插入、删除操作需要先找到对应的位置，所以插入、删除的时间复杂度也是O(n)。<br>那么，跳表的时间复杂度是多少呢？<br>如果按照标准的跳表来看的话，每一级索引减少k&#x2F;2个元素（k为其下面一级索引的个数），那么整个跳表的高度就是(log n)。<br>学习过平衡二叉树的同学都知道，它的时间复杂度与树的高度成正比，即O(log n)。<br>所以，这里跳表的时间复杂度也是O(log n)。（这里不一步步推倒了，只要记住，查询时每次减少一半的元素的时间复杂度都是O(log n)，比如二叉树的查找、二分法查找、归并排序、快速排序）</p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>我们还是以标准的跳表来分析，每两个元素向上提取一个元素，那么，最后额外需要的空间就是：<br>n&#x2F;2 + (n&#x2F;2)^2 + (n&#x2F;2)^3 + … + 8 + 4 + 2 &#x3D; n - 2<br>所以，跳表的空间复杂度是O(n)。</p>
+<h3 id="随机层数"><a href="#随机层数" class="headerlink" title="随机层数"></a>随机层数</h3><p>在新增节点时会计算当前节点应该放置的层数，表面上是按照随机数计算出来的。<br>跳表通常需要有一个最大层数maxLevel，以及一个概率p，即新增加一层的概率。通常数据量够大，就会呈现出一定的比率。<br>当p是0.25，那么只有产生一层的概率就是1-p（0.75），产生第二层的概率就是（1-p） * p。三层（1-p）pp…<br>因此，一个节点的平均层数（也即包含的平均指针数目）</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>（1）跳表是可以实现二分查找的有序链表；<br>（2）每个元素插入时随机生成它的level；<br>（3）最低层包含所有的元素；<br>（4）如果一个元素出现在level(x)，那么它肯定出现在x以下的level中；<br>（5）每个索引节点包含两个指针，一个向下，一个向右；<br>（6）跳表查询、插入、删除的时间复杂度为O(log n)，与平衡二叉树接近；</p>
+<p>△ 18次</p>
+<p>聚簇索引和非聚簇索引有什么区别？  简单 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-index-types.html">参考1</a> <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1541265">参考2</a></p>
+<p>△ 17次</p>
+<p>MySQL 中 varchar 和 char 的区别是什么？  简单</p>
+<h3 id="△-16次-简述数据库中的-ACID-分别是什么？-简单"><a href="#△-16次-简述数据库中的-ACID-分别是什么？-简单" class="headerlink" title="△ 16次 简述数据库中的 ACID 分别是什么？  简单"></a><strong>△ 16次</strong> 简述数据库中的 ACID 分别是什么？  简单</h3><ul>
+<li>**原子性(Atomicity)**：事务是一个不可分割的单位，因此在一个事务里的所有操作要么全部生效，要么全部不生效。</li>
+<li>**一致性(Consistency)**：也可以理解为是预期状态的正确性，即从一个正确的状态到另一个正确的状态，这里的状态往往是由业务来定义的。比如转账中的一个扣钱一个加钱，是我们规定的一个数据流转，那么执行前的账户余额和转账后的账户余额就得满足加减特性，这就是所谓的业务正确。题外话：银行家舍入 —— 四舍六入五考虑，五后非零则进一，五后皆零看奇偶，奇进偶舍不连续。</li>
+<li>**隔离性(Isolation)**：事务并发执行时，各个事务之间相互影响的程度。</li>
+<li>**持久化(Durability)**：通过日志等手段，只要我们的事务提交成功了，那么就意味着这次的数据操作是成功的。即使下次重启了程序，也不会丢失此处的操作结果。</li>
+</ul>
+<p>△ 16次</p>
+<p>简述 MySQL 三种日志的使用场景  中等 <a target="_blank" rel="noopener" href="https://smartkeyerror.oss-cn-shenzhen.aliyuncs.com/Phyduck/database/InnoDB-WAL.pdf">参考1</a> <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/binary-log.html">参考2</a></p>
+<p>△ 16次</p>
+<p>模糊查询是如何实现的？  简单</p>
+<p>△ 14次</p>
+<p>并发事务会引发哪些问题？如何解决？  中等</p>
+<p>△ 12次</p>
+<p>什么是数据库事务，MySQL 为什么会使用 InnoDB 作为默认选项</p>
+<h1 id="布隆过滤器"><a href="#布隆过滤器" class="headerlink" title="布隆过滤器"></a>布隆过滤器</h1><p>可以简单的理解为有一批哈希函数，对将要存储的内容进行哈希计算，每个哈希函数的结果对应一个 bit 位，如果命中了结果，就将对应 bit 位置为1。那么当这个数据查询请求再次来到时，比较哈希函数结果位是否都为1，就可以知道这个数据是不是在我们的集合内了。<br>值得一提的是，当存储的内容很大时，可能大部分 bit 位都被标记为1了，存在误判的可能。<br>即布隆过滤器中查到的元素可能存在在集合中，但是查不到的元素一定不在</p>
+<h3 id="常见应用："><a href="#常见应用：" class="headerlink" title="常见应用："></a>常见应用：</h3><ul>
+<li>网页爬虫对 URL 去重，避免爬取相同的 URL 地址；</li>
+<li>反垃圾邮件，从数十亿个垃圾邮件列表中判断某邮箱是否垃圾邮箱；</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Bishop</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://bishoptylaor.github.io/interview/sql101/">https://bishoptylaor.github.io/interview/sql101/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://bishoptylaor.github.io" target="_blank">Bishop</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付寶"/></a><div class="post-qr-code-desc">支付寶</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/"><img class="prev-cover" src="/img/loading.gif" data-original="/img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">操作系统八股文</div></div></a></div><div class="next-post pull-right"><a href="/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-gc/"><img class="next-cover" src="/img/loading.gif" data-original="/img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Golang GC 详解</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Gitalk</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bishop</div><div class="author-info__description">Bishop的blog</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">141</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Bishoptylaor/Bishoptylaor.github.io"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a><a class="social-icon" href="https://github.com/Bishoptylaor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/ayabishop@sina.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">嘻嘻，不嘻嘻</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-66%E6%AC%A1-MySQL-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-B-%E6%A0%91%E6%9D%A5%E4%BD%9C%E7%B4%A2%E5%BC%95%EF%BC%8C%E5%AF%B9%E6%AF%94-B-%E6%A0%91%E5%AE%83%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 66次 MySQL 为什么使用 B+ 树来作索引，对比 B 树它的优点和缺点是什么？  中等</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-42%E6%AC%A1-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E5%90%84%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%9F-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 42次 数据库的事务隔离级别有哪些？各有哪些优缺点？  中等</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-36%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E6%8C%81%E4%B9%85%E5%8C%96%E4%B8%AD-RDB-%E4%BB%A5%E5%8F%8A-AOF-%E6%96%B9%E6%A1%88%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9-%E5%9B%B0%E9%9A%BE"><span class="toc-text">△ 36次 简述 Redis 持久化中 RDB 以及 AOF 方案的优缺点  困难</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RDB%EF%BC%9ARedis-Database"><span class="toc-text">1. RDB：Redis Database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AOF%EF%BC%9AAppend-Only-File"><span class="toc-text">2. AOF：Append Only File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5"><span class="toc-text">3. 主从同步</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-36%E6%AC%A1-Redis-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%EF%BC%9F-%E5%9B%B0%E9%9A%BE"><span class="toc-text">△ 36次 Redis 如何实现分布式锁？  困难</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redlock"><span class="toc-text">Redlock</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-34%E6%AC%A1-Redis-%E5%BA%8F%E5%88%97%E5%8C%96%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E5%BC%8F%EF%BC%9F-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 34次 Redis 序列化有哪些方式？  中等</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-34%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E7%9A%84%E5%93%A8%E5%85%B5%E6%9C%BA%E5%88%B6-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 34次 简述 Redis 的哨兵机制  中等</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="toc-text">主从复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F"><span class="toc-text">哨兵模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-30%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E4%B8%AD%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E5%92%8C%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 30次 简述 Redis 中如何防止缓存雪崩和缓存击穿  中等</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-28%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BA%95%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">△ 28次 简述 Redis 中常见类型的底层数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#string"><span class="toc-text">string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hash"><span class="toc-text">hash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sorted-set%EF%BC%88zset%EF%BC%89"><span class="toc-text">sorted set（zset）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-28%E6%AC%A1-%E7%AE%80%E8%BF%B0%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%B7%A6%E5%8C%B9%E9%85%8D%E5%8E%9F%E5%88%99-%E7%AE%80%E5%8D%95"><span class="toc-text">△ 28次 简述什么是最左匹配原则  简单</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-26%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E7%9A%84%E8%BF%87%E6%9C%9F%E6%9C%BA%E5%88%B6%E5%92%8C%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5-%E5%9B%B0%E9%9A%BE"><span class="toc-text">△ 26次 简述 Redis 的过期机制和内存淘汰策略  困难</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E6%9C%9F%E6%9C%BA%E5%88%B6"><span class="toc-text">过期机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5"><span class="toc-text">内存淘汰策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%85%AD%E7%A7%8D%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5"><span class="toc-text">常见的六种淘汰策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%98%E6%B1%B0%E7%9A%84%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0"><span class="toc-text">淘汰的内部实现</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%96%B3-20%E6%AC%A1-%E7%AE%80%E8%BF%B0-Redis-%E4%B8%AD%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E4%BC%98%E7%BC%BA%E7%82%B9-%E4%B8%AD%E7%AD%89"><span class="toc-text">△ 20次 简述 Redis 中跳表的应用以及优缺点  中等</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">空间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%B1%82%E6%95%B0"><span class="toc-text">随机层数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%96%B3-16%E6%AC%A1-%E7%AE%80%E8%BF%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84-ACID-%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-%E7%AE%80%E5%8D%95"><span class="toc-text">△ 16次 简述数据库中的 ACID 分别是什么？  简单</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">布隆过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%EF%BC%9A"><span class="toc-text">常见应用：</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/k8s-interview-100/" title="k8s 面试必备 100 题"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s 面试必备 100 题"/></a><div class="content"><a class="title" href="/uncategorized/k8s-interview-100/" title="k8s 面试必备 100 题">k8s 面试必备 100 题</a><time datetime="2024-05-23T16:46:31.000Z" title="发表于 2024-05-24 00:46:31">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/redis-ziplist/" title="redis-ziplist"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="redis-ziplist"/></a><div class="content"><a class="title" href="/uncategorized/redis-ziplist/" title="redis-ziplist">redis-ziplist</a><time datetime="2024-05-23T16:38:10.000Z" title="发表于 2024-05-24 00:38:10">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/uncategorized/redis-skiplist/" title="Redis 跳表详解"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis 跳表详解"/></a><div class="content"><a class="title" href="/uncategorized/redis-skiplist/" title="Redis 跳表详解">Redis 跳表详解</a><time datetime="2024-05-23T16:24:49.000Z" title="发表于 2024-05-24 00:24:49">2024-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" title="计算机网络"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络"/></a><div class="content"><a class="title" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" title="计算机网络">计算机网络</a><time datetime="2024-05-22T10:42:59.000Z" title="发表于 2024-05-22 18:42:59">2024-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/" title="操作系统八股文"><img src="/img/loading.gif" data-original="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统八股文"/></a><div class="content"><a class="title" href="/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/" title="操作系统八股文">操作系统八股文</a><time datetime="2024-05-22T10:39:00.149Z" title="发表于 2024-05-22 18:39:00">2024-05-22</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/index.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2024 By Bishop</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      id: '05005566e87b458f95fae58314c497d0',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_親親":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再見":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_發怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_發財":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可愛":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_嘔吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_壞笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尷尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_驚嚇":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Gitalk' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://npm.elemecdn.com/akilar-candyassets/image/cover4.webp);"> <a class="categoryBar-list-link" href="categories/interview/">面试</a><span class="categoryBar-list-count">92</span><span class="categoryBar-list-descr">个人日记</span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/db/">数据库</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/distribution/">分布式</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/软实力/">软实力</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/research/">研究所</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/go/">go</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/blog/">博客</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/simulation/">实录</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/juan/">刷题</a><span class="categoryBar-list-count">70</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/">知识库</a><span class="categoryBar-list-count">38</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/interviewer/">面试官</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/blog/build-blog/">建站</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/interview/juan/Blind75/">Blind75</a><span class="categoryBar-list-count">69</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/algorithm/">算法题</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/计算机基础/">计算机基础</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/">Golang</a><span class="categoryBar-list-count">34</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/concurrency/">并发</a><span class="categoryBar-list-count">6</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/advanced-tutorial/">进阶教程笔记</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr"></span></li><li class="categoryBar-list-item" style="background:url(undefined);"> <a class="categoryBar-list-link" href="categories/知识库/Golang/go-design-pattern/">设计模式之美</a><span class="categoryBar-list-count">23</span><span class="categoryBar-list-descr"></span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><!-- hexo injector body_end end --><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
