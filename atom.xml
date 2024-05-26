@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-05-24T13:37:51.489Z</updated>
+  <updated>2024-05-24T15:48:33.162Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>what-happens-when</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/what-happens-when/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/what-happens-when/</id>
+    <published>2024-05-24T15:45:32.000Z</published>
+    <updated>2024-05-24T15:48:33.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;What-happens-when 的中文翻译，原仓库 &lt;a href=&quot;https://github.com/alex/what-happens-when&quot;&gt;https://github.com/alex/what-happens-when&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Golang Container.Heap 使用</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/go-container-heap/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/go-container-heap/</id>
+    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-container-heap/"/>
+    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-container-heap/</id>
     <published>2024-05-24T13:35:41.000Z</published>
-    <updated>2024-05-24T13:37:51.489Z</updated>
+    <updated>2024-05-24T14:56:45.169Z</updated>
     
     
       
@@ -34,26 +56,11 @@
     
     
     
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
     
-  </entry>
-  
-  <entry>
-    <title>最长公共前缀</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/longest-common-prefix/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/longest-common-prefix/</id>
-    <published>2024-05-24T08:20:08.000Z</published>
-    <updated>2024-05-24T08:23:59.232Z</updated>
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/longest-common-prefix/&quot;&gt;Leetcode.14</summary>
-        
-      
-    
-    
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/"/>
     
     
   </entry>
@@ -63,14 +70,14 @@
     <link href="https://bishoptylaor.github.io/interview/k8s-interview-100/"/>
     <id>https://bishoptylaor.github.io/interview/k8s-interview-100/</id>
     <published>2024-05-23T16:46:31.000Z</published>
-    <updated>2024-05-23T16:48:00.064Z</updated>
+    <updated>2024-05-24T17:20:23.873Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;1、简述ETCD及其特点&quot;&gt;&lt;a href=&quot;#1、简述ETCD及其特点&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;K8S经典面试题解析&quot;&gt;&lt;a href=&quot;#K8S经典面试题解析&quot; class=&quot;headerlink&quot; title=&quot;K8S经典面试题解析&quot;&gt;&lt;/a&gt;K8S经典面试题解析&lt;/h1&gt;&lt;h2 id=&quot;1、简述ETCD及其特点&quot;&gt;&lt;a</summary>
         
       
     
@@ -162,11 +169,11 @@
   </entry>
   
   <entry>
-    <title>数据库面试常见题</title>
-    <link href="https://bishoptylaor.github.io/interview/sql101/"/>
-    <id>https://bishoptylaor.github.io/interview/sql101/</id>
+    <title>数据库 面试必备</title>
+    <link href="https://bishoptylaor.github.io/interview/sql-interview/"/>
+    <id>https://bishoptylaor.github.io/interview/sql-interview/</id>
     <published>2024-05-22T10:24:06.000Z</published>
-    <updated>2024-05-23T16:40:58.045Z</updated>
+    <updated>2024-05-25T05:29:49.864Z</updated>
     
     
       
