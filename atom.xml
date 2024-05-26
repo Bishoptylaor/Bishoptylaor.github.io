@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-05-24T15:48:33.162Z</updated>
+  <updated>2024-05-26T09:24:30.256Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>what-happens-when</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/what-happens-when/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/what-happens-when/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/what-happens-when/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/what-happens-when/</id>
     <published>2024-05-24T15:45:32.000Z</published>
-    <updated>2024-05-24T15:48:33.162Z</updated>
+    <updated>2024-05-26T09:24:30.256Z</updated>
     
     
       
@@ -35,13 +35,15 @@
     
     
     
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
+    
     
   </entry>
   
   <entry>
     <title>Golang Container.Heap 使用</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-container-heap/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-container-heap/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-container-heap/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-container-heap/</id>
     <published>2024-05-24T13:35:41.000Z</published>
     <updated>2024-05-24T14:56:45.169Z</updated>
     
@@ -56,21 +58,21 @@
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
     
-    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/"/>
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/advanced-tutorial/"/>
     
     
   </entry>
   
   <entry>
     <title>k8s 面试必备 100 题</title>
-    <link href="https://bishoptylaor.github.io/interview/k8s-interview-100/"/>
-    <id>https://bishoptylaor.github.io/interview/k8s-interview-100/</id>
+    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/k8s-interview-100/"/>
+    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/k8s-interview-100/</id>
     <published>2024-05-23T16:46:31.000Z</published>
-    <updated>2024-05-24T17:20:23.873Z</updated>
+    <updated>2024-05-26T09:24:30.213Z</updated>
     
     
       
@@ -85,68 +87,70 @@
     
     <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
+    <category term="面试100题" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/"/>
+    
     
   </entry>
   
   <entry>
     <title>redis-ziplist</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/redis-ziplist/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/redis-ziplist/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-ziplist/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-ziplist/</id>
     <published>2024-05-23T16:38:10.000Z</published>
     <updated>2024-05-23T16:48:00.065Z</updated>
     
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/db/"/>
+    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/"/>
     
-    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/"/>
+    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/Redis/"/>
     
     
   </entry>
   
   <entry>
     <title>Redis 跳表详解</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/redis-skiplist/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/redis-skiplist/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-skiplist/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-skiplist/</id>
     <published>2024-05-23T16:24:49.000Z</published>
     <updated>2024-05-23T16:48:00.064Z</updated>
     
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/db/"/>
+    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/"/>
     
-    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/db/Redis/"/>
+    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/Redis/"/>
     
     
   </entry>
   
   <entry>
     <title>计算机网络</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/elementary/network/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/elementary/network/</id>
     <published>2024-05-22T10:42:59.000Z</published>
     <updated>2024-05-22T10:45:53.987Z</updated>
     
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/konwledge-base/elementary/"/>
     
     
   </entry>
   
   <entry>
     <title>操作系统八股文</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/os-eight-part-frame/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/elementary/os-eight-part-frame/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/elementary/os-eight-part-frame/</id>
     <published>2024-05-22T10:39:00.149Z</published>
     <updated>2024-05-22T10:47:18.804Z</updated>
     
@@ -161,9 +165,9 @@
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/konwledge-base/elementary/"/>
     
     
   </entry>
@@ -193,38 +197,38 @@
   
   <entry>
     <title>Golang GC 详解</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-gc/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/go-gc/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-gc/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-gc/</id>
     <published>2024-05-21T09:09:42.000Z</published>
     <updated>2024-05-22T10:45:53.940Z</updated>
     
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
     
-    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/advanced-tutorial/"/>
+    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/advanced-tutorial/"/>
     
     
   </entry>
   
   <entry>
     <title>go-sync-map</title>
-    <link href="https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/go-sync-map/"/>
-    <id>https://bishoptylaor.github.io/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/go-sync-map/</id>
+    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/concurrency/go-sync-map/"/>
+    <id>https://bishoptylaor.github.io/konwledge-base/Golang/concurrency/go-sync-map/</id>
     <published>2024-05-21T09:02:27.000Z</published>
     <updated>2024-05-22T10:45:53.940Z</updated>
     
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/"/>
+    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
     
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Golang/concurrency/"/>
+    <category term="并发" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/concurrency/"/>
     
     
   </entry>
