@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-05-26T09:24:30.256Z</updated>
+  <updated>2024-06-04T12:28:30.815Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,35 +17,325 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>what-happens-when</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/what-happens-when/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/what-happens-when/</id>
-    <published>2024-05-24T15:45:32.000Z</published>
-    <updated>2024-05-26T09:24:30.256Z</updated>
+    <title>Leetcode.88 合并两个有序数组</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-88-merge-sorted-array/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-88-merge-sorted-array/</id>
+    <published>2024-06-04T12:17:58.000Z</published>
+    <updated>2024-06-04T12:28:30.815Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;What-happens-when 的中文翻译，原仓库 &lt;a href=&quot;https://github.com/alex/what-happens-when&quot;&gt;https://github.com/alex/what-happens-when&lt;/a&gt;&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/merge-sorted-array/&quot;&gt;88.</summary>
         
       
     
     
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
     
     
   </entry>
   
   <entry>
-    <title>Golang Container.Heap 使用</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-container-heap/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-container-heap/</id>
-    <published>2024-05-24T13:35:41.000Z</published>
-    <updated>2024-05-24T14:56:45.169Z</updated>
+    <title>leet42</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet42/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet42/</id>
+    <published>2024-06-04T11:52:02.000Z</published>
+    <updated>2024-06-04T11:52:02.812Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.236 二叉树的最近公共祖先</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-236-lowest-common-ancestor-of-a-binary-tree/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-236-lowest-common-ancestor-of-a-binary-tree/</id>
+    <published>2024-06-04T09:31:46.000Z</published>
+    <updated>2024-06-04T11:51:11.254Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/&quot;&gt;236. 二叉树的最近公共祖先&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个二叉树,</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.103 二叉树的锯齿形层序遍历</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-103-binary-tree-zigzag-level-order-traversal/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-103-binary-tree-zigzag-level-order-traversal/</id>
+    <published>2024-06-04T08:38:55.000Z</published>
+    <updated>2024-06-04T08:40:51.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/&quot;&gt;103.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.827 最大人工岛</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-827-making-a-large-island/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-827-making-a-large-island/</id>
+    <published>2024-06-04T03:18:05.000Z</published>
+    <updated>2024-06-04T07:55:51.053Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/making-a-large-island/&quot;&gt;827. 最大人工岛&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个大小为 &lt;code&gt;n x</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.695 岛屿的最大面积</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-695-max-area-of-island/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-695-max-area-of-island/</id>
+    <published>2024-06-04T03:17:55.000Z</published>
+    <updated>2024-06-04T05:09:19.558Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/max-area-of-island/&quot;&gt;695. 岛屿的最大面积&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个大小为 &lt;code&gt;m x</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.463 岛屿的周长</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-463-island-perimeter/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-463-island-perimeter/</id>
+    <published>2024-06-04T03:17:48.000Z</published>
+    <updated>2024-06-04T03:45:37.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/island-perimeter/&quot;&gt;463. 岛屿的周长&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个 &lt;code&gt;row x</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.200 岛屿数量</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-200-number-of-islands/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-200-number-of-islands/</id>
+    <published>2024-06-04T03:17:43.000Z</published>
+    <updated>2024-06-04T03:23:22.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/number-of-islands/&quot;&gt;200.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.209 长度最小的子数组</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-209-minimum-size-subarray-sum/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-209-minimum-size-subarray-sum/</id>
+    <published>2024-06-04T02:45:32.000Z</published>
+    <updated>2024-06-04T02:48:04.766Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/minimum-size-subarray-sum/&quot;&gt;209.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.2007 从双倍数组中还原原数组</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-2007-find-original-array-from-doubled-array/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-2007-find-original-array-from-doubled-array/</id>
+    <published>2024-06-04T02:30:09.000Z</published>
+    <updated>2024-06-04T02:47:13.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/find-original-array-from-doubled-array/&quot;&gt;2007.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>岛屿问题</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/island-issue/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/island-issue/</id>
+    <published>2024-06-03T14:04:19.000Z</published>
+    <updated>2024-06-04T03:19:22.910Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/number-of-islands/&quot;&gt;L200. 岛屿数量&lt;/a&gt; （Easy）&lt;/li&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.415 字符串相加</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-415-add-strings/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-415-add-strings/</id>
+    <published>2024-06-02T17:13:12.000Z</published>
+    <updated>2024-06-02T17:15:17.587Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/add-strings/&quot;&gt;415.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.31 下一个排列</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-31-next-permutation/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-31-next-permutation/</id>
+    <published>2024-06-02T13:11:15.000Z</published>
+    <updated>2024-06-02T13:13:15.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/next-permutation/&quot;&gt;31. 下一个排列&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;整数数组的一个 &lt;strong&gt;排列&lt;/strong&gt; </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.160 相交链表</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-160-intersection-of-two-linked-lists/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-160-intersection-of-two-linked-lists/</id>
+    <published>2024-06-02T12:37:35.000Z</published>
+    <updated>2024-06-02T12:41:56.374Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/intersection-of-two-linked-lists/&quot;&gt;160.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.46 全排列</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-46-permutations/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-46-permutations/</id>
+    <published>2024-05-30T08:59:42.000Z</published>
+    <updated>2024-06-02T06:53:14.856Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/permutations/&quot;&gt;46.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>求根号 X</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/sqrt-x/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/sqrt-x/</id>
+    <published>2024-05-30T07:09:51.000Z</published>
+    <updated>2024-06-02T13:38:02.108Z</updated>
     
     
       
@@ -58,375 +348,90 @@
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
-    
-    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/advanced-tutorial/"/>
-    
     
   </entry>
   
   <entry>
-    <title>k8s 面试必备 100 题</title>
-    <link href="https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/k8s-interview-100/"/>
-    <id>https://bishoptylaor.github.io/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/k8s-interview-100/</id>
-    <published>2024-05-23T16:46:31.000Z</published>
-    <updated>2024-05-26T09:24:30.213Z</updated>
+    <title>Leetcode.215 数组中的第K个最大元素</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-215-kth-largest-element-in-an-array/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-215-kth-largest-element-in-an-array/</id>
+    <published>2024-05-29T14:53:41.000Z</published>
+    <updated>2024-05-29T15:21:47.798Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;K8S经典面试题解析&quot;&gt;&lt;a href=&quot;#K8S经典面试题解析&quot; class=&quot;headerlink&quot; title=&quot;K8S经典面试题解析&quot;&gt;&lt;/a&gt;K8S经典面试题解析&lt;/h1&gt;&lt;h2 id=&quot;1、简述ETCD及其特点&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/kth-largest-element-in-an-array/&quot;&gt;215.</summary>
         
       
     
     
     
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="面试100题" scheme="https://bishoptylaor.github.io/categories/interview/%E9%9D%A2%E8%AF%95100%E9%A2%98/"/>
-    
     
   </entry>
   
   <entry>
-    <title>redis-ziplist</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-ziplist/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-ziplist/</id>
-    <published>2024-05-23T16:38:10.000Z</published>
-    <updated>2024-05-23T16:48:00.065Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/"/>
-    
-    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/Redis/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Redis 跳表详解</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-skiplist/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/db/Redis/redis-skiplist/</id>
-    <published>2024-05-23T16:24:49.000Z</published>
-    <updated>2024-05-23T16:48:00.064Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="数据库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/"/>
-    
-    <category term="Redis" scheme="https://bishoptylaor.github.io/categories/konwledge-base/db/Redis/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/elementary/network/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/elementary/network/</id>
-    <published>2024-05-22T10:42:59.000Z</published>
-    <updated>2024-05-22T10:45:53.987Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/konwledge-base/elementary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统八股文</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/elementary/os-eight-part-frame/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/elementary/os-eight-part-frame/</id>
-    <published>2024-05-22T10:39:00.149Z</published>
-    <updated>2024-05-22T10:47:18.804Z</updated>
+    <title>Leetcode.146 LRU 缓存</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-146-lru-cache/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-146-lru-cache/</id>
+    <published>2024-05-28T13:19:48.000Z</published>
+    <updated>2024-05-29T14:39:27.451Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;操作系统&quot;&gt;&lt;a href=&quot;#操作系统&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/lru-cache/&quot;&gt;146. LRU 缓存&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;请你设计并实现一个满足  &lt;a href=&quot;https://baike.baidu.com/item/LRU&quot;&gt;LRU</summary>
         
       
     
     
     
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="计算机基础" scheme="https://bishoptylaor.github.io/categories/konwledge-base/elementary/"/>
-    
     
   </entry>
   
   <entry>
-    <title>数据库 面试必备</title>
-    <link href="https://bishoptylaor.github.io/interview/sql-interview/"/>
-    <id>https://bishoptylaor.github.io/interview/sql-interview/</id>
-    <published>2024-05-22T10:24:06.000Z</published>
-    <updated>2024-05-25T05:29:49.864Z</updated>
+    <title>Leetcode.25. K 个一组翻转链表</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-25-reverse-nodes-in-k-group/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-25-reverse-nodes-in-k-group/</id>
+    <published>2024-05-27T14:04:19.000Z</published>
+    <updated>2024-05-27T17:35:41.037Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等&quot;&gt;&lt;a href=&quot;#△-66次-MySQL-为什么使用-B-树来作索引，对比-B-树它的优点和缺点是什么？-中等&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/reverse-nodes-in-k-group/&quot;&gt;25. K</summary>
         
       
     
     
     
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
     
   </entry>
   
   <entry>
-    <title>Golang GC 详解</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-gc/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/Golang/advanced-tutorial/go-gc/</id>
-    <published>2024-05-21T09:09:42.000Z</published>
-    <updated>2024-05-22T10:45:53.940Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
-    
-    <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/advanced-tutorial/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>go-sync-map</title>
-    <link href="https://bishoptylaor.github.io/konwledge-base/Golang/concurrency/go-sync-map/"/>
-    <id>https://bishoptylaor.github.io/konwledge-base/Golang/concurrency/go-sync-map/</id>
-    <published>2024-05-21T09:02:27.000Z</published>
-    <updated>2024-05-22T10:45:53.940Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://bishoptylaor.github.io/categories/konwledge-base/"/>
-    
-    <category term="Golang" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/"/>
-    
-    <category term="并发" scheme="https://bishoptylaor.github.io/categories/konwledge-base/Golang/concurrency/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet212</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet212/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet212/</id>
-    <published>2024-05-20T15:25:12.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet211</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet211/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet211/</id>
-    <published>2024-05-20T15:25:10.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet208</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet208/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet208/</id>
-    <published>2024-05-20T15:25:06.000Z</published>
-    <updated>2024-05-20T15:26:01.025Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet235</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet235/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet235/</id>
-    <published>2024-05-20T15:25:02.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet230</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet230/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet230/</id>
-    <published>2024-05-20T15:24:34.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode.98 验证二叉搜索树</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet-98-validate-binary-search-tree/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet-98-validate-binary-search-tree/</id>
-    <published>2024-05-20T15:24:28.000Z</published>
-    <updated>2024-05-24T08:28:51.794Z</updated>
+    <title>Leetcode.Plus.490. 迷宫</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-490-the-maze/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-490-the-maze/</id>
+    <published>2024-05-27T12:10:28.000Z</published>
+    <updated>2024-05-27T14:03:25.348Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/validate-binary-search-tree/&quot;&gt;Leetcode.98</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/the-maze/&quot;&gt;Leetcode.Plus.490.</summary>
         
       
     
     
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet105</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet105/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet105/</id>
-    <published>2024-05-20T15:24:24.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet572</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet572/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet572/</id>
-    <published>2024-05-20T15:24:19.000Z</published>
-    <updated>2024-05-20T15:26:01.025Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet297</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet297/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet297/</id>
-    <published>2024-05-20T15:24:15.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet102</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/Blind75/leet102/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/Blind75/leet102/</id>
-    <published>2024-05-20T15:24:10.000Z</published>
-    <updated>2024-05-20T15:26:01.024Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="Blind75" scheme="https://bishoptylaor.github.io/categories/interview/juan/Blind75/"/>
     
     
   </entry>
