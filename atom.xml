@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-06-22T09:46:08.456Z</updated>
+  <updated>2024-07-08T07:43:28.901Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -17,19 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:46:08.456Z</updated>
+    <title>Leetcode.20. 有效的括号</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-150-valid-parentheses%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-150-valid-parentheses%201/</id>
+    <published>2024-07-08T15:20:26.000Z</published>
+    <updated>2024-07-08T07:43:28.901Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/evaluate-reverse-polish-notation/&quot;&gt;150.</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.84 柱状图中最大的矩形</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-84-largest-rectangle-in-histogram/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-84-largest-rectangle-in-histogram/</id>
+    <published>2024-07-08T07:58:19.000Z</published>
+    <updated>2024-07-08T08:00:11.608Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/largest-rectangle-in-histogram/&quot;&gt;84.</summary>
         
       
     
@@ -39,19 +65,18 @@
   </entry>
   
   <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%202/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%202/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:29:42.611Z</updated>
+    <title>Leetcode.155 最小栈</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-155-min-stack/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-155-min-stack/</id>
+    <published>2024-07-08T07:43:41.000Z</published>
+    <updated>2024-07-08T07:57:29.856Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;78&lt;br&gt;90&lt;br&gt;131&lt;br&gt;17&lt;br&gt;51&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/min-stack/&quot;&gt;155.</summary>
         
       
     
@@ -61,11 +86,162 @@
   </entry>
   
   <entry>
+    <title>Leetcode.572 另一棵树的子树</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-572-subtree-of-another-tree/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-572-subtree-of-another-tree/</id>
+    <published>2024-07-07T15:24:19.000Z</published>
+    <updated>2024-07-07T12:49:02.241Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/subtree-of-another-tree/&quot;&gt;572.</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.50 Pow(x, n)</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-50-powx-n/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-50-powx-n/</id>
+    <published>2024-07-07T12:56:35.000Z</published>
+    <updated>2024-07-07T13:13:13.887Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/powx-n/&quot;&gt;50. Pow(x, n)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实现 &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.1186 删除一次得到子数组最大和</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/leet-1186-maximum-subarray-sum-with-one-deletion/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/leet-1186-maximum-subarray-sum-with-one-deletion/</id>
+    <published>2024-07-02T14:20:39.000Z</published>
+    <updated>2024-07-02T14:38:33.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/&quot;&gt;1186.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.322 零钱兑换</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-322-coin-change/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-322-coin-change/</id>
+    <published>2024-06-27T15:14:11.000Z</published>
+    <updated>2024-06-27T03:38:01.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/coin-change/&quot;&gt;322.</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.213 打家劫舍 II</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-213-house-robber-ii/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-213-house-robber-ii/</id>
+    <published>2024-06-23T15:14:11.000Z</published>
+    <updated>2024-06-23T12:54:47.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/house-robber-ii/&quot;&gt;213. 打家劫舍</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode.416 分割等和子集</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-416-partition-equal-subset-sum/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/leet-416-partition-equal-subset-sum/</id>
+    <published>2024-06-23T12:14:11.000Z</published>
+    <updated>2024-06-23T12:57:43.339Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/partition-equal-subset-sum/&quot;&gt;416.</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T08:56:45.749Z</updated>
+    <updated>2024-06-22T10:03:44.300Z</updated>
     
     
       
@@ -79,15 +255,21 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%201/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%201/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T10:00:05.699Z</updated>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
@@ -101,37 +283,21 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%201/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:57:05.765Z</updated>
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
-</summary>
-        
-      
-    
-    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
     
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%204/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%204/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%204/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%204/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:02:46.746Z</updated>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
@@ -145,15 +311,105 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%203/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%203/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:43:44.035Z</updated>
+    <updated>2024-06-22T10:03:44.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-06-22T10:03:44.299Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%202/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%202/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-06-22T10:03:44.299Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;78&lt;br&gt;90&lt;br&gt;131&lt;br&gt;17&lt;br&gt;51&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%203/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%203/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
@@ -167,59 +423,21 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%202/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%202/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T08:59:12.148Z</updated>
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;45&lt;br&gt;134&lt;br&gt;846&lt;br&gt;1899&lt;br&gt;763&lt;br&gt;678&lt;/p&gt;
-</summary>
-        
-      
-    
-    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
     
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%201/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%201/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%205/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%205/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T10:01:24.348Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%205/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%205/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:00:51.513Z</updated>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
@@ -233,37 +451,77 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%207/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%207/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:48:44.147Z</updated>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;202&lt;br&gt;66&lt;br&gt;50&lt;br&gt;43&lt;br&gt;2013&lt;/p&gt;
+    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
 </summary>
         
       
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
     
   </entry>
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%206/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%206/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%209/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%209/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:22:05.410Z</updated>
+    <updated>2024-07-08T07:58:27.064Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;22&lt;br&gt;739&lt;br&gt;853&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/Neetcode150/index%206/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/Neetcode150/index%206/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-06-22T10:03:44.301Z</updated>
     
     
       
@@ -277,154 +535,11 @@
     
     
     
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
     
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%209/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%209/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:17:39.840Z</updated>
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;155&lt;br&gt;150&lt;br&gt;22&lt;br&gt;739&lt;br&gt;853&lt;br&gt;84&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/leet167/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/leet167/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:09:48.747Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/index%207%201/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/index%207%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-06-22T09:13:27.230Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;239&lt;/p&gt;
-&lt;p&gt;567&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet221</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/leet221/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/leet221/</id>
-    <published>2024-06-17T11:01:48.000Z</published>
-    <updated>2024-06-17T11:01:48.795Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>字节跳动高频题——圆环回原点问题</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/back-2-start-in-circle/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/back-2-start-in-circle/</id>
-    <published>2024-06-17T06:35:30.000Z</published>
-    <updated>2024-06-17T06:40:29.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;圆环上有10个点，编号为0~9。从0点出发，每次可以逆时针和顺时针走一步，问走n步回到0点共有多少种走法。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入: 2输出:</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode.77 组合</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/leet-77-combinations/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/leet-77-combinations/</id>
-    <published>2024-06-12T16:23:20.000Z</published>
-    <updated>2024-06-12T16:24:41.371Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/combinations/&quot;&gt;77. 组合&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;给定两个整数 &lt;code&gt;n&lt;/code&gt; 和 &lt;code&gt;k&lt;/code&gt;，返回范围 &lt;code&gt;[1,</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode.746 使用最小花费爬楼梯</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/leet-746-min-cost-climbing-stairs/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/leet-746-min-cost-climbing-stairs/</id>
-    <published>2024-06-12T16:07:06.000Z</published>
-    <updated>2024-06-12T16:08:59.788Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/min-cost-climbing-stairs/&quot;&gt;746.</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet1143</title>
-    <link href="https://bishoptylaor.github.io/uncategorized/leet1143/"/>
-    <id>https://bishoptylaor.github.io/uncategorized/leet1143/</id>
-    <published>2024-06-12T15:35:17.000Z</published>
-    <updated>2024-06-12T15:35:17.625Z</updated>
-    
-    
-    
+    <category term="Neetcode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/Neetcode150/"/>
     
     
   </entry>
