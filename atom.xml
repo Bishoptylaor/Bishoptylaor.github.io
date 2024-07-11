@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-07-10T13:14:08.363Z</updated>
+  <updated>2024-07-11T15:03:15.667Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>请根据场景设计缓存方案</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/design-a-cache-sync/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/design-a-cache-sync/</id>
+    <published>2024-07-11T15:00:02.000Z</published>
+    <updated>2024-07-11T15:03:15.667Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>请设计一个限流器</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/design-a-rate-limiter/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/design-a-rate-limiter/</id>
+    <published>2024-07-11T14:00:59.000Z</published>
+    <updated>2024-07-11T23:25:14.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot;&gt;&lt;a href=&quot;#要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>给定数字组成的比目标数字小的最大值</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/smaller-largest-num-in-given-digits/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/smaller-largest-num-in-given-digits/</id>
+    <published>2024-07-11T13:44:23.000Z</published>
+    <updated>2024-07-11T13:59:11.058Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;给定一个目标数 n，给定一组数组 nums，求由 nums 组成的比 n 小的最大数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：n = 23112, nums = [2, 4,</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Leetcode.20. 有效的括号</title>
@@ -253,6 +318,34 @@
     <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index/"/>
     <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index/</id>
     <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-10T13:14:08.358Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;10&lt;br&gt;97&lt;br&gt;115&lt;br&gt;309&lt;br&gt;312&lt;br&gt;329&lt;br&gt;494&lt;br&gt;518&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/NeetCode150/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
     <updated>2024-07-10T13:14:08.359Z</updated>
     
     
@@ -278,17 +371,17 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-10T13:14:08.358Z</updated>
+    <updated>2024-07-10T13:14:08.359Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;10&lt;br&gt;97&lt;br&gt;115&lt;br&gt;309&lt;br&gt;312&lt;br&gt;329&lt;br&gt;494&lt;br&gt;518&lt;/p&gt;
+    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
 </summary>
         
       
@@ -429,119 +522,6 @@
         
         
     <summary type="html">&lt;p&gt;45&lt;br&gt;134&lt;br&gt;846&lt;br&gt;1899&lt;br&gt;763&lt;br&gt;678&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/NeetCode150/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index%205/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index%205/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-10T13:14:08.360Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;252&lt;br&gt;253&lt;br&gt;1851&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/NeetCode150/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index%207/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index%207/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-10T13:14:08.363Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;202&lt;br&gt;66&lt;br&gt;50&lt;br&gt;43&lt;br&gt;2013&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/NeetCode150/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index%207%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index%207%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-10T13:14:08.385Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;239&lt;/p&gt;
-&lt;p&gt;567&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/NeetCode150/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/NeetCode150/index%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/NeetCode150/index%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-10T13:14:08.360Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
 </summary>
         
       

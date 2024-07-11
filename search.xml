@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>请根据场景设计缓存方案</title>
+      <link href="/uncategorized/design-a-cache-sync/"/>
+      <url>/uncategorized/design-a-cache-sync/</url>
+      
+        <content type="html"><![CDATA[<h2 id="有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？"><a href="#有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？" class="headerlink" title="有ABC三个请求，都是 uid 纬度的请求；分别涉及到配置 1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？"></a>有ABC三个请求，都是 uid 纬度的请求；分别涉及到配置 1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？</h2><ol><li>可以将配置变化的 binlog 加入消息队列</li><li>配置关联的请求前缀提前存入 redis</li><li>请求缓存的 key 做拆分：前缀为 2 中提到的前缀，以前缀为 key 存 uid 和 缓存更新时间到 zset 中。另 前缀 + uid 单独存储某个用户某个请求具体的缓存内容</li><li>当消息队列消费到配置变化时：获取该配置关联的请求桶前缀，将请求桶中时间小于当前时间的 uid 取出，并从桶中清除；将前缀和相关待过期 uid 组合获取真正缓存的 key，将其过期 or 删除。</li></ol><h2 id="如何保证缓存和db的数据一致性"><a href="#如何保证缓存和db的数据一致性" class="headerlink" title="如何保证缓存和db的数据一致性"></a>如何保证缓存和db的数据一致性</h2><p>cache aside pattern<br>读请求：先读缓存-&gt;缓存命中，返回数据-&gt;缓存失败，读DB-&gt;更新缓存<br>写请求：先更新DB-&gt;再更新缓存 额外记录DB变更，比如1s内是否有 db:table:column 产生了修改，这样在读到相关缓存时，可以先判断这个 变更 缓存是否有内容。</p><p>如果相邻时间窗口内没有更新操作，那么认为当前读到的缓存时相对最新的；如果相邻时间窗口内有更新操作，那么需要将此次读到的内容丢弃，重读DB，并删除 or 更新缓存。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>请设计一个限流器</title>
+      <link href="/uncategorized/design-a-rate-limiter/"/>
+      <url>/uncategorized/design-a-rate-limiter/</url>
+      
+        <content type="html"><![CDATA[<h2 id="要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置"><a href="#要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置" class="headerlink" title="要求做一个限流器，限流范围是 10-千万qps，要求限流精度 99% ，可以指定接口做限流配置"></a>要求做一个限流器，限流范围是 10-千万qps，要求限流精度 99% ，可以指定接口做限流配置</h2><p>要实现一个具有高效限流和高精度的限流器，可以使用令牌桶（Token Bucket）算法。令牌桶算法能够处理高吞吐量的请求，同时具有较高的精度。</p><p>以下是一个使用 Go 语言实现的限流器示例，包含以下特性：</p><ol><li><strong>令牌桶算法</strong>：用于控制请求的速率。</li><li><strong>接口限流配置</strong>：可以指定不同的接口进行限流配置。</li><li><strong>高吞吐量支持</strong>：支持 10 到千万 QPS 的范围。</li><li><strong>高精度</strong>：限流精度 99%。</li></ol><h3 id="Go-语言实现限流器"><a href="#Go-语言实现限流器" class="headerlink" title="Go 语言实现限流器"></a>Go 语言实现限流器</h3><p>首先，我们定义一个 <code>RateLimiter</code> 结构体，使用令牌桶算法来实现限流器。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">&quot;sync&quot;</span></span><br><span class="line"><span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// RateLimiter implements a token bucket rate limiter.</span></span><br><span class="line"><span class="keyword">type</span> RateLimiter <span class="keyword">struct</span> &#123;</span><br><span class="line">rate         <span class="type">int</span>           <span class="comment">// tokens generated per second</span></span><br><span class="line">burst        <span class="type">int</span>           <span class="comment">// max tokens in the bucket</span></span><br><span class="line">tokens       <span class="type">int</span>           <span class="comment">// current available tokens</span></span><br><span class="line">lastRefill   time.Time     <span class="comment">// last refill time</span></span><br><span class="line">mu           sync.Mutex    <span class="comment">// mutex for concurrent access</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// NewRateLimiter creates a new RateLimiter.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewRateLimiter</span><span class="params">(rate <span class="type">int</span>, burst <span class="type">int</span>)</span></span> *RateLimiter &#123;</span><br><span class="line"><span class="keyword">return</span> &amp;RateLimiter&#123;</span><br><span class="line">rate:       rate,</span><br><span class="line">burst:      burst,</span><br><span class="line">tokens:     burst,</span><br><span class="line">lastRefill: time.Now(),</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Allow checks if a request can proceed and decrements the token count.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(rl *RateLimiter)</span></span> Allow() <span class="type">bool</span> &#123;</span><br><span class="line">rl.mu.Lock()</span><br><span class="line"><span class="keyword">defer</span> rl.mu.Unlock()</span><br><span class="line"></span><br><span class="line">now := time.Now()</span><br><span class="line">elapsed := now.Sub(rl.lastRefill).Seconds()</span><br><span class="line">rl.tokens += <span class="type">int</span>(elapsed * <span class="type">float64</span>(rl.rate))</span><br><span class="line"><span class="keyword">if</span> rl.tokens &gt; rl.burst &#123;</span><br><span class="line">rl.tokens = rl.burst</span><br><span class="line">&#125;</span><br><span class="line">rl.lastRefill = now</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> rl.tokens &gt; <span class="number">0</span> &#123;</span><br><span class="line">rl.tokens--</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> RateLimiterManager <span class="keyword">struct</span> &#123;</span><br><span class="line">limiters <span class="keyword">map</span>[<span class="type">string</span>]*RateLimiter</span><br><span class="line">mu       sync.Mutex</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// NewRateLimiterManager creates a new RateLimiterManager.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewRateLimiterManager</span><span class="params">()</span></span> *RateLimiterManager &#123;</span><br><span class="line"><span class="keyword">return</span> &amp;RateLimiterManager&#123;</span><br><span class="line">limiters: <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">string</span>]*RateLimiter),</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// GetRateLimiter returns the RateLimiter for a given endpoint.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(manager *RateLimiterManager)</span></span> GetRateLimiter(endpoint <span class="type">string</span>, rate <span class="type">int</span>, burst <span class="type">int</span>) *RateLimiter &#123;</span><br><span class="line">manager.mu.Lock()</span><br><span class="line"><span class="keyword">defer</span> manager.mu.Unlock()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> limiter, exists := manager.limiters[endpoint]; exists &#123;</span><br><span class="line"><span class="keyword">return</span> limiter</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">limiter := NewRateLimiter(rate, burst)</span><br><span class="line">manager.limiters[endpoint] = limiter</span><br><span class="line"><span class="keyword">return</span> limiter</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example usage</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">manager := NewRateLimiterManager()</span><br><span class="line">endpoint := <span class="string">&quot;/api/test&quot;</span></span><br><span class="line">rate := <span class="number">1000000</span>   <span class="comment">// 1 million QPS</span></span><br><span class="line">burst := <span class="number">1000000</span>  <span class="comment">// burst capacity</span></span><br><span class="line"></span><br><span class="line">limiter := manager.GetRateLimiter(endpoint, rate, burst)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line"><span class="keyword">if</span> limiter.Allow() &#123;</span><br><span class="line"><span class="comment">// Process request</span></span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;Request allowed&quot;</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="comment">// Reject request</span></span><br><span class="line"><span class="built_in">println</span>(<span class="string">&quot;Request rejected&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h3><ol><li><strong>RateLimiter 结构体</strong>：包含速率（rate）、突发容量（burst）、当前令牌数（tokens）以及上次补充令牌的时间（lastRefill）。</li><li><strong>NewRateLimiter 函数</strong>：用于创建一个新的限流器实例。</li><li><strong>Allow 方法</strong>：检查请求是否可以通过，并相应地减少令牌数量。通过计算时间间隔来补充令牌。</li><li><strong>RateLimiterManager 结构体</strong>：用于管理不同接口的限流器。</li><li><strong>NewRateLimiterManager 函数</strong>：创建一个新的限流器管理器实例。</li><li><strong>GetRateLimiter 方法</strong>：获取指定接口的限流器，如果不存在则创建一个新的限流器。</li></ol><h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>在 <code>main</code> 函数中，创建了一个限流器管理器，并为 <code>/api/test</code> 接口设置了限流参数。然后模拟 100 个请求，检查请求是否被允许。</p><p>这个限流器实现可以处理高吞吐量的请求，并且具有限流精度。你可以根据需要调整速率和突发容量，以适应不同的 QPS 范围。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>给定数字组成的比目标数字小的最大值</title>
+      <link href="/uncategorized/smaller-largest-num-in-given-digits/"/>
+      <url>/uncategorized/smaller-largest-num-in-given-digits/</url>
+      
+        <content type="html"><![CDATA[<p>给定一个目标数 n，给定一组数组 nums，求由 nums 组成的比 n 小的最大数。</p><p><strong>示例 1：</strong></p><pre><code>输入：n = 23112, nums = [2, 4, 9]输出：0</code></pre><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> (  </span><br><span class="line">   <span class="string">&quot;fmt&quot;</span>  </span><br><span class="line">   <span class="string">&quot;sort&quot;</span>   <span class="string">&quot;strconv&quot;</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">findMaxLessThanN</span><span class="params">(target <span class="type">int</span>, nums []<span class="type">int</span>)</span></span> (result <span class="type">int</span>) &#123;  </span><br><span class="line">   targetStr := strconv.Itoa(target)  </span><br><span class="line">   <span class="keyword">var</span> targetNums []<span class="type">int</span>  </span><br><span class="line">   <span class="keyword">for</span> i, _ := <span class="keyword">range</span> targetStr &#123;  </span><br><span class="line">      targetNums = <span class="built_in">append</span>(targetNums, <span class="type">int</span>(targetStr[i]-<span class="string">&#x27;0&#x27;</span>))  </span><br><span class="line">   &#125;  </span><br><span class="line">  </span><br><span class="line">   <span class="comment">// Sort A in descending order  </span></span><br><span class="line">   sort.Sort(sort.Reverse(sort.IntSlice(nums)))  </span><br><span class="line">   ASet := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">int</span>]<span class="type">bool</span>)  </span><br><span class="line">   <span class="keyword">for</span> _, a := <span class="keyword">range</span> nums &#123;  </span><br><span class="line">      ASet[a] = <span class="literal">true</span>  </span><br><span class="line">   &#125;  </span><br><span class="line">   length := <span class="built_in">len</span>(targetNums)  </span><br><span class="line">  </span><br><span class="line">   <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;  </span><br><span class="line">      currentDigit := targetNums[i]  </span><br><span class="line">      largestLess, found := findLargestLessThan(currentDigit, nums)  </span><br><span class="line">  </span><br><span class="line">      <span class="keyword">if</span> found &#123;  </span><br><span class="line">         <span class="comment">// Replace the current digit with the largest less than itself  </span></span><br><span class="line">         targetNums[i] = largestLess  </span><br><span class="line">         <span class="comment">// Fill the rest of the digits with the largest in A  </span></span><br><span class="line">         <span class="keyword">for</span> j := i + <span class="number">1</span>; j &lt; length; j++ &#123;  </span><br><span class="line">            targetNums[j] = nums[<span class="number">0</span>]  </span><br><span class="line">         &#125;  </span><br><span class="line">         <span class="keyword">break</span>  </span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> !ASet[currentDigit] &#123;  </span><br><span class="line">         <span class="comment">// If current digit is not in A and we cannot find a smaller digit, backtrack  </span></span><br><span class="line">         <span class="keyword">for</span> i &gt;= <span class="number">0</span> &amp;&amp; !ASet[targetNums[i]] &#123;  </span><br><span class="line">            i--  </span><br><span class="line">         &#125;  </span><br><span class="line">  </span><br><span class="line">         <span class="keyword">if</span> i &lt; <span class="number">0</span> &#123;  </span><br><span class="line">            <span class="comment">// If no valid digit was found, return the largest possible number with one less digit  </span></span><br><span class="line">            result := <span class="number">0</span>  </span><br><span class="line">            <span class="keyword">for</span> j := <span class="number">0</span>; j &lt; length<span class="number">-1</span>; j++ &#123;  </span><br><span class="line">               result = result*<span class="number">10</span> + nums[<span class="number">0</span>]  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">return</span> result  </span><br><span class="line">         &#125;  </span><br><span class="line">  </span><br><span class="line">         <span class="comment">// Replace the found digit with the largest less than itself and fill the rest  </span></span><br><span class="line">         largestLess, _ = findLargestLessThan(targetNums[i], nums)  </span><br><span class="line">         targetNums[i] = largestLess  </span><br><span class="line">         <span class="keyword">for</span> j := i + <span class="number">1</span>; j &lt; length; j++ &#123;  </span><br><span class="line">            targetNums[j] = nums[<span class="number">0</span>]  </span><br><span class="line">         &#125;  </span><br><span class="line">         <span class="keyword">break</span>  </span><br><span class="line">      &#125;  </span><br><span class="line">   &#125;  </span><br><span class="line">  </span><br><span class="line">   <span class="comment">// Convert the runes back to an integer  </span></span><br><span class="line">   <span class="keyword">for</span> _, n := <span class="keyword">range</span> targetNums &#123;  </span><br><span class="line">      result = result*<span class="number">10</span> + n  </span><br><span class="line">   &#125;  </span><br><span class="line">   <span class="keyword">return</span> result  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// findLargestLessThan finds the largest digit in A that is less than the given digitfunc findLargestLessThan(digit int, A []int) (int, bool) &#123;  </span></span><br><span class="line">   <span class="keyword">for</span> _, a := <span class="keyword">range</span> A &#123;  </span><br><span class="line">      <span class="keyword">if</span> a &lt; digit &#123;  </span><br><span class="line">         <span class="keyword">return</span> a, <span class="literal">true</span>  </span><br><span class="line">      &#125;  </span><br><span class="line">   &#125;  </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>, <span class="literal">false</span>  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">   n := <span class="number">23121</span>  </span><br><span class="line">   A := []<span class="type">int</span>&#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>&#125;  </span><br><span class="line">   fmt.Println(findMaxLessThanN(n, A)) <span class="comment">// Output: 22999  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h3><ol><li><strong>findLargestLessThan</strong>: 一个辅助函数，用于找到集合 A 中小于给定数字的最大数字。</li><li><strong>findMaxLessThanN</strong>: 主要函数，根据给定数字 n 和集合 A，逐位处理，找到满足条件的最大数字。<ul><li>将 n 转换为字符串以便逐位处理。</li><li>对集合 A 进行排序，并构建一个快速查找的集合 ASet。</li><li>从高位开始逐位处理 n，如果找到可以替换的数字则进行替换，并将后续位设为集合 A 中最大的数字。</li><li>如果无法替换当前位，进行回溯处理，找到可以替换的前一位。</li></ul></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Leetcode.20. 有效的括号</title>
       <link href="/interview/juan/NeetCode150/leet-150-valid-parentheses%201/"/>
       <url>/interview/juan/NeetCode150/leet-150-valid-parentheses%201/</url>
@@ -195,7 +234,7 @@
       <link href="/interview/juan/NeetCode150/index/"/>
       <url>/interview/juan/NeetCode150/index/</url>
       
-        <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
+        <content type="html"><![CDATA[<p>10<br>97<br>115<br>309<br>312<br>329<br>494<br>518</p>]]></content>
       
       
       <categories>
@@ -218,7 +257,30 @@
       <link href="/interview/juan/NeetCode150/index/"/>
       <url>/interview/juan/NeetCode150/index/</url>
       
-        <content type="html"><![CDATA[<p>10<br>97<br>115<br>309<br>312<br>329<br>494<br>518</p>]]></content>
+        <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/NeetCode150/index%201/"/>
+      <url>/interview/juan/NeetCode150/index%201/</url>
+      
+        <content type="html"><![CDATA[<p>704<br>74<br>875<br>981</p>]]></content>
       
       
       <categories>
@@ -353,75 +415,6 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/NeetCode150/index%205/"/>
-      <url>/interview/juan/NeetCode150/index%205/</url>
-      
-        <content type="html"><![CDATA[<p>252<br>253<br>1851</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
-      <link href="/interview/juan/NeetCode150/index%207/"/>
-      <url>/interview/juan/NeetCode150/index%207/</url>
-      
-        <content type="html"><![CDATA[<p>202<br>66<br>50<br>43<br>2013</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
-      <link href="/interview/juan/NeetCode150/index%207%201/"/>
-      <url>/interview/juan/NeetCode150/index%207%201/</url>
-      
-        <content type="html"><![CDATA[<p>239</p><p>567</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
       <link href="/interview/juan/NeetCode150/index%201/"/>
       <url>/interview/juan/NeetCode150/index%201/</url>
       
@@ -445,10 +438,10 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/NeetCode150/index%209/"/>
-      <url>/interview/juan/NeetCode150/index%209/</url>
+      <link href="/interview/juan/NeetCode150/index%205/"/>
+      <url>/interview/juan/NeetCode150/index%205/</url>
       
-        <content type="html"><![CDATA[<p>22<br>739<br>853</p>]]></content>
+        <content type="html"><![CDATA[<p>252<br>253<br>1851</p>]]></content>
       
       
       <categories>
@@ -491,10 +484,56 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/NeetCode150/index%201/"/>
-      <url>/interview/juan/NeetCode150/index%201/</url>
+      <link href="/interview/juan/NeetCode150/index%207/"/>
+      <url>/interview/juan/NeetCode150/index%207/</url>
       
-        <content type="html"><![CDATA[<p>704<br>74<br>875<br>981</p>]]></content>
+        <content type="html"><![CDATA[<p>202<br>66<br>50<br>43<br>2013</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/NeetCode150/index%209/"/>
+      <url>/interview/juan/NeetCode150/index%209/</url>
+      
+        <content type="html"><![CDATA[<p>22<br>739<br>853</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/NeetCode150/index%207%201/"/>
+      <url>/interview/juan/NeetCode150/index%207%201/</url>
+      
+        <content type="html"><![CDATA[<p>239</p><p>567</p>]]></content>
       
       
       <categories>
@@ -1996,6 +2035,29 @@
     
     <entry>
       <title>leet226</title>
+      <link href="/interview/juan/NeetCode150/leet226/"/>
+      <url>/interview/juan/NeetCode150/leet226/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leet226</title>
       <link href="/interview/juan/NeetCode150/leet110/"/>
       <url>/interview/juan/NeetCode150/leet110/</url>
       
@@ -2021,29 +2083,6 @@
       <title>leet226</title>
       <link href="/interview/juan/NeetCode150/leet1448/"/>
       <url>/interview/juan/NeetCode150/leet1448/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>leet226</title>
-      <link href="/interview/juan/NeetCode150/leet226/"/>
-      <url>/interview/juan/NeetCode150/leet226/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2790,11 +2829,11 @@
     
     
     <entry>
-      <title>Leetcode.62 不同路径</title>
-      <link href="/interview/juan/NeetCode150/leet-62-unique-paths/"/>
-      <url>/interview/juan/NeetCode150/leet-62-unique-paths/</url>
+      <title>Leetcode.63 不同路径ii</title>
+      <link href="/interview/juan/NeetCode150/leet-63-unique-paths-ii/"/>
+      <url>/interview/juan/NeetCode150/leet-63-unique-paths-ii/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths/description/">Leetcode.62 不同路径</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p><p>问总共有多少条不同的路径？</p><p><strong>示例 1：</strong></p><p><img src="https://pic.leetcode.cn/1697422740-adxmsI-image.png"></p><pre><code>输入：m = 3, n = 7输出：28</code></pre><p><strong>示例 2：</strong></p><pre><code>输入：m = 3, n = 2输出：3解释：从左上角开始，总共有 3 条路径可以到达右下角。1. 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右3. 向下 -&gt; 向右 -&gt; 向下</code></pre><p><strong>示例 3：</strong></p><pre><code>输入：m = 7, n = 3输出：28</code></pre><p><strong>示例 4：</strong></p><pre><code>输入：m = 3, n = 3输出：6</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= m, n &lt;= 100</code></li><li>题目数据保证答案小于等于 <code>2 * 109</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePaths</span><span class="params">(m <span class="type">int</span>, n <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">dp := <span class="built_in">make</span>([][]<span class="type">int</span>, m)</span><br><span class="line"><span class="keyword">for</span> i, _ := <span class="keyword">range</span> dp &#123;</span><br><span class="line">dp[i] = <span class="built_in">make</span>([]<span class="type">int</span>, n)</span><br><span class="line">dp[i][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">0</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[<span class="number">0</span>][j] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> i:=<span class="number">1</span>; i&lt;m; i++ &#123;</span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">1</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[i][j] = dp[i<span class="number">-1</span>][j] + dp[i][j<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[m<span class="number">-1</span>][n<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths-ii/description/">Leetcode.63 不同路径ii</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p><p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p><p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p><p><strong>示例 1：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg"></p><pre><code>输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]输出：2解释：3x3 网格的正中间有一个障碍物。从左上角到右下角一共有 `2` 条不同的路径：1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</code></pre><p><strong>示例 2：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg"></p><pre><code>输入：obstacleGrid = [[0,1],[0,0]]输出：1</code></pre><p><strong>提示：</strong></p><ul><li><code>m == obstacleGrid.length</code></li><li><code>n == obstacleGrid[i].length</code></li><li><code>1 &lt;= m, n &lt;= 100</code></li><li><code>obstacleGrid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(obstacleGrid [][]<span class="type">int</span>)</span></span> <span class="type">int</span> &#123; </span><br><span class="line">n, m := <span class="built_in">len</span>(obstacleGrid), <span class="built_in">len</span>(obstacleGrid[<span class="number">0</span>]) </span><br><span class="line">f := <span class="built_in">make</span>([]<span class="type">int</span>, m) </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[<span class="number">0</span>][<span class="number">0</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[<span class="number">0</span>] = <span class="number">1</span> </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123; </span><br><span class="line"><span class="keyword">for</span> j := <span class="number">0</span>; j &lt; m; j++ &#123; </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[i][j] == <span class="number">1</span> &#123; </span><br><span class="line">f[j] = <span class="number">0</span> </span><br><span class="line"><span class="keyword">continue</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">if</span> j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; obstacleGrid[i][j<span class="number">-1</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[j] += f[j<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">return</span> f[<span class="built_in">len</span>(f)<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -2813,11 +2852,11 @@
     
     
     <entry>
-      <title>Leetcode.63 不同路径ii</title>
-      <link href="/interview/juan/NeetCode150/leet-63-unique-paths-ii/"/>
-      <url>/interview/juan/NeetCode150/leet-63-unique-paths-ii/</url>
+      <title>Leetcode.62 不同路径</title>
+      <link href="/interview/juan/NeetCode150/leet-62-unique-paths/"/>
+      <url>/interview/juan/NeetCode150/leet-62-unique-paths/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths-ii/description/">Leetcode.63 不同路径ii</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p><p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p><p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p><p><strong>示例 1：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg"></p><pre><code>输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]输出：2解释：3x3 网格的正中间有一个障碍物。从左上角到右下角一共有 `2` 条不同的路径：1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</code></pre><p><strong>示例 2：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg"></p><pre><code>输入：obstacleGrid = [[0,1],[0,0]]输出：1</code></pre><p><strong>提示：</strong></p><ul><li><code>m == obstacleGrid.length</code></li><li><code>n == obstacleGrid[i].length</code></li><li><code>1 &lt;= m, n &lt;= 100</code></li><li><code>obstacleGrid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(obstacleGrid [][]<span class="type">int</span>)</span></span> <span class="type">int</span> &#123; </span><br><span class="line">n, m := <span class="built_in">len</span>(obstacleGrid), <span class="built_in">len</span>(obstacleGrid[<span class="number">0</span>]) </span><br><span class="line">f := <span class="built_in">make</span>([]<span class="type">int</span>, m) </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[<span class="number">0</span>][<span class="number">0</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[<span class="number">0</span>] = <span class="number">1</span> </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123; </span><br><span class="line"><span class="keyword">for</span> j := <span class="number">0</span>; j &lt; m; j++ &#123; </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[i][j] == <span class="number">1</span> &#123; </span><br><span class="line">f[j] = <span class="number">0</span> </span><br><span class="line"><span class="keyword">continue</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">if</span> j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; obstacleGrid[i][j<span class="number">-1</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[j] += f[j<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">return</span> f[<span class="built_in">len</span>(f)<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths/description/">Leetcode.62 不同路径</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p><p>问总共有多少条不同的路径？</p><p><strong>示例 1：</strong></p><p><img src="https://pic.leetcode.cn/1697422740-adxmsI-image.png"></p><pre><code>输入：m = 3, n = 7输出：28</code></pre><p><strong>示例 2：</strong></p><pre><code>输入：m = 3, n = 2输出：3解释：从左上角开始，总共有 3 条路径可以到达右下角。1. 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右3. 向下 -&gt; 向右 -&gt; 向下</code></pre><p><strong>示例 3：</strong></p><pre><code>输入：m = 7, n = 3输出：28</code></pre><p><strong>示例 4：</strong></p><pre><code>输入：m = 3, n = 3输出：6</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= m, n &lt;= 100</code></li><li>题目数据保证答案小于等于 <code>2 * 109</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePaths</span><span class="params">(m <span class="type">int</span>, n <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">dp := <span class="built_in">make</span>([][]<span class="type">int</span>, m)</span><br><span class="line"><span class="keyword">for</span> i, _ := <span class="keyword">range</span> dp &#123;</span><br><span class="line">dp[i] = <span class="built_in">make</span>([]<span class="type">int</span>, n)</span><br><span class="line">dp[i][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">0</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[<span class="number">0</span>][j] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> i:=<span class="number">1</span>; i&lt;m; i++ &#123;</span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">1</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[i][j] = dp[i<span class="number">-1</span>][j] + dp[i][j<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[m<span class="number">-1</span>][n<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -3428,9 +3467,9 @@
       
         <tags>
             
-            <tag> 基础知识 </tag>
-            
             <tag> 必看必会 </tag>
+            
+            <tag> 基础知识 </tag>
             
         </tags>
       
@@ -3457,9 +3496,9 @@
       
         <tags>
             
-            <tag> 基础知识 </tag>
-            
             <tag> 必看必会 </tag>
+            
+            <tag> 基础知识 </tag>
             
         </tags>
       
@@ -3607,9 +3646,9 @@
       
         <tags>
             
-            <tag> 基础知识 </tag>
-            
             <tag> 必看必会 </tag>
+            
+            <tag> 基础知识 </tag>
             
             <tag> go </tag>
             
@@ -3859,9 +3898,9 @@
       
         <tags>
             
-            <tag> 基础知识 </tag>
-            
             <tag> 必看必会 </tag>
+            
+            <tag> 基础知识 </tag>
             
             <tag> go </tag>
             
@@ -4327,33 +4366,6 @@
     
     
     <entry>
-      <title>面试题-移掉K位数字</title>
-      <link href="/interview/interviewer/remove-the-k-digit/"/>
-      <url>/interview/interviewer/remove-the-k-digit/</url>
-      
-        <content type="html"><![CDATA[<h1 id="移掉K位数字-leetcode-402"><a href="#移掉K位数字-leetcode-402" class="headerlink" title="移掉K位数字-leetcode-402"></a>移掉K位数字-leetcode-402</h1><ul><li>涉及知识点：贪心,栈</li></ul><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个以字符串表示的非负整数 num，移除这个数中的 k 位数字，使得剩下的数字最小。  </p><p>注意:  </p><ul><li>num 的长度小于 10002 且 ≥ k。  </li><li>num 不会包含任何前导零。</li></ul><p>输入&#x2F;输出示例：  </p><p>Example 1:  </p><p>Input:   </p><pre><code>num = &quot;1432219&quot;, k = 3  </code></pre><p>Output:   </p><pre><code>&quot;1219&quot;  </code></pre><p>Explanation: 移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219。  </p><p>Example 2:  </p><p>Input:   </p><pre><code>num = &quot;10200&quot;, k = 1  </code></pre><p>Output:   </p><pre><code>&quot;200&quot;  </code></pre><p>Explanation: 移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前导零。  </p><p>Example 3:  </p><p>Input:   </p><pre><code>num = &quot;10&quot;, k = 2  </code></pre><p>Output:   </p><pre><code>&quot;0&quot;  </code></pre><p>Explanation: 从原数字移除所有的数字，剩余为空就是0。  </p><h2 id="思路描述"><a href="#思路描述" class="headerlink" title="思路描述"></a>思路描述</h2><h2 id="思路-0"><a href="#思路-0" class="headerlink" title="思路 0"></a>思路 0</h2><p>详细描述：思路，从左到右，找第一个比后面大的字符，删除，清零，k次扫描。  </p><ul><li>时间复杂度：o(n*k)  </li><li>空间复杂度：o(1)</li></ul><p>代码：  </p><pre><code class="java">class Solution &#123;      public String removeKdigits(String num, int k) &#123;        if (num.length() == k) return &quot;0&quot;;        StringBuilder s = new StringBuilder(num);        for (int i = 0; i &lt; k; i++) &#123;            int idx = 0;            for (int j = 1; j &lt; s.length() &amp;&amp; s.charAt(j) &gt;= s.charAt(j - 1); j++) idx = j;            s.delete(idx, idx + 1);            while (s.length() &gt; 1 &amp;&amp; s.charAt(0) == &#39;0&#39;) s.delete(0, 1);        &#125;        return s.toString();    &#125;&#125;  </code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><p>详细描述：在一定的范围内逐步选取最小的数字。<br>  </p><ol><li>在第一次循环中，num &#x3D; 1432219, k&#x3D;3，此时我们要删去k&#x3D;3个数字，保留n-k&#x3D;7-3&#x3D;4个数字。  </li><li>最终要挑选4个字符，那么我们先来挑选 千位 的字符，，由于挑选完千位后还需要挑选百位，十位，个位这三个位置的字符，所以千位能选择的范围只能在1432之间,因为要留出末尾的219这三个字符供百位、十位、个位 去挑选。  </li><li>1432中最小的值是1，所以千位的值选好了，就是1，接下来就是从千位后面的432219中去挑选百位值，可以发现挑选每一位的值是一个递归的过程。  </li><li>start &#x3D; 0, end &#x3D; k。也就是要在[start,end]中选取一个最小的进行保留，返回最小数字的下标minIndex。而在下次循环中，start &#x3D; minIndex+1, end++ ，也就是在[start,end]中选择下一个最小的数字。以此类推，直至所有数字都选取完毕。</li></ol><p>注意：当返回的下标minIndex及后面的字符串的长度 &#x3D; 还需要保留的字符串的长度的时候，直接返回  </p><ul><li>时间复杂度：o(n*k)  </li><li>空间复杂度：o(1)</li></ul><p>代码：  </p><pre><code class="go">func removeKdigits(num string, k int) string &#123;      if 0 == k &#123;        return num    &#125;    if k == len(num) &#123;        return &quot;0&quot;    &#125;    result := &quot;&quot;    i := len(num)-k    for &#123;        if i == 0 &#123;            break        &#125;        minIndex := 0        for  j := 0; j &lt; len(num)-(i-1); j++ &#123;            if num[j] &lt; num[minIndex] &#123;                minIndex = j            &#125;        &#125;        // 优化        if len(num)- minIndex == i &#123;            result = result + num[minIndex:]            break        &#125;        result += num[minIndex:minIndex+1]        num = num[minIndex+1:]        i--    &#125;    // 前导0    ans := strings.TrimLeft(result, &quot;0&quot;)    if ans == &quot;&quot; &#123;        ans = &quot;0&quot;    &#125;    return ans&#125;    </code></pre><h3 id="思路2-贪心-单调栈（一般可用-栈、队列、双端队列、双指针-实现）"><a href="#思路2-贪心-单调栈（一般可用-栈、队列、双端队列、双指针-实现）" class="headerlink" title="思路2: 贪心 + 单调栈（一般可用 栈、队列、双端队列、双指针 实现）"></a>思路2: 贪心 + 单调栈（一般可用 栈、队列、双端队列、双指针 实现）</h3><p>详细描述：  </p><ul><li><p>遍历字符串，逐个入栈,若新来的比栈顶小，则栈顶出栈 ,出栈相当于移除动作，需次数并与 k 比较，别删多了  </p></li><li><p>移除头部零有 ‘0’,全空，return “0”,构建字符串，顺序返回整个单调栈元素.  </p></li><li><p>时间复杂度：o(n+k)  </p></li><li><p>空间复杂度：o(n)</p></li></ul><p>代码：  </p><pre><code class="go">func removeKdigits(num string, k int) string &#123;      stack := []byte&#123;&#125;        for i := range num &#123;        digit := num[i]        for k &gt; 0 &amp;&amp; len(stack) &gt; 0 &amp;&amp; digit &lt; stack[len(stack)-1] &#123;            stack = stack[:len(stack)-1]            k--                &#125;        stack = append(stack, digit)     &#125;    stack = stack[:len(stack)-k]    ans := strings.TrimLeft(string(stack), &quot;0&quot;)    if ans == &quot;&quot; &#123;        ans = &quot;0&quot;        &#125;    return ans&#125;  </code></pre><h4 id="评分"><a href="#评分" class="headerlink" title="评分"></a>评分</h4><ul><li>提出思路0，能正确分析时空复杂度(2分)  </li><li>提出思路1，能正确分析时空复杂度(3分)  </li><li>提出思路2，能正确分析时空复杂度(4分)  </li><li>bugfree且代码简洁(5分)</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 面试官 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>面试题-连续固定区间最大值</title>
       <link href="/interview/interviewer/maximum-of-segments/"/>
       <url>/interview/interviewer/maximum-of-segments/</url>
@@ -4386,6 +4398,33 @@
       <url>/interview/interviewer/single-numbers/</url>
       
         <content type="html"><![CDATA[<h1 id="仅出现一次的元素"><a href="#仅出现一次的元素" class="headerlink" title="仅出现一次的元素"></a>仅出现一次的元素</h1><ul><li>涉及知识点：散列表、位运算</li></ul><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>（英文）<br>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.  </p><p>For example:  </p><p>Given nums &#x3D; [1, 2, 1, 3, 2, 5], return [3, 5].  </p><p>Note:  </p><ol><li>The order of the result is not important. So in the above example, [5, 3] is also correct.</li></ol><p>（中文）<br>给定一个整数数组，其中恰好有两个元素只出现一次，其余所有元素均出现两次。 找出仅出现一次的那两个元素。要求时间复杂度在O(N)内。  </p><p>示例输入:  </p><pre><code>[1, 2, 1, 3, 2, 5]  </code></pre><p>示例输出：  </p><pre><code>[3, 5]  </code></pre><h2 id="思路描述"><a href="#思路描述" class="headerlink" title="思路描述"></a>思路描述</h2><h3 id="思路1：排序-遍历"><a href="#思路1：排序-遍历" class="headerlink" title="思路1：排序+遍历"></a>思路1：排序+遍历</h3><p>对序列排序，后遍历所有元素，通过相邻元素是否有相同值来判断是否满足条件，输出。  </p><p>常规排序方案的时空复杂度如下：  </p><ul><li>时间复杂度 <code>O(N*log(N))</code>  </li><li>空间复杂度 <code>O(1)</code></li></ul><p>此时解法不满足要求，可给到2分，若能给出计数排序（时间复杂度O(N)）法，可给到3分。  </p><h3 id="思路2：散列表-遍历"><a href="#思路2：散列表-遍历" class="headerlink" title="思路2：散列表+遍历"></a>思路2：散列表+遍历</h3><p>遍历每个元素，使用散列表存储元素值到数量的映射关系，再遍历散列表找出其中value为1的key，输出。  </p><p>该方案的时空复杂度分析如下：  </p><ul><li>时间复杂度 <code>O(N)</code>  </li><li>空间复杂度 <code>O(N)</code></li></ul><p>此时为次优解，可延伸提问对散列表的理解（如遍历结果是否有序，两个元素输出顺序是否确定），回答正确可给到4分  </p><h3 id="思路3：位运算"><a href="#思路3：位运算" class="headerlink" title="思路3：位运算"></a>思路3：位运算</h3><p>遍历元素，使用异或运算可消除相同的元素，得到所求两个元素的异或结果，从中找出二进制为1的最低位数字，再遍历一次，求出其中一个元素，再与前面结果异或得到另一个元素，输出。  </p><p>该方案的时空复杂度分析如下：  </p><ul><li>时间复杂度 <code>O(N)</code>  </li><li>空间复杂度 <code>O(1)</code></li></ul><p>此为最优解，可给到5分  </p><h2 id="解法示例"><a href="#解法示例" class="headerlink" title="解法示例"></a>解法示例</h2><p><a href="./single-numbers/sortSolution.go">排序+遍历</a>  </p><p><a href="./single-numbers/hashSolution.go">hash+遍历</a>  </p><p><a href="./single-numbers/bitSolution.go">位运算</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 面试官 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试题-移掉K位数字</title>
+      <link href="/interview/interviewer/remove-the-k-digit/"/>
+      <url>/interview/interviewer/remove-the-k-digit/</url>
+      
+        <content type="html"><![CDATA[<h1 id="移掉K位数字-leetcode-402"><a href="#移掉K位数字-leetcode-402" class="headerlink" title="移掉K位数字-leetcode-402"></a>移掉K位数字-leetcode-402</h1><ul><li>涉及知识点：贪心,栈</li></ul><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个以字符串表示的非负整数 num，移除这个数中的 k 位数字，使得剩下的数字最小。  </p><p>注意:  </p><ul><li>num 的长度小于 10002 且 ≥ k。  </li><li>num 不会包含任何前导零。</li></ul><p>输入&#x2F;输出示例：  </p><p>Example 1:  </p><p>Input:   </p><pre><code>num = &quot;1432219&quot;, k = 3  </code></pre><p>Output:   </p><pre><code>&quot;1219&quot;  </code></pre><p>Explanation: 移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219。  </p><p>Example 2:  </p><p>Input:   </p><pre><code>num = &quot;10200&quot;, k = 1  </code></pre><p>Output:   </p><pre><code>&quot;200&quot;  </code></pre><p>Explanation: 移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前导零。  </p><p>Example 3:  </p><p>Input:   </p><pre><code>num = &quot;10&quot;, k = 2  </code></pre><p>Output:   </p><pre><code>&quot;0&quot;  </code></pre><p>Explanation: 从原数字移除所有的数字，剩余为空就是0。  </p><h2 id="思路描述"><a href="#思路描述" class="headerlink" title="思路描述"></a>思路描述</h2><h2 id="思路-0"><a href="#思路-0" class="headerlink" title="思路 0"></a>思路 0</h2><p>详细描述：思路，从左到右，找第一个比后面大的字符，删除，清零，k次扫描。  </p><ul><li>时间复杂度：o(n*k)  </li><li>空间复杂度：o(1)</li></ul><p>代码：  </p><pre><code class="java">class Solution &#123;      public String removeKdigits(String num, int k) &#123;        if (num.length() == k) return &quot;0&quot;;        StringBuilder s = new StringBuilder(num);        for (int i = 0; i &lt; k; i++) &#123;            int idx = 0;            for (int j = 1; j &lt; s.length() &amp;&amp; s.charAt(j) &gt;= s.charAt(j - 1); j++) idx = j;            s.delete(idx, idx + 1);            while (s.length() &gt; 1 &amp;&amp; s.charAt(0) == &#39;0&#39;) s.delete(0, 1);        &#125;        return s.toString();    &#125;&#125;  </code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路 1"></a>思路 1</h3><p>详细描述：在一定的范围内逐步选取最小的数字。<br>  </p><ol><li>在第一次循环中，num &#x3D; 1432219, k&#x3D;3，此时我们要删去k&#x3D;3个数字，保留n-k&#x3D;7-3&#x3D;4个数字。  </li><li>最终要挑选4个字符，那么我们先来挑选 千位 的字符，，由于挑选完千位后还需要挑选百位，十位，个位这三个位置的字符，所以千位能选择的范围只能在1432之间,因为要留出末尾的219这三个字符供百位、十位、个位 去挑选。  </li><li>1432中最小的值是1，所以千位的值选好了，就是1，接下来就是从千位后面的432219中去挑选百位值，可以发现挑选每一位的值是一个递归的过程。  </li><li>start &#x3D; 0, end &#x3D; k。也就是要在[start,end]中选取一个最小的进行保留，返回最小数字的下标minIndex。而在下次循环中，start &#x3D; minIndex+1, end++ ，也就是在[start,end]中选择下一个最小的数字。以此类推，直至所有数字都选取完毕。</li></ol><p>注意：当返回的下标minIndex及后面的字符串的长度 &#x3D; 还需要保留的字符串的长度的时候，直接返回  </p><ul><li>时间复杂度：o(n*k)  </li><li>空间复杂度：o(1)</li></ul><p>代码：  </p><pre><code class="go">func removeKdigits(num string, k int) string &#123;      if 0 == k &#123;        return num    &#125;    if k == len(num) &#123;        return &quot;0&quot;    &#125;    result := &quot;&quot;    i := len(num)-k    for &#123;        if i == 0 &#123;            break        &#125;        minIndex := 0        for  j := 0; j &lt; len(num)-(i-1); j++ &#123;            if num[j] &lt; num[minIndex] &#123;                minIndex = j            &#125;        &#125;        // 优化        if len(num)- minIndex == i &#123;            result = result + num[minIndex:]            break        &#125;        result += num[minIndex:minIndex+1]        num = num[minIndex+1:]        i--    &#125;    // 前导0    ans := strings.TrimLeft(result, &quot;0&quot;)    if ans == &quot;&quot; &#123;        ans = &quot;0&quot;    &#125;    return ans&#125;    </code></pre><h3 id="思路2-贪心-单调栈（一般可用-栈、队列、双端队列、双指针-实现）"><a href="#思路2-贪心-单调栈（一般可用-栈、队列、双端队列、双指针-实现）" class="headerlink" title="思路2: 贪心 + 单调栈（一般可用 栈、队列、双端队列、双指针 实现）"></a>思路2: 贪心 + 单调栈（一般可用 栈、队列、双端队列、双指针 实现）</h3><p>详细描述：  </p><ul><li><p>遍历字符串，逐个入栈,若新来的比栈顶小，则栈顶出栈 ,出栈相当于移除动作，需次数并与 k 比较，别删多了  </p></li><li><p>移除头部零有 ‘0’,全空，return “0”,构建字符串，顺序返回整个单调栈元素.  </p></li><li><p>时间复杂度：o(n+k)  </p></li><li><p>空间复杂度：o(n)</p></li></ul><p>代码：  </p><pre><code class="go">func removeKdigits(num string, k int) string &#123;      stack := []byte&#123;&#125;        for i := range num &#123;        digit := num[i]        for k &gt; 0 &amp;&amp; len(stack) &gt; 0 &amp;&amp; digit &lt; stack[len(stack)-1] &#123;            stack = stack[:len(stack)-1]            k--                &#125;        stack = append(stack, digit)     &#125;    stack = stack[:len(stack)-k]    ans := strings.TrimLeft(string(stack), &quot;0&quot;)    if ans == &quot;&quot; &#123;        ans = &quot;0&quot;        &#125;    return ans&#125;  </code></pre><h4 id="评分"><a href="#评分" class="headerlink" title="评分"></a>评分</h4><ul><li>提出思路0，能正确分析时空复杂度(2分)  </li><li>提出思路1，能正确分析时空复杂度(3分)  </li><li>提出思路2，能正确分析时空复杂度(4分)  </li><li>bugfree且代码简洁(5分)</li></ul>]]></content>
       
       
       <categories>
