@@ -394,36 +394,6 @@
   
   <entry>
     <title>Index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;10&lt;br&gt;97&lt;br&gt;115&lt;br&gt;309&lt;br&gt;312&lt;br&gt;329&lt;br&gt;494&lt;br&gt;518&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="2-D DP" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/2-d-dp/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Index</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/</id>
     <published>2024-06-22T08:26:02.000Z</published>
@@ -448,6 +418,36 @@
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
     <category term="Advanced Graphs" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/advanced-graphs/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.484Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;10&lt;br&gt;97&lt;br&gt;115&lt;br&gt;309&lt;br&gt;312&lt;br&gt;329&lt;br&gt;494&lt;br&gt;518&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="2-D DP" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/2-d-dp/"/>
     
     
   </entry>
@@ -544,8 +544,8 @@
   
   <entry>
     <title>Index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
     <updated>2024-07-12T14:15:22.484Z</updated>
     
@@ -554,7 +554,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;136&lt;br&gt;7&lt;br&gt;371&lt;/p&gt;
+    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
 </summary>
         
       
@@ -567,7 +567,7 @@
     
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
-    <category term="Bit Manipulation" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/bit/"/>
+    <category term="Binary Search" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/b-search/"/>
     
     
   </entry>
