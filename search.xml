@@ -5,11 +5,17 @@
     
     <entry>
       <title>Follow 认证</title>
-      <link href="/uncategorized/follow/"/>
-      <url>/uncategorized/follow/</url>
+      <link href="/something/follow/"/>
+      <url>/something/follow/</url>
       
         <content type="html"><![CDATA[<p>This message is used to verify that this feed (feedId:61681496545347584) belongs to me (userId:57309722915578880). Join me in enjoying the next generation information browser <a href="https://follow.is/">https://follow.is</a>.</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 杂项 </category>
+          
+      </categories>
       
       
     </entry>
@@ -18,11 +24,17 @@
     
     <entry>
       <title>初识 chromedp</title>
-      <link href="/uncategorized/chromedp-101/"/>
-      <url>/uncategorized/chromedp-101/</url>
+      <link href="/something/chromedp-101/"/>
+      <url>/something/chromedp-101/</url>
       
         <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近工作碰到了一些自动化的需求，要求可以自动化的上传文件。调研了 <a href="https://pkg.go.dev/github.com/chromedp/chromedp#section-readme">chromedp package - github.com&#x2F;chromedp&#x2F;chromedp - Go Packages</a>  和 <a href="https://pkg.go.dev/github.com/tebeka/selenium">selenium package - github.com&#x2F;tebeka&#x2F;selenium - Go Packages</a> 这两个库，最终根据场景选择了和 chrome 浏览器更适配的 chromedp。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u github.com/chromedp/chromedp</span><br></pre></td></tr></table></figure><p>顺便可以去 <a href="https://github.com/chromedp">GitHub-chromedp</a> 上找到源码看看官方样例~<br>目前官方给出的样例如下：</p><p>The following examples are currently available:</p><table><thead><tr><th>Example</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://github.com/chromedp/examples/tree/master/click">click</a></td><td>use a selector to click on an element</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/cookie">cookie</a></td><td>set a HTTP cookie on requests</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/download_file">download_file</a></td><td>do headless file downloads</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/download_image">download_image</a></td><td>do headless image downloads</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/emulate">emulate</a></td><td>emulate a specific device such as an iPhone</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/eval">eval</a></td><td>evaluate javascript and retrieve the result</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/fast">fast</a></td><td>extract and render data from a page</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/forecast">forecast</a></td><td>extract and render data from a page</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/geoip">geoip</a></td><td>extract and render data from a page</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/headers">headers</a></td><td>add extra HTTP headers to browser requests</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/keys">keys</a></td><td>send key events to an element</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/latlon">latlon</a></td><td>retrieve the latitude&#x2F;longitude from google maps, using the browser’s target events</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/logic">logic</a></td><td>more complex logic beyond simple actions</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/multi">multi</a></td><td>use headless-shell and a container (Docker, Podman, other)</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/pdf">pdf</a></td><td>capture a pdf of a page</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/proxy">proxy</a></td><td>authenticate a proxy server which requires authentication</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/remote">remote</a></td><td>connect to an existing Chrome DevTools instance using a remote WebSocket URL</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/screenshot">screenshot</a></td><td>take a screenshot of a specific element and of the entire browser viewport</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/submit">submit</a></td><td>fill out and submit a form</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/subtree">subtree</a></td><td>populate and travel a subtree of the DOM</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/text">text</a></td><td>从选中的 element 中提取 text 文本</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/upload">upload</a></td><td>以表单的形式上传一个文件</td></tr><tr><td><a href="https://github.com/chromedp/examples/tree/master/visible">visible</a></td><td>等待某个 element 完全加载。</td></tr></tbody></table>]]></content>
       
+      
+      <categories>
+          
+          <category> 杂项 </category>
+          
+      </categories>
       
       
     </entry>
@@ -297,31 +309,6 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/neet150/2-d-dp/index/"/>
-      <url>/interview/juan/neet150/2-d-dp/index/</url>
-      
-        <content type="html"><![CDATA[<p>10<br>97<br>115<br>309<br>312<br>329<br>494<br>518</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-          <category> 2-D DP </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
       <link href="/interview/juan/neet150/arrays-hashing/index%201/"/>
       <url>/interview/juan/neet150/arrays-hashing/index%201/</url>
       
@@ -337,31 +324,6 @@
           <category> NeetCode150 </category>
           
           <category> Arrays &amp; Hashing </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
-      <link href="/interview/juan/neet150/advanced-graphs/index/"/>
-      <url>/interview/juan/neet150/advanced-graphs/index/</url>
-      
-        <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-          <category> Advanced Graphs </category>
           
       </categories>
       
@@ -397,10 +359,10 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/neet150/bit/index%204/"/>
-      <url>/interview/juan/neet150/bit/index%204/</url>
+      <link href="/interview/juan/neet150/advanced-graphs/index/"/>
+      <url>/interview/juan/neet150/advanced-graphs/index/</url>
       
-        <content type="html"><![CDATA[<p>136<br>7<br>371</p>]]></content>
+        <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
       
       
       <categories>
@@ -411,7 +373,7 @@
           
           <category> NeetCode150 </category>
           
-          <category> Bit Manipulation </category>
+          <category> Advanced Graphs </category>
           
       </categories>
       
@@ -422,10 +384,10 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/neet150/b-search/index%201/"/>
-      <url>/interview/juan/neet150/b-search/index%201/</url>
+      <link href="/interview/juan/neet150/2-d-dp/index/"/>
+      <url>/interview/juan/neet150/2-d-dp/index/</url>
       
-        <content type="html"><![CDATA[<p>704<br>74<br>875<br>981</p>]]></content>
+        <content type="html"><![CDATA[<p>10<br>97<br>115<br>309<br>312<br>329<br>494<br>518</p>]]></content>
       
       
       <categories>
@@ -436,7 +398,7 @@
           
           <category> NeetCode150 </category>
           
-          <category> Binary Search </category>
+          <category> 2-D DP </category>
           
       </categories>
       
@@ -472,10 +434,10 @@
     
     <entry>
       <title>index</title>
-      <link href="/interview/juan/neet150/greedy/index%202/"/>
-      <url>/interview/juan/neet150/greedy/index%202/</url>
+      <link href="/interview/juan/neet150/b-search/index%201/"/>
+      <url>/interview/juan/neet150/b-search/index%201/</url>
       
-        <content type="html"><![CDATA[<p>45<br>134<br>846<br>1899<br>763<br>678</p>]]></content>
+        <content type="html"><![CDATA[<p>704<br>74<br>875<br>981</p>]]></content>
       
       
       <categories>
@@ -486,7 +448,7 @@
           
           <category> NeetCode150 </category>
           
-          <category> Greedy </category>
+          <category> Binary Search </category>
           
       </categories>
       
@@ -512,6 +474,56 @@
           <category> NeetCode150 </category>
           
           <category> Heap &amp; Priority Queue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/neet150/linked-list/index%206/"/>
+      <url>/interview/juan/neet150/linked-list/index%206/</url>
+      
+        <content type="html"><![CDATA[<p>138<br>287</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+          <category> Linked List </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/neet150/greedy/index%202/"/>
+      <url>/interview/juan/neet150/greedy/index%202/</url>
+      
+        <content type="html"><![CDATA[<p>45<br>134<br>846<br>1899<br>763<br>678</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+          <category> Greedy </category>
           
       </categories>
       
@@ -572,6 +584,31 @@
     
     <entry>
       <title>index</title>
+      <link href="/interview/juan/neet150/bit/index%204/"/>
+      <url>/interview/juan/neet150/bit/index%204/</url>
+      
+        <content type="html"><![CDATA[<p>136<br>7<br>371</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+          <category> Bit Manipulation </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
       <link href="/interview/juan/neet150/stack/index%209/"/>
       <url>/interview/juan/neet150/stack/index%209/</url>
       
@@ -587,56 +624,6 @@
           <category> NeetCode150 </category>
           
           <category> Stack </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
-      <link href="/interview/juan/neet150/linked-list/index%206/"/>
-      <url>/interview/juan/neet150/linked-list/index%206/</url>
-      
-        <content type="html"><![CDATA[<p>138<br>287</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-          <category> Linked List </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>index</title>
-      <link href="/interview/juan/neet150/s-window/index%207%201/"/>
-      <url>/interview/juan/neet150/s-window/index%207%201/</url>
-      
-        <content type="html"><![CDATA[<p>239</p><p>567</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 刷题 </category>
-          
-          <category> NeetCode150 </category>
-          
-          <category> Sliding Window </category>
           
       </categories>
       
@@ -662,6 +649,31 @@
           <category> NeetCode150 </category>
           
           <category> Two Pointers </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>index</title>
+      <link href="/interview/juan/neet150/s-window/index%207%201/"/>
+      <url>/interview/juan/neet150/s-window/index%207%201/</url>
+      
+        <content type="html"><![CDATA[<p>239</p><p>567</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 刷题 </category>
+          
+          <category> NeetCode150 </category>
+          
+          <category> Sliding Window </category>
           
       </categories>
       
@@ -2175,8 +2187,8 @@
     
     <entry>
       <title>leet226</title>
-      <link href="/interview/juan/neet150/trees/leet110/"/>
-      <url>/interview/juan/neet150/trees/leet110/</url>
+      <link href="/interview/juan/neet150/trees/leet1448/"/>
+      <url>/interview/juan/neet150/trees/leet1448/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2200,8 +2212,8 @@
     
     <entry>
       <title>leet226</title>
-      <link href="/interview/juan/neet150/trees/leet1448/"/>
-      <url>/interview/juan/neet150/trees/leet1448/</url>
+      <link href="/interview/juan/neet150/trees/leet110/"/>
+      <url>/interview/juan/neet150/trees/leet110/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -4635,35 +4647,6 @@
     
     
     <entry>
-      <title>面试官101</title>
-      <link href="/interview/interviewer/interviewer101/"/>
-      <url>/interview/interviewer/interviewer101/</url>
-      
-        <content type="html"><![CDATA[<h3 id="面试"><a href="#面试" class="headerlink" title="面试"></a><strong>面试</strong></h3><h4 id="算法能力-一题5-10min"><a href="#算法能力-一题5-10min" class="headerlink" title="算法能力 一题5-10min :"></a>算法能力 一题5-10min :</h4><ol><li>题目：仅出现一次的数</li><li>题目：连续固定区间最大值<br>给你一个数组 nums 和一个大小为 k的区间。这个区间可以从数组的最左侧不断移动到数组的最右侧。每个移动区间固定有 k 个数字。这个区间每次只向右移动一位。<br>让你返回移动过程中，这些固定区间中的最大值。</li></ol><p>样例输入：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nums = [1,3,-1,-3,5,3,6,7], k = 3</span><br></pre></td></tr></table></figure><p>样例输出：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3,3,5,5,6,7]</span><br></pre></td></tr></table></figure><p>样例解释：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">移动情况 最大值</span><br><span class="line"></span><br><span class="line">[1 3 -1] -3 5 3 6 7 3</span><br><span class="line"></span><br><span class="line">1 [3 -1 -3] 5 3 6 7 3</span><br><span class="line"></span><br><span class="line">1 3 [-1 -3 5] 3 6 7 5</span><br><span class="line"></span><br><span class="line">1 3 -1 [-3 5 3] 6 7 5</span><br><span class="line"></span><br><span class="line">1 3 -1 -3 [5 3 6] 7 6</span><br><span class="line"></span><br><span class="line">1 3 -1 -3 5 [3 6 7] 7</span><br></pre></td></tr></table></figure><ol start="3"><li>拓展</li></ol><p>样例输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [1,3,-1,-3,5,3,6,7], t = 5</span><br><span class="line">k = 2</span><br><span class="line">k = 3</span><br><span class="line">k = 4</span><br><span class="line">k = 5</span><br><span class="line">k = 6</span><br></pre></td></tr></table></figure><p>样例输出:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3 3 -1 5 5 6 7</span><br><span class="line">3 3 5 5 6 7</span><br><span class="line">3 5 5 6 7</span><br><span class="line">5 5 6 7</span><br><span class="line">5 6 7</span><br></pre></td></tr></table></figure><h4 id="基础能力"><a href="#基础能力" class="headerlink" title="基础能力"></a>基础能力</h4><h6 id="Go八股"><a href="#Go八股" class="headerlink" title="Go八股"></a>Go八股</h6><p><a href="https://www.topgoer.cn/docs/gomianshiti/gomianshiti-1dd225t6esqld">https://www.topgoer.cn/docs/gomianshiti/gomianshiti-1dd225t6esqld</a></p><h6 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h6><ol><li><p>Redis是单线程的，但Redis为什么这么快？</p><ul><li>完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；</li><li>数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的；</li><li>采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；</li><li>使用多路I&#x2F;O复用模型，非阻塞IO；这里“多路”指的是多个网络连接，“复用”指的是复用同一个线程</li><li>使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求</li></ul></li><li><p>缓存穿透和雪崩的解决方案</p></li><li><p>请简述Reids的删除策略</p><ul><li>定时删除：在设置键的过期时间的同时，创建一个定时任务，当键达到过期时间时，立即执行对键的删除操作</li><li>惰性删除：放任键过期不管，但在每次从键空间获取键时，都检查取得的键是否过期，如果过期的话，就删除该键，如果没有过期，就返回该键</li><li>定期删除：每隔一点时间，程序就对数据库进行一次检查，删除里面的过期键，至于要删除多少过期键，以及要检查多少个数据库，则由算法决定。</li></ul><ol start="3"><li>索引的构建流程？</li><li>b树，b+树区别，MongoDB为什么选用b树</li></ol></li></ol><h6 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h6><ol><li>CPU三级缓存</li><li>进程与线程<ul><li>进程: 进程是具有一定独立功能的程序，进程是系统资源分配和调度的最小单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。</li><li>线程: 线程是进程的一个实体,线程是内核态,而且是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。</li><li>协程: 协程是一种用户态的轻量级线程，协程的调度完全是由用户来控制的。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</li></ul></li></ol><h6 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h6><ol><li><p>创建索引的规则：最左匹配，区分度等</p></li><li><p>索引失效的情况</p><ul><li>未遵循最佳左前缀规则导致索引失效</li><li>计算、函数、类型转换(自动或手动)导致索引失效</li><li>范围条件右边列索引失效</li><li>不等于(!&#x3D;)会导致索引失效</li><li>is null可以用到索引，is not null不能用到索引</li><li>like以通配符%开头索引失效</li><li>or 前的列建立了索引 or后面的列没有建立索引 会导致索引失效</li><li>不同字符集进行比较前需要进行转换，会导致索引失效</li></ul></li><li><p>数据的存储方式： B+树</p><ul><li>非叶子节点不存储数据，只存索引（冗余），这样可以保证存放更多的索引</li><li>叶子节点存储所有索引字段</li><li>叶子节点用指针连接，提高区间访问性能<br> ![[Pasted image 20221201183525.png]]</li></ul></li><li><p>大数据量级的mysql，如何分库分表？解决方案？</p></li><li><p>网络这些可以挑一两个主题聊。</p></li><li><p>自我介绍，告知规则与流程：两个部分：算法题 &amp; 聊一聊基础问题</p></li><li><p>先介绍下自己；主要技能，常用语言，工作经历简单叙述</p></li><li><p>项目：支付相关，幂等？</p></li><li><p>发过去在线文档</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 面试 </category>
-          
-          <category> 面试官 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试官 </tag>
-            
-            <tag> 初学者 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>面试题-连续固定区间最大值</title>
       <link href="/interview/interviewer/maximum-of-segments/"/>
       <url>/interview/interviewer/maximum-of-segments/</url>
@@ -4710,6 +4693,35 @@
         <tags>
             
             <tag> 面试题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试官101</title>
+      <link href="/interview/interviewer/interviewer101/"/>
+      <url>/interview/interviewer/interviewer101/</url>
+      
+        <content type="html"><![CDATA[<h3 id="面试"><a href="#面试" class="headerlink" title="面试"></a><strong>面试</strong></h3><h4 id="算法能力-一题5-10min"><a href="#算法能力-一题5-10min" class="headerlink" title="算法能力 一题5-10min :"></a>算法能力 一题5-10min :</h4><ol><li>题目：仅出现一次的数</li><li>题目：连续固定区间最大值<br>给你一个数组 nums 和一个大小为 k的区间。这个区间可以从数组的最左侧不断移动到数组的最右侧。每个移动区间固定有 k 个数字。这个区间每次只向右移动一位。<br>让你返回移动过程中，这些固定区间中的最大值。</li></ol><p>样例输入：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nums = [1,3,-1,-3,5,3,6,7], k = 3</span><br></pre></td></tr></table></figure><p>样例输出：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3,3,5,5,6,7]</span><br></pre></td></tr></table></figure><p>样例解释：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">移动情况 最大值</span><br><span class="line"></span><br><span class="line">[1 3 -1] -3 5 3 6 7 3</span><br><span class="line"></span><br><span class="line">1 [3 -1 -3] 5 3 6 7 3</span><br><span class="line"></span><br><span class="line">1 3 [-1 -3 5] 3 6 7 5</span><br><span class="line"></span><br><span class="line">1 3 -1 [-3 5 3] 6 7 5</span><br><span class="line"></span><br><span class="line">1 3 -1 -3 [5 3 6] 7 6</span><br><span class="line"></span><br><span class="line">1 3 -1 -3 5 [3 6 7] 7</span><br></pre></td></tr></table></figure><ol start="3"><li>拓展</li></ol><p>样例输入：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [1,3,-1,-3,5,3,6,7], t = 5</span><br><span class="line">k = 2</span><br><span class="line">k = 3</span><br><span class="line">k = 4</span><br><span class="line">k = 5</span><br><span class="line">k = 6</span><br></pre></td></tr></table></figure><p>样例输出:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3 3 -1 5 5 6 7</span><br><span class="line">3 3 5 5 6 7</span><br><span class="line">3 5 5 6 7</span><br><span class="line">5 5 6 7</span><br><span class="line">5 6 7</span><br></pre></td></tr></table></figure><h4 id="基础能力"><a href="#基础能力" class="headerlink" title="基础能力"></a>基础能力</h4><h6 id="Go八股"><a href="#Go八股" class="headerlink" title="Go八股"></a>Go八股</h6><p><a href="https://www.topgoer.cn/docs/gomianshiti/gomianshiti-1dd225t6esqld">https://www.topgoer.cn/docs/gomianshiti/gomianshiti-1dd225t6esqld</a></p><h6 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h6><ol><li><p>Redis是单线程的，但Redis为什么这么快？</p><ul><li>完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；</li><li>数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的；</li><li>采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；</li><li>使用多路I&#x2F;O复用模型，非阻塞IO；这里“多路”指的是多个网络连接，“复用”指的是复用同一个线程</li><li>使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求</li></ul></li><li><p>缓存穿透和雪崩的解决方案</p></li><li><p>请简述Reids的删除策略</p><ul><li>定时删除：在设置键的过期时间的同时，创建一个定时任务，当键达到过期时间时，立即执行对键的删除操作</li><li>惰性删除：放任键过期不管，但在每次从键空间获取键时，都检查取得的键是否过期，如果过期的话，就删除该键，如果没有过期，就返回该键</li><li>定期删除：每隔一点时间，程序就对数据库进行一次检查，删除里面的过期键，至于要删除多少过期键，以及要检查多少个数据库，则由算法决定。</li></ul><ol start="3"><li>索引的构建流程？</li><li>b树，b+树区别，MongoDB为什么选用b树</li></ol></li></ol><h6 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h6><ol><li>CPU三级缓存</li><li>进程与线程<ul><li>进程: 进程是具有一定独立功能的程序，进程是系统资源分配和调度的最小单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。</li><li>线程: 线程是进程的一个实体,线程是内核态,而且是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。</li><li>协程: 协程是一种用户态的轻量级线程，协程的调度完全是由用户来控制的。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。</li></ul></li></ol><h6 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h6><ol><li><p>创建索引的规则：最左匹配，区分度等</p></li><li><p>索引失效的情况</p><ul><li>未遵循最佳左前缀规则导致索引失效</li><li>计算、函数、类型转换(自动或手动)导致索引失效</li><li>范围条件右边列索引失效</li><li>不等于(!&#x3D;)会导致索引失效</li><li>is null可以用到索引，is not null不能用到索引</li><li>like以通配符%开头索引失效</li><li>or 前的列建立了索引 or后面的列没有建立索引 会导致索引失效</li><li>不同字符集进行比较前需要进行转换，会导致索引失效</li></ul></li><li><p>数据的存储方式： B+树</p><ul><li>非叶子节点不存储数据，只存索引（冗余），这样可以保证存放更多的索引</li><li>叶子节点存储所有索引字段</li><li>叶子节点用指针连接，提高区间访问性能<br> ![[Pasted image 20221201183525.png]]</li></ul></li><li><p>大数据量级的mysql，如何分库分表？解决方案？</p></li><li><p>网络这些可以挑一两个主题聊。</p></li><li><p>自我介绍，告知规则与流程：两个部分：算法题 &amp; 聊一聊基础问题</p></li><li><p>先介绍下自己；主要技能，常用语言，工作经历简单叙述</p></li><li><p>项目：支付相关，幂等？</p></li><li><p>发过去在线文档</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+          <category> 面试官 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试官 </tag>
+            
+            <tag> 初学者 </tag>
             
         </tags>
       
