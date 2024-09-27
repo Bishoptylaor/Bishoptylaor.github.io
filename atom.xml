@@ -6,7 +6,7 @@
   <link href="https://bishoptylaor.github.io/atom.xml" rel="self"/>
   
   <link href="https://bishoptylaor.github.io/"/>
-  <updated>2024-07-24T15:57:24.740Z</updated>
+  <updated>2024-09-27T13:01:15.000Z</updated>
   <id>https://bishoptylaor.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>follow</title>
+    <link href="https://bishoptylaor.github.io/uncategorized/Follow%20Claim/"/>
+    <id>https://bishoptylaor.github.io/uncategorized/Follow%20Claim/</id>
+    <published>2024-09-27T13:01:15.000Z</published>
+    <updated>2024-09-27T13:01:15.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;This message is used to verify that this feed (feedId:61681496545347584) belongs to me (userId:57309722915578880). Join me in enjoying the next generation information browser &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>初识 chromedp</title>
@@ -28,7 +49,109 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;最近工作碰到了一些自动化的需求，要求可以自动化的上传文件。调研了 &lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;最近工作碰到了一些自动化的需求，要求可以自动化的上传文件。调研了 &lt;a href=&quot;https://pkg.go.dev/github.com/chromedp/chromedp#section-readme&quot;&gt;chromedp package - github.com&amp;#x2F;chromedp&amp;#x2F;chromedp - Go Packages&lt;/a&gt;  和 &lt;a href=&quot;https://pkg.go.dev/github.com/tebeka/selenium&quot;&gt;selenium package - github.com&amp;#x2F;tebeka&amp;#x2F;selenium - Go Packages&lt;/a&gt; 这两个库，最终根据场景选择了和 chrome 浏览器更适配的 chromedp。&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;h3 id=&quot;获取&quot;&gt;&lt;a href=&quot;#获取&quot; class=&quot;headerlink&quot; title=&quot;获取&quot;&gt;&lt;/a&gt;获取&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;go get -u github.com/chromedp/chromedp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;顺便可以去 &lt;a href=&quot;https://github.com/chromedp&quot;&gt;GitHub-chromedp&lt;/a&gt; 上找到源码看看官方样例~&lt;br&gt;目前官方给出的样例如下：&lt;/p&gt;
+&lt;p&gt;The following examples are currently available:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/click&quot;&gt;click&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;use a selector to click on an element&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/cookie&quot;&gt;cookie&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;set a HTTP cookie on requests&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/download_file&quot;&gt;download_file&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;do headless file downloads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/download_image&quot;&gt;download_image&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;do headless image downloads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/emulate&quot;&gt;emulate&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;emulate a specific device such as an iPhone&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/eval&quot;&gt;eval&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;evaluate javascript and retrieve the result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/fast&quot;&gt;fast&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;extract and render data from a page&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/forecast&quot;&gt;forecast&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;extract and render data from a page&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/geoip&quot;&gt;geoip&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;extract and render data from a page&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/headers&quot;&gt;headers&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;add extra HTTP headers to browser requests&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/keys&quot;&gt;keys&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;send key events to an element&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/latlon&quot;&gt;latlon&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;retrieve the latitude&amp;#x2F;longitude from google maps, using the browser’s target events&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/logic&quot;&gt;logic&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;more complex logic beyond simple actions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/multi&quot;&gt;multi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;use headless-shell and a container (Docker, Podman, other)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/pdf&quot;&gt;pdf&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;capture a pdf of a page&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/proxy&quot;&gt;proxy&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;authenticate a proxy server which requires authentication&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/remote&quot;&gt;remote&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;connect to an existing Chrome DevTools instance using a remote WebSocket URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/screenshot&quot;&gt;screenshot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;take a screenshot of a specific element and of the entire browser viewport&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/submit&quot;&gt;submit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;fill out and submit a form&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/subtree&quot;&gt;subtree&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;populate and travel a subtree of the DOM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/text&quot;&gt;text&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;从选中的 element 中提取 text 文本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/upload&quot;&gt;upload&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;以表单的形式上传一个文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/chromedp/examples/tree/master/visible&quot;&gt;visible&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;等待某个 element</summary>
         
       
     
@@ -49,7 +172,14 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&quot;&gt;&lt;a href=&quot;#有ABC三个请求，都是-uid-纬度的请求；分别涉及到配置-1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&quot; class=&quot;headerlink&quot; title=&quot;有ABC三个请求，都是 uid 纬度的请求；分别涉及到配置 1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&quot;&gt;&lt;/a&gt;有ABC三个请求，都是 uid 纬度的请求；分别涉及到配置 1，2，3；2，3，5；3，4，6。现在要求怎样在配置更新后及时将相关的请求缓存重置？&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;可以将配置变化的 binlog 加入消息队列&lt;/li&gt;
+&lt;li&gt;配置关联的请求前缀提前存入 redis&lt;/li&gt;
+&lt;li&gt;请求缓存的 key 做拆分：前缀为 2 中提到的前缀，以前缀为 key 存 uid 和 缓存更新时间到 zset 中。另 前缀 + uid 单独存储某个用户某个请求具体的缓存内容&lt;/li&gt;
+&lt;li&gt;当消息队列消费到配置变化时：获取该配置关联的请求桶前缀，将请求桶中时间小于当前时间的 uid 取出，并从桶中清除；将前缀和相关待过期 uid 组合获取真正缓存的 key，将其过期 or 删除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;如何保证缓存和db的数据一致性&quot;&gt;&lt;a href=&quot;#如何保证缓存和db的数据一致性&quot; class=&quot;headerlink&quot; title=&quot;如何保证缓存和db的数据一致性&quot;&gt;&lt;/a&gt;如何保证缓存和db的数据一致性&lt;/h2&gt;&lt;p&gt;cache aside pattern&lt;br&gt;读请求：先读缓存-&amp;gt;缓存命中，返回数据-&amp;gt;缓存失败，读DB-&amp;gt;更新缓存&lt;br&gt;写请求：先更新DB-&amp;gt;再更新缓存 额外记录DB变更，比如1s内是否有 db:table:column 产生了修改，这样在读到相关缓存时，可以先判断这个 变更 缓存是否有内容。&lt;/p&gt;
+&lt;p&gt;如果相邻时间窗口内没有更新操作，那么认为当前读到的缓存时相对最新的；如果相邻时间窗口内有更新操作，那么需要将此次读到的内容丢弃，重读DB，并删除 or</summary>
         
       
     
@@ -74,7 +204,27 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot;&gt;&lt;a href=&quot;#要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot;&gt;&lt;a href=&quot;#要求做一个限流器，限流范围是-10-千万qps，要求限流精度-99-，可以指定接口做限流配置&quot; class=&quot;headerlink&quot; title=&quot;要求做一个限流器，限流范围是 10-千万qps，要求限流精度 99% ，可以指定接口做限流配置&quot;&gt;&lt;/a&gt;要求做一个限流器，限流范围是 10-千万qps，要求限流精度 99% ，可以指定接口做限流配置&lt;/h2&gt;&lt;p&gt;要实现一个具有高效限流和高精度的限流器，可以使用令牌桶（Token Bucket）算法。令牌桶算法能够处理高吞吐量的请求，同时具有较高的精度。&lt;/p&gt;
+&lt;p&gt;以下是一个使用 Go 语言实现的限流器示例，包含以下特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;令牌桶算法&lt;/strong&gt;：用于控制请求的速率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接口限流配置&lt;/strong&gt;：可以指定不同的接口进行限流配置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高吞吐量支持&lt;/strong&gt;：支持 10 到千万 QPS 的范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高精度&lt;/strong&gt;：限流精度 99%。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;Go-语言实现限流器&quot;&gt;&lt;a href=&quot;#Go-语言实现限流器&quot; class=&quot;headerlink&quot; title=&quot;Go 语言实现限流器&quot;&gt;&lt;/a&gt;Go 语言实现限流器&lt;/h3&gt;&lt;p&gt;首先，我们定义一个 &lt;code&gt;RateLimiter&lt;/code&gt; 结构体，使用令牌桶算法来实现限流器。&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;92&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&amp;quot;sync&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// RateLimiter implements a token bucket rate limiter.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;type&lt;/span&gt; RateLimiter &lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rate         &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;           &lt;span class=&quot;comment&quot;&gt;// tokens generated per second&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	burst        &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;           &lt;span class=&quot;comment&quot;&gt;// max tokens in the bucket&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	tokens       &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;           &lt;span class=&quot;comment&quot;&gt;// current available tokens&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	lastRefill   time.Time     &lt;span class=&quot;comment&quot;&gt;// last refill time&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	mu           sync.Mutex    &lt;span class=&quot;comment&quot;&gt;// mutex for concurrent access&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// NewRateLimiter creates a new RateLimiter.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;NewRateLimiter&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(rate &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, burst &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; *RateLimiter &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;amp;RateLimiter&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		rate:       rate,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		burst:      burst,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		tokens:     burst,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		lastRefill: time.Now(),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Allow checks if a request can proceed and decrements the token count.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(rl *RateLimiter)&lt;/span&gt;&lt;/span&gt; Allow() &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rl.mu.Lock()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;defer&lt;/span&gt; rl.mu.Unlock()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	now := time.Now()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	elapsed := now.Sub(rl.lastRefill).Seconds()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rl.tokens += &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;(elapsed * &lt;span class=&quot;type&quot;&gt;float64&lt;/span&gt;(rl.rate))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; rl.tokens &amp;gt; rl.burst &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		rl.tokens = rl.burst&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rl.lastRefill = now&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; rl.tokens &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		rl.tokens--&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;type&lt;/span&gt; RateLimiterManager &lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	limiters &lt;span class=&quot;keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;type&quot;&gt;string&lt;/span&gt;]*RateLimiter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	mu       sync.Mutex&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// NewRateLimiterManager creates a new RateLimiterManager.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;NewRateLimiterManager&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; *RateLimiterManager &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;amp;RateLimiterManager&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		limiters: &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;type&quot;&gt;string&lt;/span&gt;]*RateLimiter),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// GetRateLimiter returns the RateLimiter for a given endpoint.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(manager *RateLimiterManager)&lt;/span&gt;&lt;/span&gt; GetRateLimiter(endpoint &lt;span class=&quot;type&quot;&gt;string&lt;/span&gt;, rate &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, burst &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;) *RateLimiter &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	manager.mu.Lock()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;defer&lt;/span&gt; manager.mu.Unlock()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; limiter, exists := manager.limiters[endpoint]; exists &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; limiter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	limiter := NewRateLimiter(rate, burst)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	manager.limiters[endpoint] = limiter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; limiter&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Example usage&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	manager := NewRateLimiterManager()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	endpoint := &lt;span class=&quot;string&quot;&gt;&amp;quot;/api/test&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rate := &lt;span class=&quot;number&quot;&gt;1000000&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;// 1 million QPS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	burst := &lt;span class=&quot;number&quot;&gt;1000000&lt;/span&gt;  &lt;span class=&quot;comment&quot;&gt;// burst capacity&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	limiter := manager.GetRateLimiter(endpoint, rate, burst)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;; i++ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; limiter.Allow() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// Process request&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;println&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;Request allowed&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// Reject request&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;println&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;Request rejected&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;详细解释&quot;&gt;&lt;a href=&quot;#详细解释&quot; class=&quot;headerlink&quot; title=&quot;详细解释&quot;&gt;&lt;/a&gt;详细解释&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;RateLimiter 结构体&lt;/strong&gt;：包含速率（rate）、突发容量（burst）、当前令牌数（tokens）以及上次补充令牌的时间（lastRefill）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NewRateLimiter 函数&lt;/strong&gt;：用于创建一个新的限流器实例。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Allow 方法&lt;/strong&gt;：检查请求是否可以通过，并相应地减少令牌数量。通过计算时间间隔来补充令牌。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RateLimiterManager 结构体&lt;/strong&gt;：用于管理不同接口的限流器。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NewRateLimiterManager 函数&lt;/strong&gt;：创建一个新的限流器管理器实例。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GetRateLimiter 方法&lt;/strong&gt;：获取指定接口的限流器，如果不存在则创建一个新的限流器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;使用示例&quot;&gt;&lt;a href=&quot;#使用示例&quot; class=&quot;headerlink&quot; title=&quot;使用示例&quot;&gt;&lt;/a&gt;使用示例&lt;/h3&gt;&lt;p&gt;在 &lt;code&gt;main&lt;/code&gt; 函数中，创建了一个限流器管理器，并为 &lt;code&gt;/api/test&lt;/code&gt; 接口设置了限流参数。然后模拟 100 个请求，检查请求是否被允许。&lt;/p&gt;
+&lt;p&gt;这个限流器实现可以处理高吞吐量的请求，并且具有限流精度。你可以根据需要调整速率和突发容量，以适应不同的 QPS</summary>
         
       
     
@@ -101,7 +251,17 @@
         
     <summary type="html">&lt;p&gt;给定一个目标数 n，给定一组数组 nums，求由 nums 组成的比 n 小的最大数。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入：n = 23112, nums = [2, 4,</summary>
+&lt;pre&gt;&lt;code&gt;输入：n = 23112, nums = [2, 4, 9]
+输出：0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; main  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; (  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;string&quot;&gt;&amp;quot;sort&amp;quot;&lt;/span&gt;   &lt;span class=&quot;string&quot;&gt;&amp;quot;strconv&amp;quot;&lt;/span&gt;)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;findMaxLessThanN&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(target &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, nums []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; (result &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   targetStr := strconv.Itoa(target)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; targetNums []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i, _ := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; targetStr &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      targetNums = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(targetNums, &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;(targetStr[i]-&lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt;))  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;comment&quot;&gt;// Sort A in descending order  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   sort.Sort(sort.Reverse(sort.IntSlice(nums)))  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   ASet := &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;]&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt;)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, a := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; nums &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      ASet[a] = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   length := &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(targetNums)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; length; i++ &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      currentDigit := targetNums[i]  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      largestLess, found := findLargestLessThan(currentDigit, nums)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; found &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;comment&quot;&gt;// Replace the current digit with the largest less than itself  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         targetNums[i] = largestLess  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;comment&quot;&gt;// Fill the rest of the digits with the largest in A  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j := i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; length; j++ &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            targetNums[j] = nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; !ASet[currentDigit] &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;comment&quot;&gt;// If current digit is not in A and we cannot find a smaller digit, backtrack  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; !ASet[targetNums[i]] &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            i--  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; i &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;// If no valid digit was found, return the largest possible number with one less digit  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            result := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; length&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;; j++ &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;               result = result*&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; + nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;comment&quot;&gt;// Replace the found digit with the largest less than itself and fill the rest  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         largestLess, _ = findLargestLessThan(targetNums[i], nums)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         targetNums[i] = largestLess  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j := i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; length; j++ &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            targetNums[j] = nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;comment&quot;&gt;// Convert the runes back to an integer  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, n := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; targetNums &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      result = result*&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; + n  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// findLargestLessThan finds the largest digit in A that is less than the given digitfunc findLargestLessThan(digit int, A []int) (int, bool) &amp;#123;  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, a := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; A &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; a &amp;lt; digit &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a, &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   n := &lt;span class=&quot;number&quot;&gt;23121&lt;/span&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   A := []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   fmt.Println(findMaxLessThanN(n, A)) &lt;span class=&quot;comment&quot;&gt;// Output: 22999  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;详细解释&quot;&gt;&lt;a href=&quot;#详细解释&quot; class=&quot;headerlink&quot; title=&quot;详细解释&quot;&gt;&lt;/a&gt;详细解释&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;findLargestLessThan&lt;/strong&gt;: 一个辅助函数，用于找到集合 A 中小于给定数字的最大数字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;findMaxLessThanN&lt;/strong&gt;: 主要函数，根据给定数字 n 和集合 A，逐位处理，找到满足条件的最大数字。&lt;ul&gt;
+&lt;li&gt;将 n 转换为字符串以便逐位处理。&lt;/li&gt;
+&lt;li&gt;对集合 A 进行排序，并构建一个快速查找的集合 ASet。&lt;/li&gt;
+&lt;li&gt;从高位开始逐位处理 n，如果找到可以替换的数字则进行替换，并将后续位设为集合 A</summary>
         
       
     
@@ -128,7 +288,58 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/evaluate-reverse-polish-notation/&quot;&gt;150.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/evaluate-reverse-polish-notation/&quot;&gt;150. 逆波兰表达式求值&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个字符串数组 &lt;code&gt;tokens&lt;/code&gt; ，表示一个根据 &lt;a href=&quot;https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437&quot;&gt;逆波兰表示法&lt;/a&gt; 表示的算术表达式。&lt;/p&gt;
+&lt;p&gt;请你计算该表达式。返回一个表示表达式值的整数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效的算符为 &lt;code&gt;&amp;#39;+&amp;#39;&lt;/code&gt;、&lt;code&gt;&amp;#39;-&amp;#39;&lt;/code&gt;、&lt;code&gt;&amp;#39;*&amp;#39;&lt;/code&gt; 和 &lt;code&gt;&amp;#39;/&amp;#39;&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;每个操作数（运算对象）都可以是一个整数或者另一个表达式。&lt;/li&gt;
+&lt;li&gt;两个整数之间的除法总是 &lt;strong&gt;向零截断&lt;/strong&gt; 。&lt;/li&gt;
+&lt;li&gt;表达式中不含除零运算。&lt;/li&gt;
+&lt;li&gt;输入是一个根据逆波兰表示法表示的算术表达式。&lt;/li&gt;
+&lt;li&gt;答案及所有中间计算结果可以用 &lt;strong&gt;32 位&lt;/strong&gt; 整数表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：tokens = [&amp;quot;2&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;+&amp;quot;,&amp;quot;3&amp;quot;,&amp;quot;*&amp;quot;]
+输出：9
+解释：该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) = 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：tokens = [&amp;quot;4&amp;quot;,&amp;quot;13&amp;quot;,&amp;quot;5&amp;quot;,&amp;quot;/&amp;quot;,&amp;quot;+&amp;quot;]
+输出：6
+解释：该算式转化为常见的中缀算术表达式为：(4 + (13 / 5)) = 6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：tokens = [&amp;quot;10&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;9&amp;quot;,&amp;quot;3&amp;quot;,&amp;quot;+&amp;quot;,&amp;quot;-11&amp;quot;,&amp;quot;*&amp;quot;,&amp;quot;/&amp;quot;,&amp;quot;*&amp;quot;,&amp;quot;17&amp;quot;,&amp;quot;+&amp;quot;,&amp;quot;5&amp;quot;,&amp;quot;+&amp;quot;]
+输出：22
+解释：该算式转化为常见的中缀算术表达式为：
+  ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= tokens.length &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tokens[i]&lt;/code&gt; 是一个算符（&lt;code&gt;&amp;quot;+&amp;quot;&lt;/code&gt;、&lt;code&gt;&amp;quot;-&amp;quot;&lt;/code&gt;、&lt;code&gt;&amp;quot;*&amp;quot;&lt;/code&gt; 或 &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt;），或是在范围 &lt;code&gt;[-200, 200]&lt;/code&gt; 内的一个整数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;逆波兰表达式：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;逆波兰表达式是一种后缀表达式，所谓后缀就是指算符写在后面。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;平常使用的算式则是一种中缀表达式，如 &lt;code&gt;( 1 + 2 ) * ( 3 + 4 )&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;该算式的逆波兰表达式写法为 &lt;code&gt;( ( 1 2 + ) ( 3 4 + ) * )&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;逆波兰表达式主要有以下两个优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;去掉括号后表达式无歧义，上式即便写成 &lt;code&gt;1 2 + 3 4 + *&lt;/code&gt; 也可以依据次序计算出正确结果。&lt;/li&gt;
+&lt;li&gt;适合用栈操作运算：遇到数字则入栈；遇到算符则取出栈顶两个数字进行计算，并将结果压入栈中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据题意可知：栈中应当只有数字；表达式认为都是合法的，暂时不需要完备性校验&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;evalRPN&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(tokens []&lt;span class=&quot;type&quot;&gt;string&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	stack := []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, token := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; tokens &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		val, err := strconv.Atoi(token)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; err == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			stack = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(stack, val)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			num1, num2 := stack[&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(stack)&lt;span class=&quot;number&quot;&gt;-2&lt;/span&gt;], stack[&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(stack)&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			stack = stack[:&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(stack)&lt;span class=&quot;number&quot;&gt;-2&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; token &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;+&amp;quot;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				stack = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(stack, num1 + num2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				stack = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(stack, num1 - num2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				stack = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(stack, num1 * num2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				stack = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(stack, num1 / num2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; stack[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -157,7 +368,26 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/largest-rectangle-in-histogram/&quot;&gt;84.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/largest-rectangle-in-histogram/&quot;&gt;84. 柱状图中最大的矩形&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定 &lt;em&gt;n&lt;/em&gt; 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。&lt;/p&gt;
+&lt;p&gt;求在该柱状图中，能够勾勒出来的矩形的最大面积。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg&quot;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：heights = [2,1,5,6,2,3]
+输出：10
+解释：最大的矩形为图中红色区域，面积为 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg&quot;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入： heights = [2,4]
+输出： 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= heights.length &amp;lt;=105&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= heights[i] &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -186,7 +416,46 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/min-stack/&quot;&gt;155.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/min-stack/&quot;&gt;155. 最小栈&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;设计一个支持 &lt;code&gt;push&lt;/code&gt; ，&lt;code&gt;pop&lt;/code&gt; ，&lt;code&gt;top&lt;/code&gt; 操作，并能在常数时间内检索到最小元素的栈。&lt;/p&gt;
+&lt;p&gt;实现 &lt;code&gt;MinStack&lt;/code&gt; 类:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MinStack()&lt;/code&gt; 初始化堆栈对象。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void push(int val)&lt;/code&gt; 将元素val推入堆栈。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void pop()&lt;/code&gt; 删除堆栈顶部的元素。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int top()&lt;/code&gt; 获取堆栈顶部的元素。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int getMin()&lt;/code&gt; 获取堆栈中的最小元素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：
+[&amp;quot;MinStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;getMin&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;top&amp;quot;,&amp;quot;getMin&amp;quot;]
+[[],[-2],[0],[-3],[],[],[],[]]
+
+输出：
+[null,null,null,null,-3,null,0,-2]
+
+解释：
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin();   --&amp;gt; 返回 -3.
+minStack.pop();
+minStack.top();      --&amp;gt; 返回 0.
+minStack.getMin();   --&amp;gt; 返回 -2.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-231 &amp;lt;= val &amp;lt;= 231 - 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop&lt;/code&gt;、&lt;code&gt;top&lt;/code&gt; 和 &lt;code&gt;getMin&lt;/code&gt; 操作总是在 &lt;strong&gt;非空栈&lt;/strong&gt; 上调用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;push&lt;/code&gt;, &lt;code&gt;pop&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt;, and &lt;code&gt;getMin&lt;/code&gt;最多被调用 &lt;code&gt;3 * 104&lt;/code&gt; 次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;题目已经给好了大致的方法，因此定义结构和函数具体内容即可：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据要求需要常数级检索最小元素，因此一般单独字段直接存即可；&lt;/li&gt;
+&lt;li&gt;又因为 stack 先进后出的性质，在 pop 操作后，为了保证 getMin 扔能正确执行，还应该更新最小值，因此还应该记录每次 push 的时候当时最小值的更新现场。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;type&lt;/span&gt; MinStack &lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	MinVal &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Data []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Constructor&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; MinStack &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; MinStack&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		Data: &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;([]&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		MinVal: &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(this *MinStack)&lt;/span&gt;&lt;/span&gt; Push(val &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data) == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.Data = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(this.Data, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.MinVal = val&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		diff := val - this.MinVal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; diff &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			this.MinVal = val&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.Data = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(this.Data, diff)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(this *MinStack)&lt;/span&gt;&lt;/span&gt; Pop() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data) == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	diff := this.Data[&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data)&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; diff &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		this.MinVal = this.MinVal - diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	this.Data = this.Data[:&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data)&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(this *MinStack)&lt;/span&gt;&lt;/span&gt; Top() &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data) == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	diff := this.Data[&lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(this.Data)&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; diff &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; this.MinVal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; this.MinVal + diff&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;params&quot;&gt;(this *MinStack)&lt;/span&gt;&lt;/span&gt; GetMin() &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; this.MinVal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* Your MinStack object will be instantiated and called as such:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* obj := Constructor();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* obj.Push(val);&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* obj.Pop();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* param_3 := obj.Top();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;* param_4 := obj.GetMin();&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span</summary>
         
       
     
@@ -215,7 +484,32 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/subtree-of-another-tree/&quot;&gt;572.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/subtree-of-another-tree/&quot;&gt;572. 另一棵树的子树&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你两棵二叉树 &lt;code&gt;root&lt;/code&gt; 和 &lt;code&gt;subRoot&lt;/code&gt; 。检验 &lt;code&gt;root&lt;/code&gt; 中是否包含和 &lt;code&gt;subRoot&lt;/code&gt; 具有相同结构和节点值的子树。如果存在，返回 &lt;code&gt;true&lt;/code&gt; ；否则，返回 &lt;code&gt;false&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;二叉树 &lt;code&gt;tree&lt;/code&gt; 的一棵子树包括 &lt;code&gt;tree&lt;/code&gt; 的某个节点和这个节点的所有后代节点。&lt;code&gt;tree&lt;/code&gt; 也可以看做它自身的一棵子树。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://assets.leetcode.com/uploads/2021/04/28/subtree1-tree.jpg&quot;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [3,4,5,1,2], subRoot = [4,1,2]
+输出：true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://assets.leetcode.com/uploads/2021/04/28/subtree2-tree.jpg&quot;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
+输出：false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;root&lt;/code&gt; 树上的节点数量范围是 &lt;code&gt;[1, 2000]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subRoot&lt;/code&gt; 树上的节点数量范围是 &lt;code&gt;[1, 1000]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-104 &amp;lt;= root.val &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-104 &amp;lt;= subRoot.val &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一种方法：先深度优先 || 先序遍历主树，直到找到和 subRoot 相同值的节点，再以此为起点与 subRoot 做比较。属于暴力深搜的一种。&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isSubtree&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s *TreeNode, t *TreeNode)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; s == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; check(s, t) || isSubtree(s.Left, t) || isSubtree(s.Right, t) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(a, b *TreeNode)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; a == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;amp;&amp;amp; b == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; a == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; || b == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; a.Val == b.Val &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; check(a.Left, b.Left) &amp;amp;&amp;amp; check(a.Right, b.Right) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;p&gt;第二种方法：利用树的性质，将空子树补全，这样能得到唯一的一个先序遍历结果，然后判断 subRoot 的遍历结果是否是 root 遍历结果的子串，即可确认是否是题目要求的子树。&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isSubtree&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s *TreeNode, t *TreeNode)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	maxEle := math.MinInt32 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	getMaxElement(s, &amp;amp;maxEle) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	getMaxElement(t, &amp;amp;maxEle) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	lNull := maxEle + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	rNull := maxEle + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	sl, tl := getDfsOrder(s, []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&amp;#123;&amp;#125;, lNull, rNull), getDfsOrder(t, []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;&amp;#123;&amp;#125;, lNull, rNull) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; kmp(sl, tl) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;kmp&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s, t []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	sLen, tLen := &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(s), &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(t) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	fail := &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;([]&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, sLen) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; sLen; i++ &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		fail[i] = &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i, j := &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;; i &amp;lt; tLen; i++ &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j != &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; &amp;amp;&amp;amp; t[i] != t[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			j = fail[j] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t[i] == t[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			j++ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		fail[i] = j &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i, j := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;; i &amp;lt; sLen; i++ &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j != &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt; &amp;amp;&amp;amp; s[i] != t[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			j = fail[j] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; s[i] == t[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			j++ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; j == tLen - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getDfsOrder&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(t *TreeNode, list []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;, lNull, rNull &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; list &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	list = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(list, t.Val) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t.Left != &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		list = getDfsOrder(t.Left, list, lNull, rNull) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		list = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(list, lNull) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t.Right != &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		list = getDfsOrder(t.Right, list, lNull, rNull) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		list = &lt;span class=&quot;built_in&quot;&gt;append&lt;/span&gt;(list, rNull) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; list &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getMaxElement&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(t *TreeNode, maxEle *&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t == &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; t.Val &amp;gt; *maxEle &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		*maxEle = t.Val &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	getMaxElement(t.Left, maxEle) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	getMaxElement(t.Right, maxEle) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;</summary>
         
       
     
@@ -245,7 +539,29 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/powx-n/&quot;&gt;50. Pow(x, n)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;实现 &lt;a</summary>
+&lt;p&gt;实现 &lt;a href=&quot;https://www.cplusplus.com/reference/valarray/pow/&quot;&gt;pow(&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;n&lt;/em&gt;)&lt;/a&gt; ，即计算 &lt;code&gt;x&lt;/code&gt; 的整数 &lt;code&gt;n&lt;/code&gt; 次幂函数（即，&lt;code&gt;xn&lt;/code&gt; ）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：x = 2.00000, n = 10
+输出：1024.00000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：x = 2.10000, n = 3
+输出：9.26100
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：x = 2.00000, n = -2
+输出：0.25000
+解释：2-2 = 1/22 = 1/4 = 0.25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-100.0 &amp;lt; x &amp;lt; 100.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-231 &amp;lt;= n &amp;lt;= 231-1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt; 是一个整数&lt;/li&gt;
+&lt;li&gt;要么 &lt;code&gt;x&lt;/code&gt; 不为零，要么 &lt;code&gt;n &amp;gt; 0&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-104 &amp;lt;= xn &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;myPow&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(x &lt;span class=&quot;type&quot;&gt;float64&lt;/span&gt;, n &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;float64&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; n &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; quickMul(x, n)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt; / quickMul(x, -n)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;quickMul&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(x &lt;span class=&quot;type&quot;&gt;float64&lt;/span&gt;, N &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;float64&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ans := &lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 贡献的初始值为 x&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	x_contribute := x&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 在对 N 进行二进制拆分的同时计算答案&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; N &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; N % &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;// 如果 N 二进制表示的最低位为 1，那么需要计入贡献&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			ans *= x_contribute&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 将贡献不断地平方&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		x_contribute *= x_contribute&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;comment&quot;&gt;// 舍弃 N 二进制表示的最低位，这样我们每次只要判断最低位即可&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		N /= &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; ans&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -266,7 +582,31 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/&quot;&gt;1186.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/&quot;&gt;1186. 删除一次得到子数组最大和&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个整数数组，返回它的某个 &lt;strong&gt;非空&lt;/strong&gt; 子数组（连续元素）在执行一次可选的删除操作后，所能得到的最大元素总和。换句话说，你可以从原数组中选出一个子数组，并可以决定要不要从中删除一个元素（只能删一次哦），（删除后）子数组中至少应当有一个元素，然后该子数组（剩下）的元素总和是所有子数组之中最大的。&lt;/p&gt;
+&lt;p&gt;注意，删除一个元素后，子数组 &lt;strong&gt;不能为空&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [1,-2,0,3]
+输出：4
+解释：我们可以选出 [1, -2, 0, 3]，然后删掉 -2，这样得到 [1, 0, 3]，和最大。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [1,-2,-2,3]
+输出：3
+解释：我们直接选出 [3]，这就是最大和。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：arr = [-1,-1,-1,-1]
+输出：-1
+解释：最后得到的子数组不能为空，所以我们不能选择 [-1] 并从中删去 -1 来得到 0。
+     我们应该直接选择 [-1]，或者选择 [-1, -1] 再从中删去一个 -1。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= arr.length &amp;lt;= 105&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-104 &amp;lt;= arr[i] &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -287,7 +627,30 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/coin-change/&quot;&gt;322.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/coin-change/&quot;&gt;322. 零钱兑换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个整数数组 &lt;code&gt;coins&lt;/code&gt; ，表示不同面额的硬币；以及一个整数 &lt;code&gt;amount&lt;/code&gt; ，表示总金额。&lt;/p&gt;
+&lt;p&gt;计算并返回可以凑成总金额所需的 &lt;strong&gt;最少的硬币个数&lt;/strong&gt; 。如果没有任何一种硬币组合能组成总金额，返回 &lt;code&gt;-1&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;你可以认为每种硬币的数量是无限的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：coins = `[1, 2, 5]`, amount = `11`
+输出：`3` 
+解释：11 = 5 + 5 + 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：coins = `[2]`, amount = `3`
+输出：-1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：coins = [1], amount = 0
+输出：0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= coins.length &amp;lt;= 12&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= coins[i] &amp;lt;= 231 - 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= amount &amp;lt;= 104&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -316,7 +679,31 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/house-robber-ii/&quot;&gt;213. 打家劫舍</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/house-robber-ii/&quot;&gt;213. 打家劫舍 II&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都 &lt;strong&gt;围成一圈&lt;/strong&gt; ，这意味着第一个房屋和最后一个房屋是紧挨着的。同时，相邻的房屋装有相互连通的防盗系统，&lt;strong&gt;如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;给定一个代表每个房屋存放金额的非负整数数组，计算你 &lt;strong&gt;在不触动警报装置的情况下&lt;/strong&gt; ，今晚能够偷窃到的最高金额。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [2,3,2]
+输出：3
+解释：你不能先偷窃 1 号房屋（金额 = 2），然后偷窃 3 号房屋（金额 = 2）, 因为他们是相邻的。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,2,3,1]
+输出：4
+解释：你可以先偷窃 1 号房屋（金额 = 1），然后偷窃 3 号房屋（金额 = 3）。
+     偷窃到的最高金额 = 1 + 3 = 4 。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,2,3]
+输出：3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;0 &amp;lt;= nums[i] &amp;lt;= 1000&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;考虑第一个要不要访问，如果访问了，就是原来 3&lt;del&gt;n-1 的非环形版本&lt;br&gt;如果第一个未访问，就是原来 2&lt;/del&gt;n-2 的非环形版本&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; _&lt;span class=&quot;title&quot;&gt;rob&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(nums []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	first, second := nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;], max(nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;], nums[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, v := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; nums[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;:] &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		first, second = second, max(first+v, second)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; second&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;rob&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(nums []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	n := &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(nums)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; n == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; n == &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; max(nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;], nums[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; max(_rob(nums[:n&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]), _rob(nums[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(a, b &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; a &amp;gt; b &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; b&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -345,7 +732,24 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/partition-equal-subset-sum/&quot;&gt;416.</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/partition-equal-subset-sum/&quot;&gt;416. 分割等和子集&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个 &lt;strong&gt;只包含正整数&lt;/strong&gt; 的 &lt;strong&gt;非空&lt;/strong&gt; 数组 &lt;code&gt;nums&lt;/code&gt; 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,5,11,5]
+输出：true
+解释：数组可以分割成 [1, 5, 5] 和 [11] 。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入：nums = [1,2,3,5]
+输出：false
+解释：数组不能分割成两个元素和相等的子集。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= nums.length &amp;lt;= 200&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1 &amp;lt;= nums[i] &amp;lt;= 100&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;canPartition&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(nums []&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	n := &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(nums)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; n&amp;lt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	sum, max := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, v := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; nums &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sum += v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; v &amp;gt; max &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			max = v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 不能均分一半&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; sum%&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	tar := sum / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;// 如果有个元素比一半和还大，那么不可能找到&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; max &amp;gt; tar &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	dp := &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;([][]&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt;, n)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i:= &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; dp &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dp[i] = &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;([]&lt;span class=&quot;type&quot;&gt;bool&lt;/span&gt;, tar + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		dp[i][&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	dp[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;][nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]] = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i:=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt;n; i++ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		v := nums[i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j:=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j&amp;lt;=tar; j++ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; j &amp;gt;= v &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				dp[i][j] = dp[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;][j] || dp[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;][j-v]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				dp[i][j] = dp[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;][j]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; dp[n&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;][tar]&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -358,66 +762,6 @@
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
     <category term="1-D DP" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/1-d-dp/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.483Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;271&lt;br&gt;36&lt;br&gt;347&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Arrays &amp; Hashing" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/arrays-hashing/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Advanced Graphs" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/advanced-graphs/"/>
     
     
   </entry>
@@ -454,6 +798,66 @@
   
   <entry>
     <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.484Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Advanced Graphs" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/advanced-graphs/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;271&lt;br&gt;36&lt;br&gt;347&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Arrays &amp; Hashing" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/arrays-hashing/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/backtracking/index%202/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/backtracking/index%202/</id>
     <published>2024-06-22T08:26:02.000Z</published>
@@ -478,36 +882,6 @@
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
     <category term="Backtracking" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/backtracking/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Binary Search" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/b-search/"/>
     
     
   </entry>
@@ -544,17 +918,17 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/b-search/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.485Z</updated>
+    <updated>2024-07-12T14:15:22.484Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
+    <summary type="html">&lt;p&gt;704&lt;br&gt;74&lt;br&gt;875&lt;br&gt;981&lt;/p&gt;
 </summary>
         
       
@@ -567,7 +941,7 @@
     
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
-    <category term="Heap &amp; Priority Queue" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/heap-queue/"/>
+    <category term="Binary Search" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/b-search/"/>
     
     
   </entry>
