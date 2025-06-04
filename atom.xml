@@ -445,38 +445,6 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Advanced Graphs" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/advanced-graphs/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/arrays-hashing/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
@@ -535,6 +503,38 @@
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
     <category term="Backtracking" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/backtracking/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/advanced-graphs/index/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.484Z</updated>
+    
+    <content type="html"><![CDATA[<p>332<br>1584<br>743<br>778<br>269<br>787</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;332&lt;br&gt;1584&lt;br&gt;743&lt;br&gt;778&lt;br&gt;269&lt;br&gt;787&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Advanced Graphs" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/advanced-graphs/"/>
     
     
   </entry>
@@ -605,38 +605,6 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    <content type="html"><![CDATA[<p>136<br>7<br>371</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;136&lt;br&gt;7&lt;br&gt;371&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Bit Manipulation" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/bit/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/greedy/index%202/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/greedy/index%202/</id>
     <published>2024-06-22T08:26:02.000Z</published>
@@ -669,19 +637,26 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/</id>
     <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.485Z</updated>
+    <updated>2025-06-03T16:21:21.069Z</updated>
     
-    <content type="html"><![CDATA[<p>703<br>1046<br>621<br>355</p>]]></content>
+    <content type="html"><![CDATA[<p>10</p><p>97</p><p>115</p><p>309</p><p>312</p><p>329</p><p>494</p><p>518</p>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
+    <summary type="html">&lt;p&gt;10&lt;/p&gt;
+&lt;p&gt;97&lt;/p&gt;
+&lt;p&gt;115&lt;/p&gt;
+&lt;p&gt;309&lt;/p&gt;
+&lt;p&gt;312&lt;/p&gt;
+&lt;p&gt;329&lt;/p&gt;
+&lt;p&gt;494&lt;/p&gt;
+&lt;p&gt;518&lt;/p&gt;
 </summary>
         
       
@@ -694,7 +669,71 @@
     
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
-    <category term="Heap &amp; Priority Queue" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/heap-queue/"/>
+    <category term="2-D DP" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/2-d-dp/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/bit/index%204/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.484Z</updated>
+    
+    <content type="html"><![CDATA[<p>136<br>7<br>371</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;136&lt;br&gt;7&lt;br&gt;371&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Bit Manipulation" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/bit/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/math/index%207/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/math/index%207/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.484Z</updated>
+    
+    <content type="html"><![CDATA[<p>202<br>66<br>50<br>43<br>2013</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;202&lt;br&gt;66&lt;br&gt;50&lt;br&gt;43&lt;br&gt;2013&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Math &amp; Geometry" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/math/"/>
     
     
   </entry>
@@ -765,90 +804,19 @@
   
   <entry>
     <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/math/index%207/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/math/index%207/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2024-07-12T14:15:22.484Z</updated>
-    
-    <content type="html"><![CDATA[<p>202<br>66<br>50<br>43<br>2013</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;202&lt;br&gt;66&lt;br&gt;50&lt;br&gt;43&lt;br&gt;2013&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Math &amp; Geometry" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/math/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/index/</id>
-    <published>2024-06-22T08:26:02.000Z</published>
-    <updated>2025-06-03T16:21:21.069Z</updated>
-    
-    <content type="html"><![CDATA[<p>10</p><p>97</p><p>115</p><p>309</p><p>312</p><p>329</p><p>494</p><p>518</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;10&lt;/p&gt;
-&lt;p&gt;97&lt;/p&gt;
-&lt;p&gt;115&lt;/p&gt;
-&lt;p&gt;309&lt;/p&gt;
-&lt;p&gt;312&lt;/p&gt;
-&lt;p&gt;329&lt;/p&gt;
-&lt;p&gt;494&lt;/p&gt;
-&lt;p&gt;518&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="2-D DP" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/2-d-dp/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>index</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/stack/index%209/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/stack/index%209/</id>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/heap-queue/index%201/</id>
     <published>2024-06-22T08:26:02.000Z</published>
     <updated>2024-07-12T14:15:22.485Z</updated>
     
-    <content type="html"><![CDATA[<p>22<br>739<br>853</p>]]></content>
+    <content type="html"><![CDATA[<p>703<br>1046<br>621<br>355</p>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;22&lt;br&gt;739&lt;br&gt;853&lt;/p&gt;
+    <summary type="html">&lt;p&gt;703&lt;br&gt;1046&lt;br&gt;621&lt;br&gt;355&lt;/p&gt;
 </summary>
         
       
@@ -861,7 +829,7 @@
     
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
-    <category term="Stack" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/stack/"/>
+    <category term="Heap &amp; Priority Queue" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/heap-queue/"/>
     
     
   </entry>
@@ -895,6 +863,38 @@
     <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
     
     <category term="Sliding Window" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/s-window/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>index</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/stack/index%209/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/stack/index%209/</id>
+    <published>2024-06-22T08:26:02.000Z</published>
+    <updated>2024-07-12T14:15:22.485Z</updated>
+    
+    <content type="html"><![CDATA[<p>22<br>739<br>853</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;22&lt;br&gt;739&lt;br&gt;853&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Stack" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/stack/"/>
     
     
   </entry>
@@ -2935,27 +2935,6 @@
   
   <entry>
     <title>leet226</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/trees/leet226/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/trees/leet226/</id>
-    <published>2024-05-20T15:24:01.000Z</published>
-    <updated>2024-07-12T14:15:22.486Z</updated>
-    
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
-    
-    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
-    
-    <category term="Trees" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/trees/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leet226</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/trees/leet110/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/trees/leet110/</id>
     <published>2024-05-20T15:24:01.000Z</published>
@@ -2979,6 +2958,27 @@
     <title>leet226</title>
     <link href="https://bishoptylaor.github.io/interview/juan/neet150/trees/leet1448/"/>
     <id>https://bishoptylaor.github.io/interview/juan/neet150/trees/leet1448/</id>
+    <published>2024-05-20T15:24:01.000Z</published>
+    <updated>2024-07-12T14:15:22.486Z</updated>
+    
+    
+    
+    
+    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
+    
+    <category term="刷题" scheme="https://bishoptylaor.github.io/categories/interview/juan/"/>
+    
+    <category term="NeetCode150" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/"/>
+    
+    <category term="Trees" scheme="https://bishoptylaor.github.io/categories/interview/juan/neet150/trees/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>leet226</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/trees/leet226/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/trees/leet226/</id>
     <published>2024-05-20T15:24:01.000Z</published>
     <updated>2024-07-12T14:15:22.486Z</updated>
     
@@ -3951,21 +3951,21 @@
   </entry>
   
   <entry>
-    <title>Leetcode.63 不同路径ii</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-63-unique-paths-ii/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-63-unique-paths-ii/</id>
+    <title>Leetcode.62 不同路径</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-62-unique-paths/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-62-unique-paths/</id>
     <published>2024-05-20T15:14:50.000Z</published>
-    <updated>2025-06-03T16:21:27.310Z</updated>
+    <updated>2025-06-03T16:21:24.803Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths-ii/description/">Leetcode.63 不同路径ii</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p><p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p><p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p><p><strong>示例 1：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg"></p><pre><code>输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]输出：2解释：3x3 网格的正中间有一个障碍物。从左上角到右下角一共有 `2` 条不同的路径：1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</code></pre><p><strong>示例 2：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg"></p><pre><code>输入：obstacleGrid = [[0,1],[0,0]]输出：1</code></pre><p><strong>提示：</strong></p><ul><li><code>m == obstacleGrid.length</code></li><li><code>n == obstacleGrid[i].length</code></li><li><code>1 &lt;= m, n &lt;= 100</code></li><li><code>obstacleGrid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(obstacleGrid [][]<span class="type">int</span>)</span></span> <span class="type">int</span> &#123; </span><br><span class="line">n, m := <span class="built_in">len</span>(obstacleGrid), <span class="built_in">len</span>(obstacleGrid[<span class="number">0</span>]) </span><br><span class="line">f := <span class="built_in">make</span>([]<span class="type">int</span>, m) </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[<span class="number">0</span>][<span class="number">0</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[<span class="number">0</span>] = <span class="number">1</span> </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123; </span><br><span class="line"><span class="keyword">for</span> j := <span class="number">0</span>; j &lt; m; j++ &#123; </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[i][j] == <span class="number">1</span> &#123; </span><br><span class="line">f[j] = <span class="number">0</span> </span><br><span class="line"><span class="keyword">continue</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">if</span> j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; obstacleGrid[i][j<span class="number">-1</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[j] += f[j<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">return</span> f[<span class="built_in">len</span>(f)<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths/description/">Leetcode.62 不同路径</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p><p>问总共有多少条不同的路径？</p><p><strong>示例 1：</strong></p><p><img src="https://pic.leetcode.cn/1697422740-adxmsI-image.png"></p><pre><code>输入：m = 3, n = 7输出：28</code></pre><p><strong>示例 2：</strong></p><pre><code>输入：m = 3, n = 2输出：3解释：从左上角开始，总共有 3 条路径可以到达右下角。1. 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右3. 向下 -&gt; 向右 -&gt; 向下</code></pre><p><strong>示例 3：</strong></p><pre><code>输入：m = 7, n = 3输出：28</code></pre><p><strong>示例 4：</strong></p><pre><code>输入：m = 3, n = 3输出：6</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= m, n &lt;= 100</code></li><li>题目数据保证答案小于等于 <code>2 * 109</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePaths</span><span class="params">(m <span class="type">int</span>, n <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">dp := <span class="built_in">make</span>([][]<span class="type">int</span>, m)</span><br><span class="line"><span class="keyword">for</span> i, _ := <span class="keyword">range</span> dp &#123;</span><br><span class="line">dp[i] = <span class="built_in">make</span>([]<span class="type">int</span>, n)</span><br><span class="line">dp[i][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">0</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[<span class="number">0</span>][j] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> i:=<span class="number">1</span>; i&lt;m; i++ &#123;</span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">1</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[i][j] = dp[i<span class="number">-1</span>][j] + dp[i][j<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[m<span class="number">-1</span>][n<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/unique-paths-ii/description/&quot;&gt;Leetcode.63 不同路径ii&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一个机器人位于一个 &lt;code&gt;m x n&lt;/code&gt; 网格的左上角 （起始</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/unique-paths/description/&quot;&gt;Leetcode.62 不同路径&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一个机器人位于一个 &lt;code&gt;m x n&lt;/code&gt; 网格的左上角 （起始点在下图中</summary>
         
       
     
@@ -3985,21 +3985,21 @@
   </entry>
   
   <entry>
-    <title>Leetcode.62 不同路径</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-62-unique-paths/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-62-unique-paths/</id>
+    <title>Leetcode.63 不同路径ii</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-63-unique-paths-ii/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/2-d-dp/leet-63-unique-paths-ii/</id>
     <published>2024-05-20T15:14:50.000Z</published>
-    <updated>2025-06-03T16:21:24.803Z</updated>
+    <updated>2025-06-03T16:21:27.310Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths/description/">Leetcode.62 不同路径</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p><p>问总共有多少条不同的路径？</p><p><strong>示例 1：</strong></p><p><img src="https://pic.leetcode.cn/1697422740-adxmsI-image.png"></p><pre><code>输入：m = 3, n = 7输出：28</code></pre><p><strong>示例 2：</strong></p><pre><code>输入：m = 3, n = 2输出：3解释：从左上角开始，总共有 3 条路径可以到达右下角。1. 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右3. 向下 -&gt; 向右 -&gt; 向下</code></pre><p><strong>示例 3：</strong></p><pre><code>输入：m = 7, n = 3输出：28</code></pre><p><strong>示例 4：</strong></p><pre><code>输入：m = 3, n = 3输出：6</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= m, n &lt;= 100</code></li><li>题目数据保证答案小于等于 <code>2 * 109</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePaths</span><span class="params">(m <span class="type">int</span>, n <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">dp := <span class="built_in">make</span>([][]<span class="type">int</span>, m)</span><br><span class="line"><span class="keyword">for</span> i, _ := <span class="keyword">range</span> dp &#123;</span><br><span class="line">dp[i] = <span class="built_in">make</span>([]<span class="type">int</span>, n)</span><br><span class="line">dp[i][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">0</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[<span class="number">0</span>][j] = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> i:=<span class="number">1</span>; i&lt;m; i++ &#123;</span><br><span class="line"><span class="keyword">for</span> j:=<span class="number">1</span>; j&lt;n; j++ &#123;</span><br><span class="line">dp[i][j] = dp[i<span class="number">-1</span>][j] + dp[i][j<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[m<span class="number">-1</span>][n<span class="number">-1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/unique-paths-ii/description/">Leetcode.63 不同路径ii</a></p><p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p><p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p><p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p><p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p><p><strong>示例 1：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg"></p><pre><code>输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]输出：2解释：3x3 网格的正中间有一个障碍物。从左上角到右下角一共有 `2` 条不同的路径：1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</code></pre><p><strong>示例 2：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg"></p><pre><code>输入：obstacleGrid = [[0,1],[0,0]]输出：1</code></pre><p><strong>提示：</strong></p><ul><li><code>m == obstacleGrid.length</code></li><li><code>n == obstacleGrid[i].length</code></li><li><code>1 &lt;= m, n &lt;= 100</code></li><li><code>obstacleGrid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(obstacleGrid [][]<span class="type">int</span>)</span></span> <span class="type">int</span> &#123; </span><br><span class="line">n, m := <span class="built_in">len</span>(obstacleGrid), <span class="built_in">len</span>(obstacleGrid[<span class="number">0</span>]) </span><br><span class="line">f := <span class="built_in">make</span>([]<span class="type">int</span>, m) </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[<span class="number">0</span>][<span class="number">0</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[<span class="number">0</span>] = <span class="number">1</span> </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; n; i++ &#123; </span><br><span class="line"><span class="keyword">for</span> j := <span class="number">0</span>; j &lt; m; j++ &#123; </span><br><span class="line"><span class="keyword">if</span> obstacleGrid[i][j] == <span class="number">1</span> &#123; </span><br><span class="line">f[j] = <span class="number">0</span> </span><br><span class="line"><span class="keyword">continue</span> </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">if</span> j - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; obstacleGrid[i][j<span class="number">-1</span>] == <span class="number">0</span> &#123; </span><br><span class="line">f[j] += f[j<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">return</span> f[<span class="built_in">len</span>(f)<span class="number">-1</span>] </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/unique-paths/description/&quot;&gt;Leetcode.62 不同路径&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一个机器人位于一个 &lt;code&gt;m x n&lt;/code&gt; 网格的左上角 （起始点在下图中</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/unique-paths-ii/description/&quot;&gt;Leetcode.63 不同路径ii&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一个机器人位于一个 &lt;code&gt;m x n&lt;/code&gt; 网格的左上角 （起始</summary>
         
       
     
@@ -4088,21 +4088,21 @@
   </entry>
   
   <entry>
-    <title>Leetcode.40 组合总和 II</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-40-combination-sum%20ii/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-40-combination-sum%20ii/</id>
+    <title>Leetcode.39 组合总和</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-39-combination-sum/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-39-combination-sum/</id>
     <published>2024-05-20T15:14:33.000Z</published>
-    <updated>2025-06-03T16:22:02.980Z</updated>
+    <updated>2025-06-03T16:22:00.509Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/combination-sum-ii/">40. 组合总和 II</a></p><p>给定一个候选人编号的集合 <code>candidates</code> 和一个目标数 <code>target</code> ，找出 <code>candidates</code> 中所有可以使数字和为 <code>target</code> 的组合。</p><p><code>candidates</code> 中的每个数字在每个组合中只能使用 <strong>一次</strong> 。</p><p><strong>注意：</strong>解集不能包含重复的组合。 </p><p><strong>示例 1:</strong></p><pre><code>输入: candidates = `[10,1,2,7,6,1,5]`, target = `8`,输出:[[1,1,6],[1,2,5],[1,7],[2,6]]</code></pre><p><strong>示例 2:</strong></p><pre><code>输入: candidates = [2,5,2,1,2], target = 5,输出:[[1,2,2],[5]]</code></pre><p><strong>提示:</strong></p><ul><li><code>1 &lt;= candidates.length &lt;= 100</code></li><li><code>1 &lt;= candidates[i] &lt;= 50</code></li><li><code>1 &lt;= target &lt;= 30</code></li></ul><p><strong>思路：</strong><br>用 <em>dfs(i,left)</em> 来回溯，设当前枚举到 *candidates[i]*，剩余要选的元素之和为 <em>left</em>，按照选或不选分类讨论：</p><p>不选：递归到 *dfs(i+1,left)*。<br>选：递归到 *dfs(i,left−candidates[i])*。注意 <em>i</em> 不变，表示在下次递归中可以继续选 *candidates[i]*。<br>注：这个思路类似 <strong>完全背包</strong>。</p><p>如果递归中发现 <em>left&#x3D;0</em> 则说明找到了一个合法组合，复制一份 <em>path</em> 加入答案。</p><p>递归边界：如果 <em>i&#x3D;n</em>-1 或者 <em>left&lt;0</em> 则返回。</p><p>递归入口：*dfs(0,target)*。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">combinationSum</span><span class="params">(candidates []<span class="type">int</span>, target <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">path := []<span class="type">int</span>&#123;&#125;</span><br><span class="line">ans := [][]<span class="type">int</span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> dfs <span class="function"><span class="keyword">func</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span></span></span><br><span class="line">  </span><br><span class="line">dfs = <span class="function"><span class="keyword">func</span><span class="params">(i, left <span class="type">int</span>)</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> left == <span class="number">0</span> &#123;</span><br><span class="line"><span class="comment">// 找到解了，注意需要拷贝结果</span></span><br><span class="line">p1 := <span class="built_in">append</span>([]<span class="type">int</span>&#123;&#125;, path...)</span><br><span class="line">ans = <span class="built_in">append</span>(ans, p1)</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> i == <span class="built_in">len</span>(candidates) || left &lt; <span class="number">0</span> &#123;</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 不选当前数字，选下一个</span></span><br><span class="line">dfs(i+<span class="number">1</span>, left)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 选中当前数字，left-candidates[i]</span></span><br><span class="line">path = <span class="built_in">append</span>(path, candidates[i])</span><br><span class="line">dfs(i, left - candidates[i])</span><br><span class="line">path = path[:<span class="built_in">len</span>(path) - <span class="number">1</span>] <span class="comment">// 恢复现场</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">dfs(<span class="number">0</span>, target)</span><br><span class="line"><span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/combination-sum/description/">Leetcode.39 组合总和</a></p><p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 所有 <strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p><p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。 </p><p>对于给定的输入，保证和为 <code>target</code> 的不同组合数少于 <code>150</code> 个。</p><p><strong>示例 1：</strong></p><pre><code>输入：candidates = `[2,3,6,7],` target = `7`输出：[[2,2,3],[7]]解释：2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。7 也是一个候选， 7 = 7 。仅有这两种组合。</code></pre><p><strong>示例 2：</strong></p><pre><code>输入: candidates = [2,3,5]`,` target = 8输出: [[2,2,2,2],[2,3,3],[3,5]]</code></pre><p><strong>示例 3：</strong></p><pre><code>输入: candidates = `[2],` target = 1输出: []</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= candidates.length &lt;= 30</code></li><li><code>2 &lt;= candidates[i] &lt;= 40</code></li><li><code>candidates</code> 的所有元素 <strong>互不相同</strong></li><li><code>1 &lt;= target &lt;= 40</code></li></ul><p><strong>思路：</strong><br>用 <em>dfs(i,left)</em> 来回溯，设当前枚举到 *candidates[i]*，剩余要选的元素之和为 <em>left</em>，按照选或不选分类讨论：</p><p>不选：递归到 *dfs(i+1,left)*。<br>选：递归到 *dfs(i,left−candidates[i])*。注意 <em>i</em> 不变，表示在下次递归中可以继续选 *candidates[i]*。<br>注：这个思路类似 <strong>完全背包</strong>。</p><p>如果递归中发现 <em>left&#x3D;0</em> 则说明找到了一个合法组合，复制一份 <em>path</em> 加入答案。</p><p>递归边界：如果 <em>i&#x3D;n</em>-1 或者 <em>left&lt;0</em> 则返回。</p><p>递归入口：*dfs(0,target)*。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">combinationSum</span><span class="params">(candidates []<span class="type">int</span>, target <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">path := []<span class="type">int</span>&#123;&#125;</span><br><span class="line">ans := [][]<span class="type">int</span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> dfs <span class="function"><span class="keyword">func</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span></span></span><br><span class="line">  </span><br><span class="line">dfs = <span class="function"><span class="keyword">func</span><span class="params">(i, left <span class="type">int</span>)</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> left == <span class="number">0</span> &#123;</span><br><span class="line"><span class="comment">// 找到解了，注意需要拷贝结果</span></span><br><span class="line">p1 := <span class="built_in">append</span>([]<span class="type">int</span>&#123;&#125;, path...)</span><br><span class="line">ans = <span class="built_in">append</span>(ans, p1)</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> i == <span class="built_in">len</span>(candidates) || left &lt; <span class="number">0</span> &#123;</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 不选当前数字，选下一个</span></span><br><span class="line">dfs(i+<span class="number">1</span>, left)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 选中当前数字，left-candidates[i]</span></span><br><span class="line">path = <span class="built_in">append</span>(path, candidates[i])</span><br><span class="line">dfs(i, left - candidates[i])</span><br><span class="line">path = path[:<span class="built_in">len</span>(path) - <span class="number">1</span>] <span class="comment">// 恢复现场</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">dfs(<span class="number">0</span>, target)</span><br><span class="line"><span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/combination-sum-ii/&quot;&gt;40. 组合总和 II&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;给定一个候选人编号的集合 &lt;code&gt;candidates&lt;/code&gt; 和一个目标数 &lt;code&gt;targe</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/combination-sum/description/&quot;&gt;Leetcode.39 组合总和&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给你一个 &lt;strong&gt;无重复元素&lt;/strong&gt; 的整数数组 &lt;code&gt;c</summary>
         
       
     
@@ -4122,21 +4122,21 @@
   </entry>
   
   <entry>
-    <title>Leetcode.39 组合总和</title>
-    <link href="https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-39-combination-sum/"/>
-    <id>https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-39-combination-sum/</id>
+    <title>Leetcode.40 组合总和 II</title>
+    <link href="https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-40-combination-sum%20ii/"/>
+    <id>https://bishoptylaor.github.io/interview/juan/neet150/backtracking/leet-40-combination-sum%20ii/</id>
     <published>2024-05-20T15:14:33.000Z</published>
-    <updated>2025-06-03T16:22:00.509Z</updated>
+    <updated>2025-06-03T16:22:02.980Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/combination-sum/description/">Leetcode.39 组合总和</a></p><p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 所有 <strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p><p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。 </p><p>对于给定的输入，保证和为 <code>target</code> 的不同组合数少于 <code>150</code> 个。</p><p><strong>示例 1：</strong></p><pre><code>输入：candidates = `[2,3,6,7],` target = `7`输出：[[2,2,3],[7]]解释：2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。7 也是一个候选， 7 = 7 。仅有这两种组合。</code></pre><p><strong>示例 2：</strong></p><pre><code>输入: candidates = [2,3,5]`,` target = 8输出: [[2,2,2,2],[2,3,3],[3,5]]</code></pre><p><strong>示例 3：</strong></p><pre><code>输入: candidates = `[2],` target = 1输出: []</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= candidates.length &lt;= 30</code></li><li><code>2 &lt;= candidates[i] &lt;= 40</code></li><li><code>candidates</code> 的所有元素 <strong>互不相同</strong></li><li><code>1 &lt;= target &lt;= 40</code></li></ul><p><strong>思路：</strong><br>用 <em>dfs(i,left)</em> 来回溯，设当前枚举到 *candidates[i]*，剩余要选的元素之和为 <em>left</em>，按照选或不选分类讨论：</p><p>不选：递归到 *dfs(i+1,left)*。<br>选：递归到 *dfs(i,left−candidates[i])*。注意 <em>i</em> 不变，表示在下次递归中可以继续选 *candidates[i]*。<br>注：这个思路类似 <strong>完全背包</strong>。</p><p>如果递归中发现 <em>left&#x3D;0</em> 则说明找到了一个合法组合，复制一份 <em>path</em> 加入答案。</p><p>递归边界：如果 <em>i&#x3D;n</em>-1 或者 <em>left&lt;0</em> 则返回。</p><p>递归入口：*dfs(0,target)*。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">combinationSum</span><span class="params">(candidates []<span class="type">int</span>, target <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">path := []<span class="type">int</span>&#123;&#125;</span><br><span class="line">ans := [][]<span class="type">int</span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> dfs <span class="function"><span class="keyword">func</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span></span></span><br><span class="line">  </span><br><span class="line">dfs = <span class="function"><span class="keyword">func</span><span class="params">(i, left <span class="type">int</span>)</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> left == <span class="number">0</span> &#123;</span><br><span class="line"><span class="comment">// 找到解了，注意需要拷贝结果</span></span><br><span class="line">p1 := <span class="built_in">append</span>([]<span class="type">int</span>&#123;&#125;, path...)</span><br><span class="line">ans = <span class="built_in">append</span>(ans, p1)</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> i == <span class="built_in">len</span>(candidates) || left &lt; <span class="number">0</span> &#123;</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 不选当前数字，选下一个</span></span><br><span class="line">dfs(i+<span class="number">1</span>, left)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 选中当前数字，left-candidates[i]</span></span><br><span class="line">path = <span class="built_in">append</span>(path, candidates[i])</span><br><span class="line">dfs(i, left - candidates[i])</span><br><span class="line">path = path[:<span class="built_in">len</span>(path) - <span class="number">1</span>] <span class="comment">// 恢复现场</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">dfs(<span class="number">0</span>, target)</span><br><span class="line"><span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.cn/problems/combination-sum-ii/">40. 组合总和 II</a></p><p>给定一个候选人编号的集合 <code>candidates</code> 和一个目标数 <code>target</code> ，找出 <code>candidates</code> 中所有可以使数字和为 <code>target</code> 的组合。</p><p><code>candidates</code> 中的每个数字在每个组合中只能使用 <strong>一次</strong> 。</p><p><strong>注意：</strong>解集不能包含重复的组合。 </p><p><strong>示例 1:</strong></p><pre><code>输入: candidates = `[10,1,2,7,6,1,5]`, target = `8`,输出:[[1,1,6],[1,2,5],[1,7],[2,6]]</code></pre><p><strong>示例 2:</strong></p><pre><code>输入: candidates = [2,5,2,1,2], target = 5,输出:[[1,2,2],[5]]</code></pre><p><strong>提示:</strong></p><ul><li><code>1 &lt;= candidates.length &lt;= 100</code></li><li><code>1 &lt;= candidates[i] &lt;= 50</code></li><li><code>1 &lt;= target &lt;= 30</code></li></ul><p><strong>思路：</strong><br>用 <em>dfs(i,left)</em> 来回溯，设当前枚举到 *candidates[i]*，剩余要选的元素之和为 <em>left</em>，按照选或不选分类讨论：</p><p>不选：递归到 *dfs(i+1,left)*。<br>选：递归到 *dfs(i,left−candidates[i])*。注意 <em>i</em> 不变，表示在下次递归中可以继续选 *candidates[i]*。<br>注：这个思路类似 <strong>完全背包</strong>。</p><p>如果递归中发现 <em>left&#x3D;0</em> 则说明找到了一个合法组合，复制一份 <em>path</em> 加入答案。</p><p>递归边界：如果 <em>i&#x3D;n</em>-1 或者 <em>left&lt;0</em> 则返回。</p><p>递归入口：*dfs(0,target)*。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">combinationSum</span><span class="params">(candidates []<span class="type">int</span>, target <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">path := []<span class="type">int</span>&#123;&#125;</span><br><span class="line">ans := [][]<span class="type">int</span>&#123;&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> dfs <span class="function"><span class="keyword">func</span><span class="params">(<span class="type">int</span>, <span class="type">int</span>)</span></span></span><br><span class="line">  </span><br><span class="line">dfs = <span class="function"><span class="keyword">func</span><span class="params">(i, left <span class="type">int</span>)</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> left == <span class="number">0</span> &#123;</span><br><span class="line"><span class="comment">// 找到解了，注意需要拷贝结果</span></span><br><span class="line">p1 := <span class="built_in">append</span>([]<span class="type">int</span>&#123;&#125;, path...)</span><br><span class="line">ans = <span class="built_in">append</span>(ans, p1)</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">if</span> i == <span class="built_in">len</span>(candidates) || left &lt; <span class="number">0</span> &#123;</span><br><span class="line"><span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 不选当前数字，选下一个</span></span><br><span class="line">dfs(i+<span class="number">1</span>, left)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 选中当前数字，left-candidates[i]</span></span><br><span class="line">path = <span class="built_in">append</span>(path, candidates[i])</span><br><span class="line">dfs(i, left - candidates[i])</span><br><span class="line">path = path[:<span class="built_in">len</span>(path) - <span class="number">1</span>] <span class="comment">// 恢复现场</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">dfs(<span class="number">0</span>, target)</span><br><span class="line"><span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/combination-sum/description/&quot;&gt;Leetcode.39 组合总和&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;给你一个 &lt;strong&gt;无重复元素&lt;/strong&gt; 的整数数组 &lt;code&gt;c</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://leetcode.cn/problems/combination-sum-ii/&quot;&gt;40. 组合总和 II&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个候选人编号的集合 &lt;code&gt;candidates&lt;/code&gt; 和一个目标数 &lt;code&gt;targe</summary>
         
       
     
@@ -4824,33 +4824,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://bishoptylaor.github.io/interview/simulation/%E8%AF%9D%E6%9C%AF/"/>
-    <id>https://bishoptylaor.github.io/interview/simulation/%E8%AF%9D%E6%9C%AF/</id>
-    <published>2024-05-10T02:37:28.480Z</published>
-    <updated>2024-06-21T13:37:24.769Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="自我介绍："><a href="#自我介绍：" class="headerlink" title="自我介绍："></a>自我介绍：</h3><p>您好，我是王鑫宇，非常感谢给我的这次面试机会，拥有几年k12教育公司负责增长业务相关的系统和模型设计，其中主要包括活动营销平台的开发，以及相关系统的重构与升级，有过多次大型系统研发经验，有过多次跨部门系统研发经验。有过5人小组的管理经验。</p><h3 id="您在前一家公司的离职原因是什么？"><a href="#您在前一家公司的离职原因是什么？" class="headerlink" title="您在前一家公司的离职原因是什么？"></a>您在前一家公司的离职原因是什么？</h3><p>政策限制后，公司尝试了多种方向，比如海外业务、多学科等探索，初步是有一些成果的。我自身来说还是想要和公司一同发展的，但是随着时间的推移，各方向业务收缩，研发工作以维护为主，对于系统层面的迭代实际上是在不断地做减法。并且家人生病，需要人照顾，综合考虑下就出来了</p><h3 id="项目-STAR原则！（Situation、Task、Action、Result）"><a href="#项目-STAR原则！（Situation、Task、Action、Result）" class="headerlink" title="项目 STAR原则！（Situation、Task、Action、Result）"></a>项目 STAR原则！（Situation、Task、Action、Result）</h3><h4 id="广告平台"><a href="#广告平台" class="headerlink" title="广告平台"></a>广告平台</h4><p><strong>Situation：</strong><br>初衷是这样的，做活动的时候需要在公司内部多个 app 做展示推送，那么涉及到了不同业务方的展示规则不尽相同，需求提过去又需要结合其他业务方评估是否支持，以及研发周期，对于所有人来说都是很高的成本，并且数据统计也是各管各的，从活动角度很难一键式的获取营销数据，需要额外的再提一些数据需求；再者，有一些 ab 实验的展示要求，也很难推广，基本上只能选取最大流量的来做评估，但是最大流量的 app 从付费模式上来说又不一样，所以其实获取的数据很难得到想要的结果。<br><strong>Task：</strong><br>为了解决上述的问题，首先要做的是先收集各种广告的样式以及投放规则，然后做整合和分类。并且由于新系统目标要支持整个公司多个 App 的访问流量，可以预见的是相关并发量会比常规的活动要高。一个用户单 app 大概有十几个位置需要拉取信息，绘本的用户因为没有严格的上课时间，所以虽然用户量大，日活高，但是理论上不会短时间集中访问。但是一对一就不一样了，用户一般上下课时间是固定的，那么这一段短时间内，可能会有2-3w用户并发的来获取广告内容，双减前高峰期也能有 5w+ 的用户，估算大概至少是百万级别的 qps。<br>其次是要做好与各个第三方功能系统的交互，关键的是数据怎么流通和冗余。<br><strong>Action：</strong><br>大概整理出来的分类有：轮播、点播、弹窗、开屏（轮换）、首页条、金刚位、浮窗（常驻）等。<br>大概的筛选项有：静默期、轮播、最近N（小时&#x2F;天&#x2F;周&#x2F;月）最多投放M次、每日活跃区间等。还有关联的第三方 用户属性、ab实验分组、简单的版本控制等。<br>广告位：定义分类和展示内容规则（大小、多少等）<br>广告组：定义一批广告的内容素材，以及广告点击后跳转地址等<br>广告：组和位 多对多 的单个组合，是用户可见营销内容的基本单位<br>为了保证服务的质量和稳定性，采用了 内存-redis-tidb 三层缓存结构，系统启动时，将相关广告配置加载到内存和 redis 中，如果是活动或者营销高峰，还会针对热点数据再缓存一层到 redis 中，第三层是 tidb 持久化的数据。为了减少前两层同时失效的情况，内存缓存做了随机定时更新，更新阶段会请求会透传到 redis 这一层。由于是读多写少的场景，redis 层一般会随配置更新而更新，除此之外也有自己的随机刷新时间，间隔相较于内存缓存会长一点。整体的刷新时间基本在1-2分钟，从业务上评估的话，对于这种延时是可以接受且影响不大的。<br>容灾：为了应对极端情况，比如数据库挂掉，会在动态配置和前端分别做默认数据的相关处理，保证业务基本可用；如果是配置错误造成的缓存污染的情况，如果比较紧急，也提供了强制刷新的动态配置开关。在配置正确的情况下，一般会在 1-2 分钟内完成缓存更新。</p><p>能够支持的配置维度大概有：</p><ol><li>静默期</li><li>最近N（小时&#x2F;天&#x2F;周&#x2F;月）最多投放M次、<ol><li>按照自然周期设置一个桶，用户a在该周期1展示的广告x，用户每次展示成功了就往该 key 中添加一个元素，最后判断是否达到 M 来确定是否继续展示</li><li>zset 结构</li></ol></li><li>每日投放区间<ol><li>可以配置多个</li><li>设计上比较像 leet 合并区间，</li><li>最后判断当前时间即可</li></ol></li><li>用户标签 or 用户身份规则<br>并且对接了 ab 测试系统，可以自动的参与实验。且使用广告的唯一标识来串联了数据漏斗，可以很好地查看投放的效果。</li></ol><p>一个比较有意思的功能是轮播，用户每次进来都能看到不同的广告，实现方式是利用了redis中zset的结构。首先用户有一个可见广告的集合，用户+广告位来标识一个桶，每次访问将广告的唯一id加入桶内，利用 zscore 来做判断，访问一轮以后清除桶重新计数。当时也是想了一些缓存计数方案，但是都不如 zset 来的方便。<br><strong>Result：</strong><br>最终的效果是可以支持多 app 多种类型广告位，多种展示规则，多种过滤规则，对接了ab实验，以及串联起来前后端数据流统计和漏斗统计，方便运营优化策略。<br>能够很好的支持百万级别的访问量</p><h4 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h4><p>很明确的排行榜需求嘛<br><strong>Task：</strong><br>提供总排名，查询用户个人排名，查询排行榜分数，以及可能相关的翻页需求。基础的分数计数器。<br><strong>Action：</strong><br>分数变动入口由计数器处理，计数器设计上是单实例串行的逻辑，相关接口配用户维度的分布式锁，且接入消息队列，对于大量 or 并发高的数据，可以考虑接入队列。用户的个人分数也有计数器来提供功能。<br>使用 zset 来存储，对于简单的活动，一般一个排行榜就是一个 zset。里面是用户和分数。对于同分选手，需要按照先达到该分数的排名靠前（方案可以是到达时间与基准时间做差值，当做score的小数部分参与排序。执行<code>时间排序值 =（基准时间 - 玩家达到分数时间）/ 基准时间</code>公式计算，得到的结果值一定小于 1，正好可作为 score 小数部分。越早达到，这个值就越大，满足排序。）<br>ZREVRANGE 命令来获取排行榜，其中成员的位置按 score 值递减 (从大到小) 来排列。具有相同 score 值的成员按字典序的反序排列。<br>还可以用负分数参与排序，使用 zrange 命令<br>对于参与人数大的排行榜，全部放到一起显然是不可行的。一般会根据业务形态，如果是短期营销，用户的分数分布更可能是金字塔型<br>前几页热门排行，会再加一层缓存数据，随业务更新异步刷新，展示相对实时内容；<br>或者前几页单独配置一个排行榜，但是会涉及到多个排行榜之间的排名及翻页的复杂计算，还有用户积分变化后从榜a出来进入榜b等，这个需要看情况要不要做成这么复杂的。<br>如果还不够支持，可以考虑做成内存缓存。<br>可以按照分段分成不同的 zset ，并且配合缓存每个 zset 的用户数量。那么用户自身排名就是他之前的 bucket 数量和 + 本 bucket 排名。<br>积分变动可能有两种，一种是 bucket 不变，积分变化，那么 zset 可以支持；另一种积分变化导致 bucket 变化，需要有 出榜 和 入榜 的操作。<br>还有一种不太要求实时排名的情况，可以定时去拉积分变动的 binlog ，来做更新。</p><p>本质上是读取和写入两个部分嘛，读取就要做好防击穿和雪崩的应对。写入的话分两种，一种是队列每一种是接口调用，都要保证并发安全；另外还可以每天晚上根据 binlog 对账。<br>还有一个是需要注意 bucket 中的人数数量级，及时准备应对方案。<br><strong>Result：</strong></p><h2 id="长链转短链"><a href="#长链转短链" class="headerlink" title="长链转短链"></a>长链转短链</h2><p>长链转短链是日常很容易碰到的场景嘛，可用于消息触达、解决关键词屏蔽问题或者域名屏蔽问题，可以统计用户点击等；另外可能的情景是分享二维码的时候长连接会影响生成的二维码密度，也需要转链服务的支持。</p><p>主要流程是：</p><ol><li>用户访问某域名下短链，例：<a href="https://short.com/1a2b3c">https://short.com/1a2b3c</a></li><li>短链服务收到请求后，去相应的缓存或者 db 中查找 kv 对，找到原始长链接</li><li>返回状态码 302（临时重定向），并将响应头中的Location设置为原长链接地址（301永久重定向，不好统计点击次数）</li><li>浏览器重新请求原链接</li><li>返回响应</li></ol><p>理论上不可能存在将所有长链一一对应成短链；也不存在某种 hash 函数，可以不重复的计算出长链对应的短链<br>所以问题就回归到发号器上边，来一个长地址，就给分配一个短地址。简单的方案，使用自增ID即可，从10进制往62进制转换即可；</p><p>但是在分布式场景下，这个方案就变得不那么可行了。改进方案可以参考 tidb 的自增id，为每个实例分配不同的号段，或者设定某种取模方案均衡号段</p><h4 id="算法优化"><a href="#算法优化" class="headerlink" title="算法优化"></a>算法优化</h4><p>短链接标识一般是 [0-9, a-z, A-Z] 随机组合而成的字符串，字符一共有 62 个，因此短链接标识可以用 62 进制的字符串表示。</p><p>首先维护一个自增的 ID，当生成短链接时，将 10 进制的自增 ID 转换成 62 进制字符串，这个字符串就可以唯一标识一个长链接。由于 ID 是自增的，对应的 62 进制字符串是不同的，这样就不会出现一个短链接对应多个长链接的问题，62 个字符排列组合，可以保证短链接是用不完的，就算仅限于 6 位长度标识的短链接，也有 558 亿多种情况，这种算法在网上被称为自增序列算法。</p><p>1、62 进制的顺序并不一定严格按照 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 的顺序来表示，这个顺序可以是打乱的，这样生成的短链接标识更随机不易被破解。</p><p>2、长链接与短链接是否需要一对多关系，同一个长链接使用自增主键 ID 算法生成的短链接是不同的，因为自增主键 ID 不同，生成的 62 进制字符串自然也不同。如果我们有一个长链接唯一对应一个短链接需求，可以将长链接进行 md5 加密，将加密后的 md5 值存储在 DB 中，每次生成短链接前都根据长链接 md5 值查询 DB，如果存在，则直接返回短链接，当然也可以使用其他方式维护这种关系。</p><p>如果创建一个短链系统，我们应该做什么呢？</p><ol><li>将长链接变为短链；</li><li>用户访问短链接，会跳转到正确的长链接上去。</li></ol><p>查找到对应的长网址，并跳转到对应的页面。</p><h5 id="短链生成方法"><a href="#短链生成方法" class="headerlink" title="短链生成方法"></a>短链生成方法</h5><p>短码一般是由 <code>[a - z, A - Z, 0 - 9]</code> 这62 个字母或数字组成，短码的长度也可以自定义，但一般不超过8位。比较常用的都是6位，6位的短码已经能有568亿种的组合：(26+26+10)^6 &#x3D; 56800235584，已满足绝大多数的使用场景。</p><p>目前比较流行的生成短码方法有：<code>自增id</code>、<code>摘要算法</code>、<code>普通随机数</code>。</p><h6 id="自增id"><a href="#自增id" class="headerlink" title="自增id"></a>自增id</h6><p>该方法是一种无碰撞的方法，原理是，每新增一个短码，就在上次添加的短码id基础上加1，然后将这个10进制的id值，转化成一个62进制的字符串。</p><p>一般利用数据表中的自增id来完成：每次先查询数据表中的自增id最大值max，那么需要插入的长网址对应自增id值就是 max+1，将max+1转成62进制即可得到短码。</p><p>但是短码 id 是从一位长度开始递增，短码的长度不固定，不过可以用 id 从指定的数字开始递增的方式来处理，确保所有的短码长度都一致。同时，生成的短码是有序的，可能会有安全的问题，可以将生成的短码id，结合长网址等其他关键字，进行md5运算生成最后的短码。</p><h6 id="摘要算法"><a href="#摘要算法" class="headerlink" title="摘要算法"></a>摘要算法</h6><p>摘要算法又称哈希算法，它表示输入任意长度的数据，输出固定长度的数据。相同的输入数据始终得到相同的输出，不同的输入数据尽量得到不同的输出。</p><p>算法过程：</p><ol><li>将长网址md5生成32位签名串,分为4段, 每段8个字节；</li><li>对这四段循环处理, 取8个字节, 将他看成16进制串与0x3fffffff(30位1)与操作, 即超过30位的忽略处理；</li><li>这30位分成6段, 每5位的数字作为字母表的索引取得特定字符, 依次进行获得6位字符串；</li><li>总的md5串可以获得4个6位串；取里面的任意一个就可作为这个长url的短url地址；</li></ol><p>这种算法,虽然会生成4个,但是仍然存在重复几率。</p><p>虽然几率很小，但是该方法依然存在碰撞的可能性，解决冲突会比较麻烦。不过该方法生成的短码位数是固定的，也不存在连续生成的短码有序的情况。</p><h6 id="普通随机数"><a href="#普通随机数" class="headerlink" title="普通随机数"></a>普通随机数</h6><p>该方法是从62个字符串中随机取出一个6位短码的组合，然后去<a href="https://cloud.tencent.com/solution/database?from_column=20065&from=20065">数据库</a>中查询该短码是否已存在。如果已存在，就继续循环该方法重新获取短码，否则就直接返回。</p><p>该方法是最简单的一种实现，不过由于 <code>Math.round()</code>方法生成的随机数属于伪随机数，碰撞的可能性也不小。在数据比较多的情况下，可能会循环很多次，才能生成一个不冲突的短码。</p><h1 id="对于分布式系统，有哪些新认识？"><a href="#对于分布式系统，有哪些新认识？" class="headerlink" title="对于分布式系统，有哪些新认识？"></a>对于分布式系统，有哪些新认识？</h1><ol><li>cap原理，可用性和数据一致性和分区容忍性三者不可兼得嘛。需要根据业务做权衡，数据的一致性也有 最终一致性、强一致性等不同要求。</li><li>数据跟随微服务，放在靠近使用者的位置，可以减少网络延时</li><li>多实例就会涉及到分布式架构的弹性伸缩和自动恢复，也会涉及到熔断降级等应对操作</li><li>微服务架构大致会按照功能或者业务划分成不同的微服务，方便各自拓展边界和维护。但是要注意微服务之间的调用链和依赖路径。</li><li>一致性协议包括 paxos 和 raft 。raft 是增加了任期概念的 paxos。保证多节点之间的数据一致性和容错性。</li><li>rpc：使用 http2 协议，传输文本为 protobuffer 二进制序列化，</li><li>多服务多实例的话就需要可观测和监控，比如访问量、访问延时、调用数据库延时、堆栈内存变化等指标，及时应对异常</li><li>大数据流量和高并发场景下，kafka 这种流式处理组件就很重要了。</li><li>故障隔离和容错，增加熔断、降级机制，避免故障扩散</li><li></li></ol><p>使用 etcd 来完成微服务注册和发现，使用 thrift 和 grpc 作为微服务的框架。<br>rpc访问量、耗时，sql耗时等关键指标暴露给 Prometheus，并通过 Grafana 展示，便于监控服务质量，以及出现问题时可以帮助快速定位异常接口</p><p>context多数用来进行上下文信息传递，在实际开发中，会记录整条调用链路。一般来说，需要注意的是超时机制；context只能自顶向下传值；context一定不能为nil，在不确定的情况下可以使用 context.TODO() 或者 context.Background()</p><p>etcd中的分布式锁一般用来在集群系统启动时确定由哪一个系统来全局单例业务操作，比如数据刷新、业务数据清洗等<br>依据当前接口的唯一标识数据来实现幂等<br>不同系统间调用顺序可以用消息队列保证<br>分布式的CAP理论告诉我们“任何一个分布式系统都无法同时满足一致性（Consistency）、可用性（Availability）和分区容错性（Partition tolerance），最多只能同时满足两项。”所以，很多系统在设计之初就要对这三者做出取舍。在互联网领域的绝大多数的场景中，都需要牺牲强一致性来换取系统的高可用性，系统往往只需要保证“最终一致性”，只要这个最终时间是在用户可以接受的范围内即可。</p><p>分布式系统一般使用 redis 来做分布式锁（缺点：redis主从切换时可能丢失数据）<br>redis分布式锁，我们使用的业务场景，加锁时间一般为1s-3s，根据场景浮动，其中3s是我们设定的最长响应时间。</p><p>如果加锁后，过期时间内业务由于某种原因还没执行完，下一次请求再次加锁后打进来，而此时上一次的请求还未执行完毕，这时候需要对锁进行延期。可以采用协程的方法来设置一个ticker，在执行完毕的channel中如果没有收到通知，那么就需要对这个锁进行有限次的续期，来保证不会出现超卖这类情况。</p><p>另一种情况是如果当前锁是全局的，那么可能会出现锁被其他集群的进程解锁的情况，这种一般针对加锁的key进行处理即可</p><p>对于活动呢，由于运营提出的活动形式有很多，且对于上线时间有强要求，所以一般初次出现的活动形式，会采取敏捷开发的方式，以达到最快且稳定上线的目的</p><p>任务系统，初期设计呢是很死板的，根据运营设计的任务动作从涉及到的多个方向拉取或者等待信息推送，但是这个方案对于其他业务的侵入性太高，风险极高。针对这一点，我将所有的业务动作全部转移到消息队列来获取，这样对于其他业务线或者系统来说，大部分是已经支持的</p><p>抽奖系统，可以讲讲分布式锁相关，</p><p>slice底层实现方法，map底层实现方法</p><p>redis 跳表</p><p>golang 语言的优势：静态语言，编译阶段可以发现一些问题；并发支持好，耗时随并发数线性增加；垃圾回收处理好</p><p>golang 文件操作使用比较少，了解不多</p><p>golang channel 利用协程通信来共享内存</p><p>常见排序：快排，堆排，归并</p><p>内核线程才是并行的基本单位</p><p>k8s 运维同学可以用运营商的相关配置</p><h2 id="如果你现在重头来看当时的一个设计-或者当时遇到的一些困难的问题-有没有更好的做法？"><a href="#如果你现在重头来看当时的一个设计-或者当时遇到的一些困难的问题-有没有更好的做法？" class="headerlink" title="如果你现在重头来看当时的一个设计 或者当时遇到的一些困难的问题 有没有更好的做法？"></a>如果你现在重头来看当时的一个设计 或者当时遇到的一些困难的问题 有没有更好的做法？</h2><p>哥，我想的是可以拿团购来说，就是不要把业务流程和功能绑定太死，尽量要抽取主框架，然后往上边填模块<br>可以结合业务发展来讲。主流程就是开团参团嘛，还有自动脚本成团啥的，成员分成团长团员机器人三个嘛，不同身份在流程节点的动作是抽象在成员的函数内的；成员会挂载到一个团概念上，团又会有啥阶梯、普通这种分类，在成团发奖方面也有自己的抽象方法。甚至开团参团也可以抽象成一个 tunnel，一条购买消息来了，根据上下文走不通的逻辑，执行不同的pre校验和post动作。就这种方案的话，以后加入加个别的什么功能或者概念，往上边套就行</p><p>您提供的描述已经非常详细和专业，但如果想要进一步优化，可以考虑以下几个方面：</p><ol><li><strong>精简和突出重点</strong>：将最重要的技能和经验放在前面，以便快速抓住读者的注意力。</li><li><strong>使用专业术语</strong>：确保使用行业内广泛认可的术语，以显示您的专业性。</li><li><strong>量化成果</strong>：如果可能，提供具体的例子或数字来量化您的成果和经验。</li><li><strong>个人特质</strong>：强调您的个人特质和工作态度，让读者了解您作为团队成员的价值。</li></ol><p>以下是优化后的版本：</p><hr><p><strong>技术专长</strong>：</p><ul><li>精通 Golang 编程语言，具备扎实的编程基础和优秀的逻辑思维能力。</li><li>熟练掌握 MySQL、TiDB 等主流关系型数据库，以及 MongoDB、Redis 等 NoSQL 数据库的应用。</li><li>深入理解 Kafka 等消息中间件的工作原理。</li></ul><p><strong>架构与设计</strong>：</p><ul><li>熟悉微服务架构，具有丰富的系统设计经验，能够高效地进行系统架构规划和设计。</li><li>强大的系统设计能力，能够应对复杂系统的设计挑战。</li></ul><p><strong>项目管理</strong>：</p><ul><li>拥有5人团队的项目管理经验，曾作为项目负责人成功主持跨部门项目的设计、研发和上线。</li><li>强烈的团队合作意识，能够在团队中发挥领导作用。</li></ul><p><strong>个人素质</strong>：</p><ul><li>认真负责，具备出色的执行力和良好的抗压能力。</li><li>对编程充满热情，面对挑战和问题时表现出高度的积极性和解决问题的能力。</li></ul><hr><p>这样的描述更加精炼，同时突出了您的专业技能、项目管理能力和个人素质。</p><p>离职原因</p><p>当时更看好做教育方向，也想换语言到 golang ，更支持微服务这个方向</p><p>双减算是黑天鹅事件了</p><p>职业规划：这次看机会就几个方向，一个是看有没有搭建基础中台的机会</p><p>另一个是看有没有机会入行 ai 方向，毕竟这也算是未来一段时间的主流蓝海了</p><p>继续提升技术，寻找一些大型项目的机会（搭建基础中台的机会），进而看有没有成为项目 leader 或者架构的方向。</p><p>个人优势？<br>golang 语言，微服务，活动营销平台，总结抽象系统，喜欢重构，喜欢研究有需求的东西并做一些自己的理解和发散。</p><p>家人原因离职</p><p>学科探索 新加坡数学，中英，国学（流量池但不大）<br>有现金流的话其实就很好，可以在稳定的前提下再探索嘛，这部分相对来说也是可控的。</p><p>伴鱼的话，感觉1对1还算可以，能有相对稳定的流水，但是增长的话目前是没什么好的方案</p><p>其他业务线绘本啊、自然拼读啊，因为本身付费周期相对较短，而且结合一些头部主播做专场，流水倒是还行。</p><p>获客成本高，直播流量对于1对1的增长感觉有折扣。活动角度的话，很多时候为了活动而活动，感觉对于产品本身的一些特性没有很突出，后期大多数时候是成为了一个促单促销的工具，又受限于营销成本，可能用户角度的优惠也没有那么大。</p><p>有没有涉及翻译功能？学习交流的是目标语言还是？学习者是在纯目标语言环境中体验虚拟情景？<br>有没有一些预设的学习目标？口语这个感觉不好找量化指标？<br>结合社交与游戏玩法让用户练习口语。目标人群是 青少年 还是成人方向？内容和虚拟形象是否会做差异化？<br>语音识别？</p><p>会往 vrchat 的方向发展么？</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;自我介绍：&quot;&gt;&lt;a href=&quot;#自我介绍：&quot; class=&quot;headerlink&quot; title=&quot;自我介绍：&quot;&gt;&lt;/a&gt;自我介绍：&lt;/h3&gt;&lt;p&gt;您好，我是王鑫宇，非常感谢给我的这次面试机会，拥有几年k12教育公司负责增长业务相关的系统和模型设计，其中主要包括活</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://bishoptylaor.github.io/categories/interview/"/>
-    
-    <category term="实录" scheme="https://bishoptylaor.github.io/categories/interview/simulation/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>常见排序</title>
     <link href="https://bishoptylaor.github.io/library/algorithm/algorithm-sort/"/>
     <id>https://bishoptylaor.github.io/library/algorithm/algorithm-sort/</id>
@@ -4876,9 +4849,9 @@
     <category term="算法题" scheme="https://bishoptylaor.github.io/categories/library/algorithm/"/>
     
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
@@ -4907,9 +4880,9 @@
     <category term="算法题" scheme="https://bishoptylaor.github.io/categories/library/algorithm/"/>
     
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
@@ -5086,9 +5059,9 @@
     <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/library/Golang/advanced-tutorial/"/>
     
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
     
@@ -5298,9 +5271,9 @@
     <category term="进阶教程笔记" scheme="https://bishoptylaor.github.io/categories/library/Golang/advanced-tutorial/"/>
     
     
-    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
     <category term="必看必会" scheme="https://bishoptylaor.github.io/tags/%E5%BF%85%E7%9C%8B%E5%BF%85%E4%BC%9A/"/>
+    
+    <category term="基础知识" scheme="https://bishoptylaor.github.io/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     
     <category term="go" scheme="https://bishoptylaor.github.io/tags/go/"/>
     
